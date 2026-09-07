@@ -1,26 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Geist:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Square+Peg&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F5F4F3;
+  --foreground: #242424;
+  --color-brand-green: #536757;
+  --color-brand-black: #242424;
+  --font-heading: "Fraunces", "Source Serif 4", serif;
+  --font-body: "Geist", "Outfit", "Montserrat", sans-serif;
+  --font-doodle: "Square Peg", cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-green: #536757;
+  --color-brand-black: #242424;
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-doodle: var(--font-doodle);
+  --font-fraunces: "Fraunces", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-geist: "Geist", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-source-serif: "Source Serif 4", serif;
+  --font-square-peg: "Square Peg", cursive;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #F5F4F3;
+    --foreground: #242424;
   }
 }
 
 body {
-  background: var(--background);
+  background-color: #F5F4F3;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-subheading,
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-doodle {
+  font-family: var(--font-doodle);
+}
+
+.font-fraunces {
+  font-family: "Fraunces", serif;
+}
+
+.font-outfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.font-geist {
+  font-family: "Geist", sans-serif;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-source-serif {
+  font-family: "Source Serif 4", serif;
+}
+
+.font-square-peg {
+  font-family: "Square Peg", cursive;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }
