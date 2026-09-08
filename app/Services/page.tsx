@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/navbar";
+import SimpleFAQ from "../components/simplefaq";
 import Footer from "../components/footer";
 
 interface ServiceItem {
@@ -247,6 +248,9 @@ export default function ServicesPage() {
           </section>
         </div>
       </main>
+
+      {/* FAQ Section */}
+      <SimpleFAQ />
 
       {/* Footer Section */}
       <Footer />

@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 :root {
+  --app-zoom: 0.8;
   --background: #F5F4F3;
   --foreground: #242424;
   --color-brand-green: #536757;
@@ -50,6 +51,19 @@
     --background: #F5F4F3;
     --foreground: #242424;
   }
+}
+
+html {
+  zoom: var(--app-zoom, 0.8);
+}
+
+.hero-fullscreen {
+  height: 100vh;
+  height: calc(100vh / var(--app-zoom, 1));
+  height: calc(100dvh / var(--app-zoom, 1));
+  min-height: 100vh;
+  min-height: calc(100vh / var(--app-zoom, 1));
+  min-height: calc(100dvh / var(--app-zoom, 1));
 }
 
 body {
