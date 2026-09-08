@@ -14,7 +14,7 @@ export default function Footer({
   navLinks = [
     { name: "About", href: "/#about" },
     { name: "Services", href: "/Services" },
-    { name: "Work", href: "/#work" },
+    { name: "Work", href: "/Work" },
     { name: "Insights", href: "#insights" },
   ],
   attributionText = "A agency created by",

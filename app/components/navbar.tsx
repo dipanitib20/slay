@@ -19,14 +19,14 @@ export default function Navbar({
   links = [
     { name: "About", href: "/#about" },
     { name: "Services", href: "/Services" },
-    { name: "Work", href: "/#work" },
+    { name: "Work", href: "/Work" },
   ],
   mobileLinks = [
-    { name: "Case studies", href: "/#work" },
+    { name: "Case studies", href: "/Work" },
     { name: "About us", href: "/#about" },
-    { name: "Contact", href: "#book-call" },
+    { name: "Contact", href: "/Contact" },
   ],
-  bookCallHref = "#book-call",
+  bookCallHref = "/Contact",
   avatarSrc = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=256&auto=format&fit=crop",
   phone = "(510) 895-6500",
   email = "hello@slayagency.com",

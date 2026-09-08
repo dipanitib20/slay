@@ -7,6 +7,18 @@ const nextConfig: NextConfig = {
         source: "/services",
         destination: "/Services",
       },
+      {
+        source: "/work",
+        destination: "/Work",
+      },
+      {
+        source: "/contact",
+        destination: "/Contact",
+      },
+      {
+        source: "/contact-us",
+        destination: "/Contact",
+      },
     ];
   },
 };
