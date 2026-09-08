@@ -114,6 +114,33 @@ body {
   animation-play-state: paused;
 }
 
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical 22s linear infinite;
+}
+
+.animate-marquee-vertical-fast {
+  animation: marquee-vertical 17s linear infinite;
+}
+
+.animate-marquee-vertical-slow {
+  animation: marquee-vertical 28s linear infinite;
+}
+
+.animate-marquee-vertical:hover,
+.animate-marquee-vertical-fast:hover,
+.animate-marquee-vertical-slow:hover {
+  animation-play-state: paused;
+}
+
 /* Reusable Section Spacing Utilities (Ensures uniform gap across all current and future sections) */
 .section-py {
   padding-top: var(--section-py);
