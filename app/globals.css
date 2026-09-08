@@ -9,6 +9,24 @@
   --font-heading: "Fraunces", "Source Serif 4", serif;
   --font-body: "Geist", "Outfit", "Montserrat", sans-serif;
   --font-doodle: "Square Peg", cursive;
+
+  /* Standardized Section Spacing System:
+     Matches the exact gap between Client Logos and 'What We Bring' section
+     (Mobile: 136px, Tablet/sm: 192px, Desktop/md+: 208px) */
+  --section-gap: 136px;
+  --section-py: calc(var(--section-gap) / 2);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --section-gap: 192px;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --section-gap: 208px;
+  }
 }
 
 @theme inline {
@@ -95,3 +113,48 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* Reusable Section Spacing Utilities (Ensures uniform gap across all current and future sections) */
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.section-pt {
+  padding-top: var(--section-py);
+}
+
+.section-pb {
+  padding-bottom: var(--section-py);
+}
+
+.section-gap {
+  gap: var(--section-gap);
+}
+
+/* Tactile Card Top Inner Shadow + Drop Shadow Utility */
+.inner-shadow-card {
+  box-shadow: 
+    inset 0 3px 6px 0 rgba(255, 255, 255, 0.95),
+    inset 0 1px 2px 0 #ffffff,
+    0 12px 24px -4px rgba(0, 0, 0, 0.08),
+    0 4px 8px -2px rgba(0, 0, 0, 0.04);
+}
+
+.inner-shadow-card:hover {
+  box-shadow: 
+    inset 0 3px 6px 0 rgba(255, 255, 255, 1),
+    inset 0 1px 2px 0 #ffffff,
+    0 16px 32px -4px rgba(0, 0, 0, 0.12),
+    0 6px 12px -2px rgba(0, 0, 0, 0.06);
+}
+
+.circle-badge-shadow {
+  box-shadow: 
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.28),
+    inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.45),
+    0 6px 14px -1px rgba(0, 0, 0, 0.45),
+    0 2px 6px 0 rgba(0, 0, 0, 0.28);
+}
+
+

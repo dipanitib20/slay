@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState<number>(0);
@@ -205,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* Clients Horizontal Carousel Section */}
-      <section className="relative w-full bg-[#F5F4F3] py-14 sm:py-20 overflow-hidden">
+      <section className="relative w-full bg-[#F5F4F3] section-py overflow-hidden">
         {/* Left & Right Gradient Fade Masks */}
         <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
@@ -228,7 +229,7 @@ export default function Home() {
       </section>
 
       {/* "What we bring" / Services Showcase Section */}
-      <section className="w-full bg-[#F5F4F3] py-20 sm:py-28 md:py-32 px-4 sm:px-8 md:px-12">
+      <section id="services" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-4xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
@@ -319,7 +320,7 @@ export default function Home() {
           {/* Action Button */}
           <div className="mt-10 sm:mt-12 md:mt-14 flex justify-center">
             <Link
-              href="#book-call"
+              href="/Services"
               className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
             >
               View more services
@@ -329,7 +330,7 @@ export default function Home() {
       </section>
 
       {/* "What We've Made" / Project Showcase Section */}
-      <section id="work" className="w-full bg-[#F5F4F3] py-20 sm:py-28 md:py-32 px-4 sm:px-8 md:px-12">
+      <section id="work" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-3xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
@@ -350,7 +351,7 @@ export default function Home() {
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
               <span className="text-neutral-400 font-normal">Work That </span>
-              <span className="text-[#242424] font-medium">Makes an Impact</span>
+              <span className="text-[#536757] font-medium">Makes an Impact</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
@@ -364,7 +365,7 @@ export default function Home() {
             {projects.map((project, idx) => (
               <div key={`${project.id}-${idx}`} className="group flex flex-col cursor-pointer">
                 {/* Image Container */}
-                <div className="relative w-full aspect-[4/4.1] sm:aspect-[4/3.9] md:aspect-[4/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6] shadow-sm">
+                <div className="relative w-full aspect-[4/4.1] sm:aspect-[4/3.9] md:aspect-[4/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6] ">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -376,7 +377,7 @@ export default function Home() {
 
                 {/* Project Details */}
                 <div className="flex flex-col mt-6 sm:mt-7">
-                  <h3 className="font-heading font-semibold text-2xl sm:text-3xl text-[#242424] tracking-tight group-hover:text-[#536757] transition-colors duration-200">
+                  <h3 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight transition-colors duration-200">
                     {project.title}
                   </h3>
                   <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
@@ -388,7 +389,7 @@ export default function Home() {
                     {project.tags.map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
-                        className="px-6 sm:px-7 py-2.5 rounded-full bg-white text-[#242424] font-body font-medium text-sm sm:text-[15px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-black/[0.04] hover:bg-[#242424] hover:text-white transition-colors duration-200"
+                        className="px-6 sm:px-7 py-2.5 rounded-full bg-white text-[#242424] font-body font-regular text-sm sm:text-[15px] shadow-[0_2px_12px_rgba(0,0,0,0.25)] border border-black/[0.04] transition-colors duration-200"
                       >
                         {tag}
                       </span>
@@ -398,8 +399,23 @@ export default function Home() {
               </div>
             ))}
           </div>
+
+          {/* Action Button */}
+          <div className="mt-10 sm:mt-12 md:mt-18 flex justify-center">
+            <Link
+              href="#book-call"
+              className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
+            >
+              View more projects
+            </Link>
+          </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 }
+
+

@@ -13,9 +13,9 @@ interface NavbarProps {
 
 export default function Navbar({
   links = [
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Work", href: "#work" },
+    { name: "About", href: "/#about" },
+    { name: "Services", href: "/Services" },
+    { name: "Work", href: "/#work" },
   ],
   bookCallHref = "#book-call",
   avatarSrc = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=256&auto=format&fit=crop",
