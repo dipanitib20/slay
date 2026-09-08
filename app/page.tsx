@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "./components/navbar";
 
 export default function Home() {
@@ -163,6 +164,27 @@ export default function Home() {
     },
   ];
 
+  const projects = [
+    {
+      id: "project-1",
+      title: "The Social Refresh",
+      description:
+        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+      image:
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+      tags: ["Design", "Strategy"],
+    },
+    {
+      id: "project-2",
+      title: "The Social Refresh",
+      description:
+        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+      image:
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+      tags: ["Design", "Strategy"],
+    },
+  ];
+
   return (
     <div className="relative min-h-screen w-full bg-[#F5F4F3] text-[#242424] selection:bg-[#242424] selection:text-white overflow-x-hidden">
       {/* Floating Header / Navbar */}
@@ -206,30 +228,29 @@ export default function Home() {
       </section>
 
       {/* "What we bring" / Services Showcase Section */}
-      <section className="w-full bg-[#F5F4F3] py-24 sm:py-32 px-5 sm:px-10 md:px-16 lg:px-20">
-        <div className="max-w-8xl mx-auto">
+      <section className="w-full bg-[#F5F4F3] py-20 sm:py-28 md:py-32 px-4 sm:px-8 md:px-12">
+        <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
-          <div className="relative max-w-4xl mx-auto text-center mb-16 sm:mb-20">
+          <div className="relative max-w-4xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
             {/* Doodle Arrow & Handwritten Note */}
-            <div className="absolute -top-12 sm:-top-16 right-2 sm:right-12 md:right-20 flex items-center gap-2 pointer-events-none select-none translate-x-45">
+            <div className="absolute -top-9 sm:-top-12 md:-top-16 right-0 sm:right-2 md:right-6 lg:right-12 flex items-center gap-1 sm:gap-2 pointer-events-none select-none md:translate-x-8 lg:translate-x-14">
               <Image
                 src="/arrow.svg"
                 alt="Arrow"
                 width={85}
                 height={55}
-                className="w-16 sm:w-24 md:w-28 h-auto object-contain"
+                className="w-10 sm:w-16 md:w-22 lg:w-28 h-auto object-contain shrink-0"
               />
-              <span className="font-doodle text-3xl sm:text-4xl md:text-5xl text-[#536757] whitespace-nowrap pt-3 -translate-y-5">
+              <span className="font-doodle text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#536757] whitespace-nowrap pt-1 sm:pt-2 md:pt-3 -translate-y-2 sm:-translate-y-3 md:-translate-y-5">
                 What we bring
               </span>
             </div>
 
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">Built to make </span>
-              <span className="text-[#536757] font-semibold">your brand</span>
+              <span className="text-neutral-400 font-normal">Built to make</span>
               <br />
-              <span className="text-[#536757] font-semibold">grow.</span>
+              <span className="text-[#536757] font-semibold">your brand grow.</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
@@ -238,60 +259,144 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 items-stretch">
-            {services.map((service, index) => {
-              const isActive = activeCard === index;
+          {/* Cards Expandable Container */}
+          <div className="bg-[#FAF9EE] rounded-[32px] sm:rounded-[40px] p-1.5 sm:p-2 border-1 border-[#ECEADE]/60">
+            <div className="flex flex-col md:flex-row gap-1.5 sm:gap-2 h-[580px] sm:h-[500px] md:h-[460px] lg:h-[480px] w-full">
+              {services.map((service, index) => {
+                const isActive = activeCard === index;
 
-              return (
-                <div
-                  key={service.number}
-                  onClick={() => setActiveCard(index)}
-                  onMouseEnter={() => setActiveCard(index)}
-                  className={`rounded-[32px] p-7 sm:p-8 flex flex-col justify-between min-h-[380px] sm:min-h-[440px] transition-all duration-300 cursor-pointer ${
-                    isActive
-                      ? "bg-[#242424] text-white shadow-2xl scale-[1.02]"
-                      : "bg-[#ECEAE7] text-[#242424] hover:bg-[#E5E2DF] hover:shadow-md"
-                  }`}
-                >
-                  {/* Top Header */}
-                  {isActive ? (
-                    <div className="flex items-center justify-between w-full">
-                      <span className="text-sm font-semibold tracking-wider text-neutral-400">
-                        {service.number}
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="w-full pt-2">
-                      <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#242424] text-center leading-snug">
-                        {service.title}
-                      </h3>
-                    </div>
-                  )}
+                return (
+                  <div
+                    key={service.number}
+                    onMouseEnter={() => setActiveCard(index)}
+                    onClick={() => setActiveCard(index)}
+                    className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-between ${
+                      isActive
+                        ? "flex-[2.8] md:flex-[2.2] bg-[#222222] text-white rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 lg:p-9 shadow-xl"
+                        : "flex-1 bg-[#F0EEEB] text-[#242424] hover:bg-[#EAE7E3] rounded-[22px] sm:rounded-[28px] p-5 sm:p-6"
+                    }`}
+                  >
+                    {/* Top Section */}
+                    {isActive ? (
+                      <div className="flex items-center justify-between w-full">
+                        <span className="font-sans font-medium text-sm sm:text-base tracking-wider text-white">
+                          {service.number}
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="w-full pt-2 sm:pt-4 text-center">
+                        <h3 className="font-heading font-semibold text-base sm:text-lg lg:text-[19px] text-[#242424] leading-snug mx-auto max-w-[140px] sm:max-w-[160px]">
+                          {service.title}
+                        </h3>
+                      </div>
+                    )}
 
-                  {/* Empty Spacer when inactive */}
-                  {!isActive && <div />}
+                    {/* Inactive Middle Spacer */}
+                    {!isActive && <div />}
 
-                  {/* Bottom Content when Active */}
-                  {isActive ? (
-                    <div className="flex flex-col gap-3 animate-in fade-in duration-300">
-                      <h3 className="font-heading font-bold text-2xl sm:text-[26px] text-white leading-tight">
-                        {service.title}
-                      </h3>
-                      <p className="font-subheading text-neutral-300 text-sm sm:text-[15px] leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  ) : (
-                    <div className="flex justify-center w-full pb-2">
-                      <span className="text-xs font-semibold tracking-wider text-neutral-400">
-                        {service.number}
-                      </span>
-                    </div>
-                  )}
+                    {/* Bottom Content for Active Card */}
+                    {isActive ? (
+                      <div className="flex flex-col gap-2.5 sm:gap-3 transition-all duration-500 delay-100 ease-out">
+                        <h3 className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight">
+                          {service.title}
+                        </h3>
+                        <p className="font-subheading text-neutral-300 text-sm sm:text-[15px] lg:text-base leading-relaxed max-w-lg">
+                          {service.description}
+                        </p>
+                      </div>
+                    ) : (
+                      /* Optional Bottom placeholder to balance inactive card */
+                      <div className="w-full flex justify-center opacity-0 pointer-events-none">
+                        <span className="text-xs">{service.number}</span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Action Button */}
+          <div className="mt-10 sm:mt-12 md:mt-14 flex justify-center">
+            <Link
+              href="#book-call"
+              className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
+            >
+              View more services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* "What We've Made" / Project Showcase Section */}
+      <section id="work" className="w-full bg-[#F5F4F3] py-20 sm:py-28 md:py-32 px-4 sm:px-8 md:px-12">
+        <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
+          {/* Section Header */}
+          <div className="relative max-w-3xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
+            {/* Doodle Arrow & Handwritten Note on Top Right */}
+            <div className="absolute -top-10 sm:-top-14 md:-top-16 right-0 sm:right-2 md:right-4 lg:right-6 flex flex-col items-center pointer-events-none select-none md:translate-x-6 lg:translate-x-10">
+              <span className="font-doodle text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#536757] whitespace-nowrap -rotate-2">
+                What We’ve Made
+              </span>
+              <Image
+                src="/arrow.svg"
+                alt="Arrow"
+                width={85}
+                height={55}
+                className="w-10 sm:w-14 md:w-18 lg:w-20 h-auto object-contain shrink-0 rotate-[130deg] scale-x-[-1] mt-0.5 -translate-x-3"
+              />
+            </div>
+
+            {/* Main Headline */}
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
+              <span className="text-neutral-400 font-normal">Work That </span>
+              <span className="text-[#242424] font-medium">Makes an Impact</span>
+            </h2>
+
+            {/* Subheading / Description Paragraph */}
+            <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-base sm:text-lg leading-relaxed mt-4 sm:mt-5">
+              From strategy to execution, we create work that gets attention, builds brands, and drives results.
+            </p>
+          </div>
+
+          {/* Project Showcase Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+            {projects.map((project, idx) => (
+              <div key={`${project.id}-${idx}`} className="group flex flex-col cursor-pointer">
+                {/* Image Container */}
+                <div className="relative w-full aspect-[4/4.1] sm:aspect-[4/3.9] md:aspect-[4/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6] shadow-sm">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    unoptimized
+                  />
                 </div>
-              );
-            })}
+
+                {/* Project Details */}
+                <div className="flex flex-col mt-6 sm:mt-7">
+                  <h3 className="font-heading font-semibold text-2xl sm:text-3xl text-[#242424] tracking-tight group-hover:text-[#536757] transition-colors duration-200">
+                    {project.title}
+                  </h3>
+                  <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex items-center gap-3 mt-4 sm:mt-5 flex-wrap">
+                    {project.tags.map((tag, tagIdx) => (
+                      <span
+                        key={tagIdx}
+                        className="px-6 sm:px-7 py-2.5 rounded-full bg-white text-[#242424] font-body font-medium text-sm sm:text-[15px] shadow-[0_2px_12px_rgba(0,0,0,0.04)] border border-black/[0.04] hover:bg-[#242424] hover:text-white transition-colors duration-200"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
