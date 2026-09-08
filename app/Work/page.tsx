@@ -135,13 +135,13 @@ export default function WorkPage() {
       <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Headline Section */}
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center relative z-40">
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] text-[#536757] font-normal tracking-tight leading-[1.14]">
               Selected projects built with ambitious brands and bold teams
             </h1>
 
             {/* Filter and Search Bar Row */}
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 flex-wrap relative z-30">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 flex-wrap relative z-40">
               {/* Search Input */}
               <div className="bg-white rounded-[12px] px-5 sm:px-6 py-3.5 sm:py-4 shadow-[0_4px_16px_rgba(0,0,0,0.06)] border border-black/[0.04] flex items-center gap-3 transition-all focus-within:ring-2 focus-within:ring-[#536757]/30">
                 <svg
@@ -176,7 +176,7 @@ export default function WorkPage() {
               </div>
 
               {/* Category Dropdown Button */}
-              <div className="relative">
+              <div className="relative z-50">
                 <button
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -207,7 +207,7 @@ export default function WorkPage() {
                       className="fixed inset-0 z-40"
                       onClick={() => setIsDropdownOpen(false)}
                     />
-                    <div className="absolute right-0 sm:left-0 mt-2 w-44 bg-white rounded-2xl shadow-xl border border-black/5 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+                    <div className="absolute right-0 sm:left-0 mt-2 w-48 bg-white rounded-2xl shadow-[0_20px_48px_rgba(0,0,0,0.18)] border border-black/5 py-2 z-50 animate-in fade-in zoom-in-95 duration-150">
                       {categories.map((cat) => (
                         <button
                           key={cat}
@@ -222,7 +222,7 @@ export default function WorkPage() {
                               : "text-[#242424] hover:bg-neutral-100/70"
                           }`}
                         >
-                          {cat}
+                          <span>{cat}</span>
                           {selectedCategory === cat && (
                             <span className="w-1.5 h-1.5 rounded-full bg-[#536757]" />
                           )}
@@ -236,7 +236,7 @@ export default function WorkPage() {
           </div>
 
           {/* Projects Grid Container */}
-          <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col gap-10 sm:gap-14 md:gap-16">
+          <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col gap-10 sm:gap-14 md:gap-16 relative z-10">
             {/* Top Row: 2 Featured Larger Columns */}
             {featuredProjects.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">

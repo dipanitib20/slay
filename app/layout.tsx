@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollAnimator from "./components/scroll-animator";
 
 export const metadata: Metadata = {
   title: "Slay Agency",
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth">
+    <html lang="en" className="antialiased scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -25,7 +26,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col font-body bg-[#F5F4F3] text-[#242424]">
+      <body className="min-h-screen flex flex-col font-body bg-[#F5F4F3] text-[#242424]">
+        <ScrollAnimator />
         {children}
       </body>
     </html>

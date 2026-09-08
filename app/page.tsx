@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
+import FAQFun from "./components/faqfun";
+import TestimonialSection from "./components/testimonial";
 import Footer from "./components/footer";
 
 export default function Home() {
@@ -262,9 +264,8 @@ export default function Home() {
 
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">Built to make</span>
-              <br />
-              <span className="text-[#536757] font-semibold">your brand grow.</span>
+              <span className="text-neutral-400 font-normal">Built to make </span>
+              <span className="text-[#536757] font-medium">your brand grow.</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
@@ -424,6 +425,83 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQFun />
+
+      {/* Criss-Crossing Ticker Ribbons Section */}
+      <section className="relative w-full py-16 sm:py-24 md:py-32 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">
+        <div className="relative w-full flex items-center justify-center h-[220px] sm:h-[260px] md:h-[290px]">
+          {/* Black Strip Ribbon (Angled bottom-left to top-right, moving right-to-left) */}
+          <div className="absolute w-[300vw] left-1/2 -translate-x-1/2 py-3.5 sm:py-4 md:py-5 bg-[#1C1C1C] text-white shadow-[0_12px_28px_rgba(0,0,0,0.35)] rotate-[6.5deg] sm:rotate-[5deg] md:rotate-[3.8deg] z-10 overflow-hidden flex items-center">
+            <div className="animate-marquee flex items-center whitespace-nowrap">
+              {Array.from({ length: 6 }).map((_, setIdx) => (
+                <div key={`black-set-${setIdx}`} className="flex items-center">
+                  {[
+                    "Trusted by Global Startups",
+                    "Conversion Focused",
+                    "Built to Scale",
+                    "Fast Turnaround",
+                    "Seamless User Experience",
+                    "World-Class Quality",
+                    "Data-Driven Growth",
+                    "End-to-End Execution",
+                  ].map((item, idx) => (
+                    <React.Fragment key={`black-${setIdx}-${idx}`}>
+                      <span className="font-geist font-medium text-base sm:text-lg md:text-[21px] tracking-tight text-white whitespace-nowrap">
+                        {item}
+                      </span>
+                      <svg
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 shrink-0 mx-5 sm:mx-7 md:mx-8"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                      </svg>
+                    </React.Fragment>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Green Strip Ribbon (Angled top-left to bottom-right, moving left-to-right) */}
+          <div className="absolute w-[300vw] left-1/2 -translate-x-1/2 py-3.5 sm:py-4 md:py-5 bg-[#536757] text-white shadow-[0_16px_36px_rgba(0,0,0,0.4)] rotate-[-6.5deg] sm:rotate-[-5deg] md:rotate-[-3.8deg] z-20 overflow-hidden flex items-center">
+            <div className="animate-marquee-reverse flex items-center whitespace-nowrap">
+              {Array.from({ length: 6 }).map((_, setIdx) => (
+                <div key={`green-set-${setIdx}`} className="flex items-center">
+                  {[
+                    "Web Development",
+                    "UI/UX Design",
+                    "Conversion-Focused Design",
+                    "Digital Marketing",
+                    "Brand Strategy",
+                    "Performance Marketing",
+                    "Content Production",
+                    "Next.js & React",
+                  ].map((item, idx) => (
+                    <React.Fragment key={`green-${setIdx}-${idx}`}>
+                      <span className="font-geist font-medium text-base sm:text-lg md:text-[21px] tracking-tight text-white whitespace-nowrap">
+                        {item}
+                      </span>
+                      <svg
+                        className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 shrink-0 mx-5 sm:mx-7 md:mx-8"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
+                        <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                      </svg>
+                    </React.Fragment>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section with Auto-Cycling Scattered Cards */}
+      <TestimonialSection />
 
       {/* Footer Section */}
       <Footer />

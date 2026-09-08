@@ -54,7 +54,19 @@
 }
 
 html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
   zoom: var(--app-zoom, 0.8);
+  background-color: #F5F4F3;
+  color: var(--foreground);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-fullscreen {
@@ -66,10 +78,45 @@ html {
   min-height: calc(100dvh / var(--app-zoom, 1));
 }
 
-body {
-  background-color: #F5F4F3;
-  color: var(--foreground);
-  font-family: var(--font-body);
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F4F3;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.18);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(83, 103, 87, 0.6);
+}
+
+/* Buttery-Smooth, Cinematic Scroll Animations across all pages */
+.scroll-animate,
+section:not(.hero-fullscreen),
+main > div > div:not(.no-scroll-animate),
+.scroll-reveal,
+footer {
+  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 1.05s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
+}
+
+.scroll-hidden {
+  opacity: 0 !important;
+  transform: translateY(48px) scale(0.975);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.scroll-visible {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1);
+  filter: blur(0px);
+  pointer-events: auto;
 }
 
 .font-heading {
@@ -121,10 +168,29 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 36s linear infinite;
 }
 
 .animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 36s linear infinite;
+}
+
+.animate-marquee-reverse:hover {
   animation-play-state: paused;
 }
 
