@@ -8,6 +8,7 @@ import Footer from "../components/footer";
 
 interface ProjectItem {
   id: string;
+  slug: string;
   title: string;
   description: string;
   image: string;
@@ -25,6 +26,7 @@ export default function WorkPage() {
   const projects: ProjectItem[] = [
     {
       id: "project-1",
+      slug: "the-social-refresh",
       title: "The Social Refresh",
       description:
         "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
@@ -35,36 +37,40 @@ export default function WorkPage() {
     },
     {
       id: "project-2",
-      title: "The Social Refresh",
+      slug: "lumen-brand-evolution",
+      title: "Lumen Brand Evolution",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "Evolving an enterprise tech platform into an iconic modern brand with warm human-centric design.",
       image:
         "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-      category: "Design",
-      tags: ["Design", "Strategy"],
+      category: "Branding",
+      tags: ["Branding", "Design"],
     },
     {
       id: "project-3",
-      title: "The Social Refresh",
+      slug: "kinetic-motion-lab",
+      title: "Kinetic Motion Lab",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "Dynamic motion identity and digital campaign built for high-voltage creative pioneers.",
       image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
-      category: "Branding",
-      tags: ["Design", "Branding"],
-    },
-    {
-      id: "project-4",
-      title: "The Social Refresh",
-      description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-      category: "Design",
+        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+      category: "Strategy",
       tags: ["Design", "Strategy"],
     },
     {
+      id: "project-4",
+      slug: "nordic-living-space",
+      title: "Nordic Living Space",
+      description:
+        "A serene digital sanctuary for Scandinavian interior design, blending tactile craftsmanship with frictionless e-commerce.",
+      image:
+        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
+      category: "Development",
+      tags: ["Design", "Development"],
+    },
+    {
       id: "project-5",
+      slug: "the-social-refresh",
       title: "The Social Refresh",
       description:
         "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
@@ -75,9 +81,10 @@ export default function WorkPage() {
     },
     {
       id: "project-6",
-      title: "The Social Refresh",
+      slug: "nordic-living-space",
+      title: "Nordic Living Space",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "Minimalist architectural e-commerce flagship engineered for speed, conversion, and spatial beauty.",
       image:
         "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
       category: "Development",
@@ -85,9 +92,10 @@ export default function WorkPage() {
     },
     {
       id: "project-7",
-      title: "The Social Refresh",
+      slug: "lumen-brand-evolution",
+      title: "Lumen Brand Evolution",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "Translating complex technology infrastructure into an effortless, warm, human-centric design language.",
       image:
         "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
       category: "Design",
@@ -95,9 +103,10 @@ export default function WorkPage() {
     },
     {
       id: "project-8",
-      title: "The Social Refresh",
+      slug: "kinetic-motion-lab",
+      title: "Kinetic Motion Lab",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "High-voltage digital campaigns and motion language that captures the relentless pace of modern culture.",
       image:
         "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
       category: "Branding",
@@ -248,7 +257,11 @@ export default function WorkPage() {
             {featuredProjects.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
                 {featuredProjects.map((project) => (
-                  <div key={project.id} className="group flex flex-col">
+                  <Link
+                    key={project.id}
+                    href={`/Work/${project.slug}`}
+                    className="group flex flex-col cursor-pointer"
+                  >
                     {/* Image Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
                       <Image
@@ -262,7 +275,7 @@ export default function WorkPage() {
 
                     {/* Project Info */}
                     <div className="flex flex-col mt-6 sm:mt-7">
-                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight transition-colors duration-200">
+                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200">
                         {project.title}
                       </h2>
                       <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
@@ -281,7 +294,7 @@ export default function WorkPage() {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}
@@ -290,7 +303,11 @@ export default function WorkPage() {
             {remainingProjects.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 lg:gap-10">
                 {remainingProjects.map((project) => (
-                  <div key={project.id} className="group flex flex-col">
+                  <Link
+                    key={project.id}
+                    href={`/Work/${project.slug}`}
+                    className="group flex flex-col cursor-pointer"
+                  >
                     {/* Image Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
                       <Image
@@ -304,7 +321,7 @@ export default function WorkPage() {
 
                     {/* Project Info */}
                     <div className="flex flex-col mt-6 sm:mt-7">
-                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight transition-colors duration-200">
+                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200">
                         {project.title}
                       </h2>
                       <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
@@ -323,7 +340,7 @@ export default function WorkPage() {
                         ))}
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             )}

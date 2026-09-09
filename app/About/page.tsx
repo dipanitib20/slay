@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "../components/navbar";
 import BrandTrust from "../components/brandtrust";
 import WorldMap from "../components/worldmap";
@@ -205,7 +206,7 @@ export default function AboutPage() {
             ].map((stat, idx) => (
               <div
                 key={idx}
-                className="flex flex-col text-left lg:px-8 first:lg:pl-0 last:lg:pr-0"
+                className="flex flex-col text-center items-center px-4 sm:px-6 lg:px-8"
               >
                 {/* Metric Label */}
                 <span className="font-subheading text-neutral-600 text-xs sm:text-sm font-medium">
@@ -218,9 +219,143 @@ export default function AboutPage() {
                 </span>
 
                 {/* Description */}
-                <p className="font-subheading text-neutral-500 text-xs sm:text-sm leading-relaxed max-w-xs">
+                <p className="font-subheading text-neutral-500 text-xs sm:text-sm leading-relaxed max-w-xs mx-auto">
                   {stat.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section ("The people behind the work") */}
+      <section className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 relative overflow-hidden">
+        <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
+          {/* Section Header */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 md:mb-20">
+            <div className="relative">
+              {/* Cursive Doodle "Our Team" on Top */}
+              <div className="absolute -top-7 sm:-top-9 -left-1 -rotate-6 pointer-events-none select-none">
+                <span className="font-doodle text-3xl sm:text-4xl md:text-5xl text-[#7E8B80]/85">
+                  Our Team
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[58px] tracking-tight leading-[1.08] text-left pt-2">
+                <span className="text-[#9BA59D] font-normal">The people behind</span>
+                <br />
+                <span className="text-[#536757] font-medium">the work</span>
+              </h2>
+            </div>
+
+            {/* "Join the team" CTA Button */}
+            <div className="shrink-0 self-start sm:self-auto mb-2">
+              <Link
+                href="/Contact"
+                className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
+              >
+                Join the team
+              </Link>
+            </div>
+          </div>
+
+          {/* Staggered 3-Column Team Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-x-12 lg:gap-y-16">
+            {[
+              {
+                id: "member-1",
+                name: "Arjun Mehta",
+                role: "Founder & CEO",
+                image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+                gridPlacement: "lg:col-start-1 lg:row-start-1",
+              },
+              {
+                id: "member-2",
+                name: "Arjun Mehta",
+                role: "Founder & CEO",
+                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+                gridPlacement: "lg:col-start-2 lg:row-start-1",
+              },
+              {
+                id: "member-3",
+                name: "Arjun Mehta",
+                role: "Founder & CEO",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+                gridPlacement: "lg:col-start-2 lg:row-start-2",
+              },
+              {
+                id: "member-4",
+                name: "Arjun Mehta",
+                role: "Founder & CEO",
+                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
+                gridPlacement: "lg:col-start-3 lg:row-start-2",
+              },
+            ].map((member) => (
+              <div
+                key={member.id}
+                className={`flex flex-col group ${member.gridPlacement}`}
+              >
+                {/* Image Frame Card */}
+                <div className="relative w-full aspect-[4/5] rounded-[28px] sm:rounded-[34px] md:rounded-[40px] bg-[#ECEAE6]/70 border border-black/[0.04] overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] group-hover:border-[#536757]/20">
+                  {/* Fallback / Mockup Style Placeholder Vector */}
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <svg
+                      className="w-16 h-16 sm:w-20 sm:h-20 text-[#BAC7BE]/70 group-hover:text-[#536757]/60 transition-colors duration-300"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="8"
+                        y="8"
+                        width="64"
+                        height="64"
+                        rx="16"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <circle cx="52" cy="28" r="2.5" fill="currentColor" />
+                      <path
+                        d="M14 56L30 38C32.5 35.5 36.5 35.5 39 38L52 52"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M44 46L49 40C51.5 37.5 55.5 37.5 58 40L66 50"
+                        stroke="currentColor"
+                        strokeWidth="3.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+
+                  {/* Actual Portrait Image if present */}
+                  {member.image && (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    />
+                  )}
+                </div>
+
+                {/* Name & Role Text */}
+                <div className="mt-4 sm:mt-5 text-left">
+                  <h3 className="font-heading text-2xl sm:text-[26px] md:text-[28px] text-[#536757] font-normal tracking-tight">
+                    {member.name}
+                  </h3>
+                  <p className="font-subheading text-neutral-500 text-xs sm:text-sm mt-0.5 sm:mt-1 font-normal tracking-wide">
+                    {member.role}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

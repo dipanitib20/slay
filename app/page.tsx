@@ -171,6 +171,7 @@ export default function Home() {
   const projects = [
     {
       id: "project-1",
+      slug: "the-social-refresh",
       title: "The Social Refresh",
       description:
         "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
@@ -180,12 +181,13 @@ export default function Home() {
     },
     {
       id: "project-2",
-      title: "The Social Refresh",
+      slug: "lumen-brand-evolution",
+      title: "Lumen Brand Evolution",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
+        "Evolving an enterprise tech platform into an iconic modern brand with warm human-centric design.",
       image:
         "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-      tags: ["Design", "Strategy"],
+      tags: ["Branding", "Design"],
     },
   ];
 
@@ -358,7 +360,11 @@ export default function Home() {
           {/* Project Showcase Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
             {projects.map((project, idx) => (
-              <div key={`${project.id}-${idx}`} className="group flex flex-col cursor-pointer">
+              <Link
+                key={`${project.id}-${idx}`}
+                href={`/Work/${project.slug}`}
+                className="group flex flex-col cursor-pointer"
+              >
                 {/* Image Container */}
                 <div className="relative w-full aspect-[4/4.1] sm:aspect-[4/3.9] md:aspect-[4/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6] ">
                   <Image
@@ -372,7 +378,7 @@ export default function Home() {
 
                 {/* Project Details */}
                 <div className="flex flex-col mt-6 sm:mt-7">
-                  <h3 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight transition-colors duration-200">
+                  <h3 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200">
                     {project.title}
                   </h3>
                   <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
@@ -391,14 +397,14 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           {/* Action Button */}
           <div className="mt-10 sm:mt-12 md:mt-18 flex justify-center">
             <Link
-              href="#book-call"
+              href="/Work"
               className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
             >
               View more projects
