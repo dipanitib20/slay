@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
-import BrandTrust from "./components/brandtrust";
 import FAQFun from "./components/faqfun";
 import TestimonialSection from "./components/testimonial";
 import Footer from "./components/footer";
@@ -144,27 +143,31 @@ export default function Home() {
   const services = [
     {
       number: "01/N",
+      slug: "social-media-management",
       title: "Social Media Management",
       description:
         "We turn your social presence into a brand people remember — with strategic content, consistent posting, and a voice that feels truly yours.",
     },
     {
       number: "02/N",
+      slug: "performance-marketing",
       title: "Performance Marketing",
       description:
         "Data-driven ad campaigns designed to convert, scale your revenue, and maximize ROI across paid social and search channels.",
     },
     {
       number: "03/N",
-      title: "UGC & Content Shoots",
+      slug: "brand-identity-strategy",
+      title: "Brand Identity & Strategy",
       description:
-        "High-converting user-generated content and studio-quality creative shoots tailored to engage modern audiences.",
+        "We shape memorable brand identities, timeless design systems, and positioning strategies that build trust and command authority.",
     },
     {
       number: "04/N",
-      title: "AI-Generated Videos",
+      slug: "web-design-development",
+      title: "Web Design & Development",
       description:
-        "Cutting-edge AI video production for hyper-scalable visual storytelling, dynamic ad variations, and rapid creative testing.",
+        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that turn visitors into customers.",
     },
   ];
 
@@ -223,8 +226,28 @@ export default function Home() {
         </video>
       </section>
 
-      {/* 3-Row Alternating Clients Carousel Section */}
-      <BrandTrust />
+      {/* Client Logos Carousel Section (Single Row) */}
+      <section className="relative w-full bg-[#F5F4F3] section-py overflow-hidden">
+        {/* Left & Right Gradient Fade Masks */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
+
+        {/* Infinite Carousel Track */}
+        <div className="animate-marquee flex items-center gap-16 sm:gap-24">
+          {logos.map((logo, index) => (
+            <div key={`set1-${logo.id}-${index}`}>{logo.element}</div>
+          ))}
+          {logos.map((logo, index) => (
+            <div key={`set2-${logo.id}-${index}`}>{logo.element}</div>
+          ))}
+          {logos.map((logo, index) => (
+            <div key={`set3-${logo.id}-${index}`}>{logo.element}</div>
+          ))}
+          {logos.map((logo, index) => (
+            <div key={`set4-${logo.id}-${index}`}>{logo.element}</div>
+          ))}
+        </div>
+      </section>
 
       {/* "What we bring" / Services Showcase Section */}
       <section id="services" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">
@@ -295,9 +318,13 @@ export default function Home() {
                     {/* Bottom Content for Active Card */}
                     {isActive ? (
                       <div className="flex flex-col gap-2.5 sm:gap-3 transition-all duration-500 delay-100 ease-out">
-                        <h3 className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight">
-                          {service.title}
-                        </h3>
+                        <Link
+                          href={`/Services/${service.slug}`}
+                          className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight hover:text-[#9BA59D] transition-colors inline-flex items-center gap-2 group/title"
+                        >
+                          <span>{service.title}</span>
+                          <span className="text-xl transition-transform group-hover/title:translate-x-1">→</span>
+                        </Link>
                         <p className="font-subheading text-neutral-300 text-sm sm:text-[15px] lg:text-base leading-relaxed max-w-lg">
                           {service.description}
                         </p>

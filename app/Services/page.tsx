@@ -9,54 +9,54 @@ import Footer from "../components/footer";
 
 interface ServiceItem {
   id: string;
+  slug: string;
   title: string;
   description: string;
   buttonText: string;
-  buttonHref: string;
   image: string;
 }
 
 export default function ServicesPage() {
   const services: ServiceItem[] = [
     {
-      id: "web-design-1",
+      id: "web-design",
+      slug: "web-design-development",
       title: "Web Design & Development",
       description:
         "From high-converting landing pages to complete brand websites, we design and develop digital experiences that feel effortless, load fast, and turn visitors into customers.",
-      buttonText: "Build your website",
-      buttonHref: "#book-call",
+      buttonText: "Explore web design",
       image:
         "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      id: "web-design-2",
-      title: "Web Design & Development",
+      id: "brand-identity",
+      slug: "brand-identity-strategy",
+      title: "Brand Identity & Strategy",
       description:
-        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that feel effortless, load fast, and turn visitors into customers.",
-      buttonText: "Build your website",
-      buttonHref: "#book-call",
+        "We build brands that connect and endure — from visual systems, typography, and logos to comprehensive positioning and voice guidelines.",
+      buttonText: "Explore branding",
       image:
-        "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      id: "web-design-3",
-      title: "Web Design & Development",
+      id: "social-media",
+      slug: "social-media-management",
+      title: "Social Media Management",
       description:
-        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that feel effortless, load fast, and turn visitors into customers.",
-      buttonText: "Build your website",
-      buttonHref: "#book-call",
+        "We turn your social presence into a brand people remember — with strategic content, consistent posting, and a voice that feels truly yours.",
+      buttonText: "Explore social growth",
       image:
-        "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
     },
     {
-      id: "web-design-4",
-      title: "Web Design & Development",
+      id: "performance-marketing",
+      slug: "performance-marketing",
+      title: "Performance Marketing",
       description:
-        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that feel effortless, load fast, and turn visitors into customers.",
-      buttonText: "Build your website",
-      buttonHref: "#book-call",
+        "Data-driven ad campaigns designed to convert, scale your revenue, and maximize ROI across paid social and search channels.",
+      buttonText: "Explore marketing",
       image:
-        "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
     },
   ];
 
@@ -132,22 +132,27 @@ export default function ServicesPage() {
                 className="bg-white rounded-[28px] sm:rounded-[36px] p-3 sm:p-4 lg:p-4.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04] flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300"
               >
                 {/* Mockup / Image Container */}
-                <div className="relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-[22px] sm:rounded-[28px] overflow-hidden bg-[#ECEAE6]">
+                <Link
+                  href={`/Services/${service.slug}`}
+                  className="block relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-[22px] sm:rounded-[28px] overflow-hidden bg-[#ECEAE6]"
+                >
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     unoptimized
                   />
-                </div>
+                </Link>
 
                 {/* Service Details & Action */}
                 <div className="flex flex-col mt-5 sm:mt-6 px-2 sm:px-3 pb-1.5 flex-1 justify-between">
                   <div>
-                    <h2 className="font-heading text-2xl sm:text-3xl text-[#242424] tracking-tight font-medium">
-                      {service.title}
-                    </h2>
+                    <Link href={`/Services/${service.slug}`}>
+                      <h2 className="font-heading text-2xl sm:text-3xl text-[#242424] tracking-tight font-medium group-hover:text-[#536757] transition-colors duration-200">
+                        {service.title}
+                      </h2>
+                    </Link>
                     <p className="font-subheading text-neutral-500 text-xs sm:text-sm md:text-base leading-relaxed mt-2.5">
                       {service.description}
                     </p>
@@ -156,8 +161,8 @@ export default function ServicesPage() {
                   {/* Action Button */}
                   <div className="mt-6 sm:mt-8 flex justify-center">
                     <Link
-                      href={service.buttonHref}
-                      className="w-full inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300"
+                      href={`/Services/${service.slug}`}
+                      className="w-full inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300 hover:bg-[#3B4A3D]"
                     >
                       {service.buttonText}
                     </Link>

@@ -19,7 +19,10 @@ export default function ScrollAnimator() {
         if (
           el.closest("header") ||
           el.closest("nav") ||
+          el.closest("[class*='sticky']") ||
+          el.closest(".no-scroll-animate") ||
           el.classList.contains("no-scroll-animate") ||
+          el.classList.contains("sticky") ||
           el.classList.contains("animate-marquee") ||
           el.querySelector("video")
         ) {

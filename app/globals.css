@@ -54,7 +54,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
 }
@@ -64,7 +64,7 @@ body {
   background-color: #F5F4F3;
   color: var(--foreground);
   font-family: var(--font-body);
-  overflow-x: hidden;
+  overflow-x: clip;
   margin: 0;
   padding: 0;
 }
@@ -95,7 +95,7 @@ body {
 
 /* Buttery-Smooth, Cinematic Scroll Animations across all pages */
 .scroll-animate,
-section:not(.hero-fullscreen),
+section:not(.hero-fullscreen):not(.no-scroll-animate),
 main > div > div:not(.no-scroll-animate),
 .scroll-reveal,
 footer {
@@ -103,6 +103,15 @@ footer {
               transform 1.05s cubic-bezier(0.16, 1, 0.3, 1),
               filter 1.05s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform, filter;
+}
+
+.no-scroll-animate,
+.no-scroll-animate *,
+[class*="sticky"],
+.sticky {
+  transform: none !important;
+  will-change: auto !important;
+  filter: none !important;
 }
 
 .scroll-hidden {
