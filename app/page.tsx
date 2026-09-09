@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
+import BrandTrust from "./components/brandtrust";
 import FAQFun from "./components/faqfun";
 import TestimonialSection from "./components/testimonial";
 import Footer from "./components/footer";
@@ -220,28 +221,8 @@ export default function Home() {
         </video>
       </section>
 
-      {/* Clients Horizontal Carousel Section */}
-      <section className="relative w-full bg-[#F5F4F3] section-py overflow-hidden">
-        {/* Left & Right Gradient Fade Masks */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
-
-        {/* Infinite Carousel Track */}
-        <div className="animate-marquee flex items-center gap-16 sm:gap-24">
-          {logos.map((logo, index) => (
-            <div key={`set1-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`set2-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`set3-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`set4-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-        </div>
-      </section>
+      {/* 3-Row Alternating Clients Carousel Section */}
+      <BrandTrust />
 
       {/* "What we bring" / Services Showcase Section */}
       <section id="services" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">

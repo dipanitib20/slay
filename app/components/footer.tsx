@@ -12,7 +12,7 @@ interface FooterProps {
 
 export default function Footer({
   navLinks = [
-    { name: "About", href: "/#about" },
+    { name: "About", href: "/About" },
     { name: "Services", href: "/Services" },
     { name: "Work", href: "/Work" },
     { name: "Insights", href: "#insights" },

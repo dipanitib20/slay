@@ -17,13 +17,13 @@ interface NavbarProps {
 export default function Navbar({
   logoText = "slay",
   links = [
-    { name: "About", href: "/#about" },
+    { name: "About", href: "/About" },
     { name: "Services", href: "/Services" },
     { name: "Work", href: "/Work" },
   ],
   mobileLinks = [
     { name: "Case studies", href: "/Work" },
-    { name: "About us", href: "/#about" },
+    { name: "About us", href: "/About" },
     { name: "Contact", href: "/Contact" },
   ],
   bookCallHref = "/Contact",

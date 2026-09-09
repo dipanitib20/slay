@@ -221,6 +221,35 @@ footer {
   animation-play-state: paused;
 }
 
+/* Slot Machine Downward Rolling Animations */
+@keyframes slot-machine-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-slot-down-1 {
+  animation: slot-machine-down 14s linear infinite;
+}
+
+.animate-slot-down-2 {
+  animation: slot-machine-down 18s linear infinite;
+}
+
+.animate-slot-down-3 {
+  animation: slot-machine-down 12s linear infinite;
+}
+
+.animate-slot-down-1:hover,
+.animate-slot-down-2:hover,
+.animate-slot-down-3:hover,
+.group:hover > [style*="slot-machine-down"] {
+  animation-play-state: paused;
+}
+
 /* Reusable Section Spacing Utilities (Ensures uniform gap across all current and future sections) */
 .section-py {
   padding-top: var(--section-py);

@@ -135,7 +135,14 @@ export default function WorkPage() {
       <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Headline Section */}
-          <div className="max-w-3xl mx-auto text-center relative z-40">
+          <div className="relative max-w-3xl mx-auto text-center z-40">
+            {/* Doodle "Our Work" on Top Left */}
+            <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-6 md:left-10 lg:left-12 -rotate-12 pointer-events-none select-none">
+              <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
+                Our Work
+              </span>
+            </div>
+
             <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] text-[#536757] font-normal tracking-tight leading-[1.14]">
               Selected projects built with ambitious brands and bold teams
             </h1>
