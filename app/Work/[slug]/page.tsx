@@ -64,18 +64,14 @@ export default function ProjectSlugPage() {
             {/* Hero Main Header Content */}
             <div className="max-w-5xl">
               {/* Display Typography */}
-              <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-tight leading-[1.04] uppercase">
-                <span className="text-[#9BA59D] font-normal">
-                  {project.heroHeadline[0]}
-                </span>
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
+                {project.heroHeadline[0]}
                 <br />
-                <span className="text-[#536757] font-medium">
-                  {project.heroHeadline[1]}
-                </span>
+                {project.heroHeadline[1]}
               </h1>
 
               {/* Narrative Story Description */}
-              <p className="font-subheading text-neutral-600 max-w-3xl text-sm sm:text-base md:text-lg leading-relaxed mt-6 sm:mt-8">
+              <p className="font-subheading text-neutral-500 max-w-3xl text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
                 {project.heroDescription}
               </p>
             </div>

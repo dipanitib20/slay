@@ -246,6 +246,51 @@ footer {
   animation-play-state: paused;
 }
 
+/* FAQ Mobile Slider Animations */
+@keyframes faqStepSlideNext {
+  0% {
+    opacity: 0;
+    transform: translateX(20px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes faqStepSlidePrev {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes faqContentSlideNext {
+  0% {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes faqContentSlidePrev {
+  0% {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* Reusable Section Spacing Utilities (Ensures uniform gap of 40 across all current and future sections) */
 .section-py {
   margin-top: 10rem;

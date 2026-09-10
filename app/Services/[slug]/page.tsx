@@ -58,12 +58,10 @@ export default function ServiceSlugPage() {
             {/* Title & Summary Row */}
             <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr] gap-6 sm:gap-10 items-end justify-between pt-4">
               {/* Main Service Headline */}
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#242424] font-normal leading-[1.08] tracking-tight">
-                <span className="text-[#242424]">{service.heading[0]}</span>
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
+                {service.heading[0]}
                 <br />
-                <span className="text-[#536757] font-medium">
-                  {service.heading[1]}
-                </span>
+                {service.heading[1]}
               </h1>
 
               {/* Service Summary Text */}
@@ -88,8 +86,8 @@ export default function ServiceSlugPage() {
               2. TWO-COLUMN CONTENT SECTION (Sticky until footer)
              ========================================= */}
           <section className="no-scroll-animate my-40 grid grid-cols-1 lg:grid-cols-[1fr_1.85fr] gap-12 sm:gap-16 lg:gap-20 items-start">
-            {/* Left Column: Deliverables (Sticky below navbar until footer) */}
-            <div className="no-scroll-animate lg:sticky lg:top-24 self-start flex flex-col z-20">
+            {/* Left Column: Deliverables (Sticky below navbar with generous clearance) */}
+            <div className="no-scroll-animate lg:sticky lg:top-36 xl:top-40 self-start flex flex-col z-20">
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-[#242424] font-medium tracking-tight mb-4 sm:mb-6">
                 Deliverables
               </h2>

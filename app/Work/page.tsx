@@ -144,17 +144,25 @@ export default function WorkPage() {
       <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Headline Section */}
-          <div className="relative max-w-3xl mx-auto text-center z-40">
+          <div className="relative max-w-4xl mx-auto text-center z-40">
             {/* Doodle "Our Work" on Top Left */}
-            <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-6 md:left-10 lg:left-12 -rotate-12 pointer-events-none select-none">
+            <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-10 md:left-18 lg:left-24 -rotate-12 pointer-events-none select-none">
               <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
                 Our Work
               </span>
             </div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] text-[#536757] font-normal tracking-tight leading-[1.14]">
-              Selected projects built with ambitious brands and bold teams
+            {/* Main Headline */}
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
+              SELECTED PROJECTS
+              <br />
+              BUILT WITH BOLD BRANDS
             </h1>
+
+            {/* Subheading / Description Paragraph */}
+            <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
+              Explore our curated portfolio of digital products, brand identities, and high-impact web experiences built for ambitious teams.
+            </p>
 
             {/* Filter and Search Bar Row */}
             <div className="flex items-center justify-center gap-3 sm:gap-4 mt-8 sm:mt-10 flex-wrap relative z-40">

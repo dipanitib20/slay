@@ -16,130 +16,97 @@ export interface FAQProps {
   subtitle?: string;
 }
 
-/* ── Mobile FAQ Pill: stacked layout, smooth accordion ── */
-function MobileFAQPill({
-  question,
-  answer,
-  color = "bg-[#536757]",
-}: {
-  question: string;
-  answer: string;
-  color?: string;
-}) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div
-      className={`${color} text-white rounded-[22px] px-6 py-4.5 shadow-[0_8px_24px_rgba(83,103,87,0.2)] cursor-pointer w-full select-none transition-all duration-200 border border-white/10`}
-      onClick={() => setOpen(!open)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setOpen(!open);
-        }
-      }}
-    >
-      <div className="flex items-center justify-between gap-3">
-        <span className="font-body text-white font-medium text-base leading-snug">
-          {question}
-        </span>
-        <div
-          className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center flex-shrink-0 bg-white/10"
-          style={{
-            transform: open ? "rotate(45deg)" : "rotate(0deg)",
-            transition: "transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
-          }}
-        >
-          <svg
-            className="w-3.5 h-3.5 text-white"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-          >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="19" y2="12" />
-          </svg>
-        </div>
-      </div>
-      <div
-        style={{
-          maxHeight: open ? "260px" : "0px",
-          overflow: "hidden",
-          transition: "max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
-      >
-        <div className="border-t border-white/15 mt-3 pt-3">
-          <p className="text-sm text-white/85 leading-relaxed font-body">
-            {answer}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const defaultFAQItems: FAQItem[] = [
   {
     question: "What services do you offer?",
-    shortLabel: "Services",
-    tags: "BRAND STRATEGY • UI/UX DESIGN • WEB DEVELOPMENT",
+    shortLabel: "Strategy",
+    tags: "BRAND STRATEGY • MESSAGING • ROADMAP",
     answer:
-      "We provide end-to-end digital solutions including brand strategy, custom UI/UX design, Next.js & React web development, e-commerce, and high-growth performance marketing.",
+      "We define direction, structure, and positioning to support every design decision.",
   },
   {
     question: "How long does a project take?",
-    shortLabel: "Timeline",
-    tags: "2–6 WEEKS • CLEAR MILESTONES • TIMELY DELIVERY",
+    shortLabel: "Discovery",
+    tags: "RESEARCH • USER JOURNEYS • ARCHITECTURE",
     answer:
-      "Typical web design and development projects range between 2 to 6 weeks from discovery to deployment, depending on project scope and deliverables.",
+      "We deep dive into your market landscape and user workflows to establish clear foundational blueprints.",
   },
   {
     question: "What is your pricing structure?",
-    shortLabel: "Pricing",
-    tags: "PROJECT BASED • MONTHLY RETAINERS • TRANSPARENT",
+    shortLabel: "Design",
+    tags: "UI/UX DESIGN • DESIGN SYSTEMS • PROTOTYPES",
     answer:
-      "We offer tailored project-based quotes as well as flexible monthly retainer plans designed to fit your team's specific roadmap and growth targets.",
+      "We craft high-fidelity visual concepts, responsive layouts, and interactive design systems tailored to your brand.",
   },
   {
     question: "Do you work with startups?",
-    shortLabel: "Startups",
-    tags: "EARLY STAGE • SCALING • GLOBAL ENTERPRISES",
+    shortLabel: "Development",
+    tags: "NEXT.JS • REACT • TAILWIND • PERFORMANCE",
     answer:
-      "Yes! We partner with ambitious early-stage startups as well as established global enterprises looking to scale their digital presence.",
+      "We build pixel-perfect, scalable web applications with high-performance animations and rock-solid codebases.",
   },
   {
     question: "Do you provide ongoing support?",
-    shortLabel: "Support",
-    tags: "MAINTENANCE • OPTIMIZATION • CONTINUOUS ITERATION",
+    shortLabel: "Launch & Scale",
+    tags: "DEPLOYMENT • MONITORING • CONTINUOUS GROWTH",
     answer:
-      "Yes, we offer post-launch maintenance, performance optimization, content updates, and continuous design support to ensure your website scales effortlessly.",
-  },
-  {
-    question: "How do we get started?",
-    shortLabel: "Kickoff",
-    tags: "INTRO CALL • ROADMAP • 24–48H PROPOSAL",
-    answer:
-      "Simply reach out via our contact form or book a quick intro call. We will review your goals and deliver a detailed roadmap and estimate within 24-48 hours.",
+      "We ensure smooth production deployment, continuous optimization, and scalable support for long-term growth.",
   },
 ];
 
-const TOTAL = 6;
-const MIDDLE_INDEX = 2;
+const TOTAL = 5;
+const INITIAL_INDEX = 0;
 const STEP_COOLDOWN = 280; // ms — snappy, tactile wheel response
 
-export default function FAQFun({ items = defaultFAQItems }: FAQProps = {}) {
+export default function FAQFun({
+  items = defaultFAQItems,
+  title = "A collaborative approach",
+  subtitle = "PROCESS",
+}: FAQProps = {}) {
   const faqList = items && items.length > 0 ? items : defaultFAQItems;
-  const [activeIndex, setActiveIndex] = useState(MIDDLE_INDEX);
+  const [activeIndex, setActiveIndex] = useState(INITIAL_INDEX);
   const [isPinned, setIsPinned] = useState(false);
+
+  // Mobile horizontal slide state
+  const [mobileIndex, setMobileIndex] = useState(0);
+  const touchStartXRef = useRef<number | null>(null);
+  const touchStartYRef = useRef<number | null>(null);
+
+  const handleMobilePrev = () => {
+    setMobileIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleMobileNext = () => {
+    setMobileIndex((prev) => Math.min(faqList.length - 1, prev + 1));
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartXRef.current = e.touches[0].clientX;
+    touchStartYRef.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartXRef.current === null || touchStartYRef.current === null) return;
+    const deltaX = touchStartXRef.current - e.changedTouches[0].clientX;
+    const deltaY = touchStartYRef.current - e.changedTouches[0].clientY;
+
+    // Only swipe if horizontal motion is dominant
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 35) {
+      if (deltaX > 0) {
+        handleMobileNext();
+      } else {
+        handleMobilePrev();
+      }
+    }
+    touchStartXRef.current = null;
+    touchStartYRef.current = null;
+  };
 
   const wrapperRef = useRef<HTMLDivElement>(null); // Stays in document flow as spacer
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(1200);
 
-  const activeIndexRef = useRef(MIDDLE_INDEX);
+  const activeIndexRef = useRef(INITIAL_INDEX);
   const isPinnedRef = useRef(false);
   const lastScrollYRef = useRef(0);
   const enterDirectionRef = useRef<"down" | "up">("down");
@@ -278,9 +245,8 @@ export default function FAQFun({ items = defaultFAQItems }: FAQProps = {}) {
       : rect.top <= 40 && rect.bottom >= vh * 0.7;
 
     if (isAligned) {
-      if (isFirstEntryRef.current) {
-        isFirstEntryRef.current = false;
-        setActiveIndex(MIDDLE_INDEX);
+      if (enteringFromAbove) {
+        setActiveIndex(0);
       }
       engagePin();
     }
@@ -649,30 +615,167 @@ export default function FAQFun({ items = defaultFAQItems }: FAQProps = {}) {
         </div>
       </div>
 
-      {/* ── STACKED ACCORDION LAYOUT: Mobile (<1024px) ── */}
-      <div className="block lg:hidden relative z-20 w-full section-py px-4 sm:px-8 md:px-12 flex flex-col items-center select-none">
-        <div className="flex flex-col items-center text-center mb-10">
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl tracking-tight leading-[1.12]">
-            <span className="text-neutral-400 font-normal relative inline-block">
-              You ask.
-              <span className="absolute -top-3 -right-8 sm:-top-4 sm:-right-12 font-doodle text-2xl sm:text-3xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal">
-                FAQs
-              </span>
-            </span>
-            <span className="text-[#536757] font-medium block">
-              We make it simple.
-            </span>
-          </h2>
+      {/* ── HORIZONTAL STEP SLIDER: Mobile (<1024px) ── */}
+      <div className="block lg:hidden relative z-20 w-full py-16 px-4 sm:px-8 flex flex-col items-center select-none overflow-hidden">
+        {/* Top Eyebrow Tag */}
+        <div className="inline-flex items-center justify-center gap-2 text-[11px] font-semibold tracking-[0.24em] text-[#536757] uppercase mb-2">
+          <span className="text-[10px] text-[#536757]/70">⁝</span>
+          <span>{subtitle}</span>
+          <span className="text-[10px] text-[#536757]/70">⁝</span>
         </div>
 
-        <div className="flex flex-col gap-4 w-full max-w-[480px]">
-          {faqList.map((faq, idx) => (
-            <MobileFAQPill
-              key={idx}
-              question={faq.question}
-              answer={faq.answer}
-            />
-          ))}
+        {/* Section Heading */}
+        <h2 className="font-heading text-3xl sm:text-4xl text-[#242424] font-medium tracking-tight text-center max-w-xs sm:max-w-sm mx-auto leading-tight">
+          {title}
+        </h2>
+
+        {/* Step Eyebrow + Straight Horizontal Line with Sliding Number Badge */}
+        <div className="w-full flex flex-col items-center mt-9 mb-7">
+          <span className="text-[11px] font-bold tracking-[0.22em] text-[#536757]/80 uppercase mb-3">
+            STEP
+          </span>
+
+          <div className="relative w-full flex items-center justify-center">
+            {/* Straight Horizontal Guide Line */}
+            <div className="absolute inset-x-0 top-1/2 h-[1px] bg-neutral-300/80 -translate-y-1/2" />
+
+            {/* Step Badge with internal horizontal sliding numbers */}
+            <div className="relative z-10 w-12 h-12 rounded-[14px] bg-[#536757] text-white font-bold text-lg flex items-center justify-center shadow-[0_6px_18px_rgba(83,103,87,0.35)] overflow-hidden">
+              <div
+                className="flex w-full h-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
+              >
+                {faqList.map((_, idx) => (
+                  <span
+                    key={idx}
+                    className="w-full h-full shrink-0 flex items-center justify-center text-center"
+                  >
+                    {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide Content Viewport (Continuous Carousel Track) */}
+        <div
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          className="w-full max-w-lg mx-auto overflow-hidden py-2"
+        >
+          <div
+            className="flex w-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform"
+            style={{ transform: `translateX(-${mobileIndex * 100}%)` }}
+          >
+            {faqList.map((item, idx) => {
+              const isCurrent = idx === mobileIndex;
+              return (
+                <div
+                  key={idx}
+                  className="w-full shrink-0 flex flex-col items-center text-center px-4 sm:px-6"
+                  style={{
+                    opacity: isCurrent ? 1 : 0.15,
+                    transform: isCurrent ? "scale(1)" : "scale(0.95)",
+                    filter: isCurrent ? "blur(0px)" : "blur(1.5px)",
+                    transition:
+                      "transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease, filter 0.5s ease",
+                  }}
+                >
+                  {/* Title */}
+                  <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#242424] tracking-tight">
+                    {item.shortLabel || item.question}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-body text-sm sm:text-[15px] text-[#242424]/75 font-normal leading-relaxed mt-2.5 max-w-xs sm:max-w-sm">
+                    {item.answer}
+                  </p>
+
+                  {/* Dotted border tags */}
+                  {item.tags && (
+                    <div className="w-full max-w-xs sm:max-w-sm border-y border-dotted border-neutral-300/90 py-3.5 my-5">
+                      <p className="font-subheading text-[10.5px] sm:text-xs tracking-[0.18em] text-[#536757] font-semibold uppercase">
+                        {item.tags}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* CTA Button */}
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center justify-center px-8 py-3.5 rounded-2xl bg-[#536757] text-white font-semibold text-sm shadow-[0_4px_16px_rgba(83,103,87,0.25)] hover:bg-[#435346] active:scale-95 transition-all duration-200 cursor-pointer"
+                  >
+                    Start your project
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Counter (Sliding Number Display) */}
+        <div className="mt-7 text-[11px] font-bold text-neutral-400 tracking-[0.2em] h-4 overflow-hidden flex items-center justify-center">
+          <div
+            className="flex flex-col items-center transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{ transform: `translateY(-${mobileIndex * 16}px)` }}
+          >
+            {faqList.map((_, idx) => (
+              <span
+                key={idx}
+                className="h-4 flex items-center justify-center leading-none"
+              >
+                {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}/
+                {faqList.length < 10 ? `0${faqList.length}` : faqList.length}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Arrow Controls */}
+        <div className="flex items-center gap-3 mt-3.5">
+          <button
+            type="button"
+            onClick={handleMobilePrev}
+            disabled={mobileIndex === 0}
+            className="w-10 h-10 rounded-xl bg-white border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center text-neutral-700 hover:text-[#536757] hover:border-[#536757]/40 disabled:opacity-30 disabled:cursor-not-allowed active:scale-90 transition-all cursor-pointer"
+            aria-label="Previous step"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={handleMobileNext}
+            disabled={mobileIndex === faqList.length - 1}
+            className="w-10 h-10 rounded-xl bg-white border border-neutral-200/90 shadow-[0_2px_8px_rgba(0,0,0,0.06)] flex items-center justify-center text-neutral-700 hover:text-[#536757] hover:border-[#536757]/40 disabled:opacity-30 disabled:cursor-not-allowed active:scale-90 transition-all cursor-pointer"
+            aria-label="Next step"
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2.5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
