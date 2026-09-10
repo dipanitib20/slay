@@ -22,6 +22,7 @@ export default function Navbar({
     { name: "Work", href: "/Work" },
   ],
   mobileLinks = [
+    { name: "Services", href: "/Services" },
     { name: "Case studies", href: "/Work" },
     { name: "About us", href: "/About" },
     { name: "Contact", href: "/Contact" },
@@ -194,9 +195,9 @@ export default function Navbar({
             aria-hidden="true"
           />
 
-          {/* Floating Dropdown Card (Smooth Scale, Fade & Slide in/out) */}
+          {/* Floating Dropdown Card (Matches closed navbar width with smooth scale, fade & slide) */}
           <div
-            className={`relative w-full max-w-sm sm:max-w-md h-fit bg-white rounded-[32px] p-6 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] border border-black/5 z-10 flex flex-col transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] transform will-change-transform ${
+            className={`relative w-full h-fit bg-white rounded-[32px] p-6 sm:p-7 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.35)] border border-black/5 z-10 flex flex-col transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] transform will-change-transform ${
               isVisible
                 ? "opacity-100 scale-100 translate-y-0"
                 : "opacity-0 scale-[0.96] -translate-y-3 pointer-events-none"
