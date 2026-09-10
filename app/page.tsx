@@ -227,7 +227,7 @@ export default function Home() {
       </section>
 
       {/* Client Logos Carousel Section (Single Row) */}
-      <section className="relative w-full bg-[#F5F4F3] section-py overflow-hidden">
+      <section className="relative w-full bg-[#F5F4F3] my-40 overflow-hidden">
         {/* Left & Right Gradient Fade Masks */}
         <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* "What we bring" / Services Showcase Section */}
-      <section id="services" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">
+      <section id="services" className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-4xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
@@ -354,7 +354,7 @@ export default function Home() {
       </section>
 
       {/* "What We've Made" / Project Showcase Section */}
-      <section id="work" className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12">
+      <section id="work" className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-3xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
@@ -444,7 +444,7 @@ export default function Home() {
       <FAQFun />
 
       {/* Criss-Crossing Ticker Ribbons Section */}
-      <section className="relative w-full py-16 sm:py-24 md:py-32 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">
+      <section className="relative w-full my-40 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">
         <div className="relative w-full flex items-center justify-center h-[220px] sm:h-[260px] md:h-[290px]">
           {/* Black Strip Ribbon (Angled bottom-left to top-right, moving right-to-left) */}
           <div className="absolute w-[300vw] left-1/2 -translate-x-1/2 py-3.5 sm:py-4 md:py-5 bg-[#1C1C1C] text-white shadow-[0_12px_28px_rgba(0,0,0,0.35)] rotate-[6.5deg] sm:rotate-[5deg] md:rotate-[3.8deg] z-10 overflow-hidden flex items-center">

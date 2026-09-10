@@ -15,145 +15,153 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12">
-        <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
-          {/* Hero Section Header */}
-          <div className="relative max-w-4xl mx-auto text-center">
-            {/* Doodle "About us" on Top Left */}
-            <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-10 md:left-18 lg:left-24 -rotate-12 pointer-events-none select-none">
-              <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
-                About us
-              </span>
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
-              WE BUILD BRANDS
-              <br />
-              THAT MOVE FORWARD
-            </h1>
-
-            {/* Subheading / Description Paragraph */}
-            <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-              We bring strategy, creativity, and technology together to create impactful brands, content, campaigns, and digital experiences that help businesses stand out and grow.
-            </p>
-          </div>
-
-          {/* Large Office Image Container */}
-          <div className="relative w-full aspect-[16/9] sm:aspect-[2.1/1] md:aspect-[2.4/1] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#ECEAE6] mt-10 sm:mt-14 md:mt-16 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
-            <Image
-              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600&auto=format&fit=crop"
-              alt="Office Workspace"
-              fill
-              priority
-              className="object-cover"
-            />
-          </div>
-
-          {/* Creativity with Purpose Section Header */}
-          <div className="text-center mt-20 sm:mt-28 md:mt-36 max-w-2xl mx-auto">
-            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[56px] tracking-tight leading-[1.12]">
-              <span className="text-[#9BA59D] font-normal italic">Creativity </span>
-              <span className="text-[#242424] font-medium">with</span>
-              <br />
-              <span className="text-[#536757] font-medium">purpose</span>
-            </h2>
-            <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-              We combine bold ideas with smart strategy and seamless execution to create digital work that moves businesses forward.
-            </p>
-          </div>
-
-          {/* Approach & Belief Rows */}
-          <div className="mt-14 sm:mt-20 md:mt-24 flex flex-col gap-14 sm:gap-20 md:gap-24">
-            {/* Row 1: OUR APPROACH */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8 lg:gap-12">
-              {/* Left Column: Text */}
-              <div className="flex flex-col">
-                <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
-                  OUR APPROACH
-                </h3>
-                <p className="font-subheading text-[#242424] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-3 sm:mb-4">
-                  We bring strategy, creativity, and technology together to build digital experiences that actually move businesses forward.
-                </p>
-                <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
-                  From social media and performance marketing to brand identity and web development, every piece is designed with a clear purpose: get attention, build trust, and drive action.
-                </p>
+      <main className="flex-1">
+        {/* Section 1: Hero & Workspace Image */}
+        <section className="pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
+          <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
+            {/* Hero Section Header */}
+            <div className="relative max-w-4xl mx-auto text-center">
+              {/* Doodle "About us" on Top Left */}
+              <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-10 md:left-18 lg:left-24 -rotate-12 pointer-events-none select-none">
+                <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
+                  About us
+                </span>
               </div>
 
-              {/* Middle: Horizontal Arrow pointing RIGHT */}
-              <div className="hidden lg:flex items-center justify-center shrink-0 px-2 lg:px-6">
-                <svg
-                  className="w-20 md:w-28 lg:w-36 h-6 text-[#7E8B80]"
-                  viewBox="0 0 120 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 10H116M116 10L102 2M116 10L102 18"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+              {/* Main Headline */}
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
+                WE BUILD BRANDS
+                <br />
+                THAT MOVE FORWARD
+              </h1>
+
+              {/* Subheading / Description Paragraph */}
+              <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
+                We bring strategy, creativity, and technology together to create impactful brands, content, campaigns, and digital experiences that help businesses stand out and grow.
+              </p>
+            </div>
+
+            {/* Large Office Image Container */}
+            <div className="relative w-full aspect-[16/9] sm:aspect-[2.1/1] md:aspect-[2.4/1] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#ECEAE6] mt-10 sm:mt-14 md:mt-16 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+              <Image
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600&auto=format&fit=crop"
+                alt="Office Workspace"
+                fill
+                priority
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2: Creativity with Purpose & Approach/Belief */}
+        <section className="my-40 px-4 sm:px-8 md:px-12">
+          <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
+            {/* Creativity with Purpose Section Header */}
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[56px] tracking-tight leading-[1.12]">
+                <span className="text-[#9BA59D] font-normal italic">Creativity </span>
+                <span className="text-[#242424] font-medium">with</span>
+                <br />
+                <span className="text-[#536757] font-medium">purpose</span>
+              </h2>
+              <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
+                We combine bold ideas with smart strategy and seamless execution to create digital work that moves businesses forward.
+              </p>
+            </div>
+
+            {/* Approach & Belief Rows */}
+            <div className="mt-14 sm:mt-20 md:mt-24 flex flex-col gap-14 sm:gap-20 md:gap-24">
+              {/* Row 1: OUR APPROACH */}
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8 lg:gap-12">
+                {/* Left Column: Text */}
+                <div className="flex flex-col">
+                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
+                    OUR APPROACH
+                  </h3>
+                  <p className="font-subheading text-[#242424] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-3 sm:mb-4">
+                    We bring strategy, creativity, and technology together to build digital experiences that actually move businesses forward.
+                  </p>
+                  <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
+                    From social media and performance marketing to brand identity and web development, every piece is designed with a clear purpose: get attention, build trust, and drive action.
+                  </p>
+                </div>
+
+                {/* Middle: Horizontal Arrow pointing RIGHT */}
+                <div className="hidden lg:flex items-center justify-center shrink-0 px-2 lg:px-6">
+                  <svg
+                    className="w-20 md:w-28 lg:w-36 h-6 text-[#7E8B80]"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 10H116M116 10L102 2M116 10L102 18"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                {/* Right Column: Image Card */}
+                <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
+                    alt="Our Approach"
+                    fill
+                    className="object-cover"
                   />
-                </svg>
+                </div>
               </div>
 
-              {/* Right Column: Image Card */}
-              <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
-                <Image
-                  src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
-                  alt="Our Approach"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Row 2: OUR BELIEF */}
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8 lg:gap-12">
-              {/* Left Column: Image Card */}
-              <div className="order-2 lg:order-1 relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
-                <Image
-                  src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
-                  alt="Our Belief"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Middle: Horizontal Arrow pointing LEFT */}
-              <div className="hidden lg:flex order-2 items-center justify-center shrink-0 px-2 lg:px-6">
-                <svg
-                  className="w-20 md:w-28 lg:w-36 h-6 text-[#7E8B80]"
-                  viewBox="0 0 120 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M120 10H4M4 10L18 2M4 10L18 18"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+              {/* Row 2: OUR BELIEF */}
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8 lg:gap-12">
+                {/* Left Column: Image Card */}
+                <div className="order-2 lg:order-1 relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+                  <Image
+                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
+                    alt="Our Belief"
+                    fill
+                    className="object-cover"
                   />
-                </svg>
-              </div>
+                </div>
 
-              {/* Right Column: Text */}
-              <div className="order-1 lg:order-3 flex flex-col lg:items-end lg:text-right">
-                <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
-                  OUR BELIEF
-                </h3>
-                <p className="font-subheading text-[#242424] font-medium text-xs sm:text-sm md:text-[15px] leading-snug mb-2 sm:mb-3">
-                  Great marketing should do more than look good.
-                </p>
-                <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
-                  We believe strong brands are built when bold ideas meet smart execution. That means creating content people want to watch, campaigns people want to click, and digital experiences people want to remember.
-                </p>
+                {/* Middle: Horizontal Arrow pointing LEFT */}
+                <div className="hidden lg:flex order-2 items-center justify-center shrink-0 px-2 lg:px-6">
+                  <svg
+                    className="w-20 md:w-28 lg:w-36 h-6 text-[#7E8B80]"
+                    viewBox="0 0 120 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M120 10H4M4 10L18 2M4 10L18 18"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                {/* Right Column: Text */}
+                <div className="order-1 lg:order-3 flex flex-col lg:items-end lg:text-right">
+                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
+                    OUR BELIEF
+                  </h3>
+                  <p className="font-subheading text-[#242424] font-medium text-xs sm:text-sm md:text-[15px] leading-snug mb-2 sm:mb-3">
+                    Great marketing should do more than look good.
+                  </p>
+                  <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
+                    We believe strong brands are built when bold ideas meet smart execution. That means creating content people want to watch, campaigns people want to click, and digital experiences people want to remember.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
 
       {/* Brand Trust Logo Carousel Section */}
@@ -163,7 +171,7 @@ export default function AboutPage() {
       <WorldMap />
 
       {/* "The Numbers Speak" Stats / Impact Section */}
-      <section className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
@@ -229,7 +237,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section ("The people behind the work") */}
-      <section className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 md:mb-20">

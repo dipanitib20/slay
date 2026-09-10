@@ -434,7 +434,7 @@ export default function FAQFun({ items = defaultFAQItems }: FAQProps = {}) {
   };
 
   return (
-    <section className="relative w-full bg-[#F5F4F3] select-none no-scroll-animate">
+    <section className="relative w-full bg-[#F5F4F3] my-40 select-none no-scroll-animate">
       {/* ── DESKTOP FIXED PINNED CONTAINER (≥1024px) ── */}
       <div
         ref={wrapperRef}

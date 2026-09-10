@@ -255,7 +255,7 @@ export default function TestimonialSection() {
   const activeSet = testimonialSets[currentSetIndex];
 
   return (
-    <section className="relative w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 overflow-hidden select-none">
+    <section className="relative w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 overflow-hidden select-none">
       <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
         {/* ── DESKTOP SCATTERED LAYOUT ── */}
         <div

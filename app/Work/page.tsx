@@ -141,7 +141,7 @@ export default function WorkPage() {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12">
+      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Headline Section */}
           <div className="relative max-w-3xl mx-auto text-center z-40">

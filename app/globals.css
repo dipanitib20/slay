@@ -12,22 +12,9 @@
   --font-doodle: "Square Peg", cursive;
 
   /* Standardized Section Spacing System:
-     Matches the exact gap between Client Logos and 'What We Bring' section
-     (Mobile: 136px, Tablet/sm: 192px, Desktop/md+: 208px) */
-  --section-gap: 136px;
-  --section-py: calc(var(--section-gap) / 2);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --section-gap: 192px;
-  }
-}
-
-@media (min-width: 768px) {
-  :root {
-    --section-gap: 208px;
-  }
+     Equal margin/padding of 40 (10rem / 160px) across all sections for symmetric gaps */
+  --section-gap: 10rem;
+  --section-py: 10rem;
 }
 
 @theme inline {
@@ -259,18 +246,18 @@ footer {
   animation-play-state: paused;
 }
 
-/* Reusable Section Spacing Utilities (Ensures uniform gap across all current and future sections) */
+/* Reusable Section Spacing Utilities (Ensures uniform gap of 40 across all current and future sections) */
 .section-py {
-  padding-top: var(--section-py);
-  padding-bottom: var(--section-py);
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .section-pt {
-  padding-top: var(--section-py);
+  margin-top: 10rem;
 }
 
 .section-pb {
-  padding-bottom: var(--section-py);
+  margin-bottom: 10rem;
 }
 
 .section-gap {

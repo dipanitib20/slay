@@ -19,7 +19,7 @@ export default function ServiceSlugPage() {
       {/* Floating Header / Navbar */}
       <Navbar />
 
-      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 pb-20 sm:pb-28 px-4 sm:px-8 md:px-12">
+      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Back Navigation */}
           <div className="mb-6 sm:mb-8">
@@ -47,7 +47,7 @@ export default function ServiceSlugPage() {
           {/* =========================================
               1. HERO SECTION (Header + Full-Width Image)
              ========================================= */}
-          <div className="relative">
+          <section className="relative mb-40">
             {/* Doodle "Service Details" */}
             <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-4 -rotate-12 pointer-events-none select-none">
               <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
@@ -82,12 +82,12 @@ export default function ServiceSlugPage() {
                 className="object-cover"
               />
             </div>
-          </div>
+          </section>
 
           {/* =========================================
               2. TWO-COLUMN CONTENT SECTION (Sticky until footer)
              ========================================= */}
-          <div className="no-scroll-animate mt-16 sm:mt-24 md:mt-28 grid grid-cols-1 lg:grid-cols-[1fr_1.85fr] gap-12 sm:gap-16 lg:gap-20 items-start">
+          <section className="no-scroll-animate my-40 grid grid-cols-1 lg:grid-cols-[1fr_1.85fr] gap-12 sm:gap-16 lg:gap-20 items-start">
             {/* Left Column: Deliverables (Sticky below navbar until footer) */}
             <div className="no-scroll-animate lg:sticky lg:top-24 self-start flex flex-col z-20">
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl text-[#242424] font-medium tracking-tight mb-4 sm:mb-6">
@@ -252,7 +252,7 @@ export default function ServiceSlugPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </main>
 

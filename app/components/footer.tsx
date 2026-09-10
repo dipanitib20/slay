@@ -87,7 +87,7 @@ export default function Footer({
   };
 
   return (
-    <footer className="w-full bg-[#F5F4F3] section-pt px-4 sm:px-8 md:px-12 relative overflow-hidden">
+    <footer className="w-full bg-[#F5F4F3] mt-40 pt-10 px-4 sm:px-8 md:px-12 relative overflow-hidden">
       {/* Background Watermark Text "Slay" with Geist Font & Subtle Spacing */}
       <div
         className="absolute top-6 sm:top-8 md:top-10 left-1/2 -translate-x-[48%] pointer-events-none select-none z-0 font-geist font-regular text-[150px] sm:text-[270px] md:text-[380px] lg:text-[470px] leading-none tracking-[-0.01em] whitespace-nowrap bg-gradient-to-b from-[#536757]/[0.75] via-[#536757]/[0.1] to-transparent bg-clip-text text-transparent [mask-image:linear-gradient(to_bottom,black_15%,transparent_85%)]"

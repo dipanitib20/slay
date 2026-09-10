@@ -115,7 +115,7 @@ export default function WorldMap() {
   };
 
   return (
-    <section className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 relative overflow-hidden">
+    <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 relative overflow-hidden">
       <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
         {/* Section Header */}
         <div className="relative max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-14">

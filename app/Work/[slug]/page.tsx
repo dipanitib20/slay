@@ -36,7 +36,7 @@ export default function ProjectSlugPage() {
         {/* =========================================
             1. HERO SECTION (Saratoga Inspired)
            ========================================= */}
-        <section className="pt-32 sm:pt-40 md:pt-44 pb-14 sm:pb-20 px-4 sm:px-8 md:px-12">
+        <section className="pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Back to Work Link */}
             <div className="mb-6 sm:mb-8">
@@ -63,7 +63,7 @@ export default function ProjectSlugPage() {
 
             {/* Hero Main Header Content */}
             <div className="max-w-5xl">
-              {/* Stacked Display Typography */}
+              {/* Display Typography */}
               <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl lg:text-[80px] tracking-tight leading-[1.04] uppercase">
                 <span className="text-[#9BA59D] font-normal">
                   {project.heroHeadline[0]}
@@ -120,7 +120,7 @@ export default function ProjectSlugPage() {
             </div>
 
             {/* Star Icon Divider */}
-            <div className="flex items-center justify-center my-12 sm:my-16">
+            <div className="flex items-center justify-center mt-12 sm:mt-16">
               <div className="flex items-center gap-3">
                 <div className="w-12 sm:w-24 h-[1px] bg-black/[0.1]" />
                 <span className="text-[#536757] text-lg sm:text-xl select-none">
@@ -135,7 +135,7 @@ export default function ProjectSlugPage() {
         {/* =========================================
             2. 3-COLUMN BENTO MASONRY IMAGE GALLERY
            ========================================= */}
-        <section className="px-4 sm:px-8 md:px-12 pb-20 sm:pb-28">
+        <section className="my-40 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Bento Grid Container */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 items-start">
@@ -277,7 +277,7 @@ export default function ProjectSlugPage() {
         {/* =========================================
             4. NEXT PROJECT / MORE WORK BENTO CTA
            ========================================= */}
-        <section className="w-full bg-[#F5F4F3] section-py px-4 sm:px-8 md:px-12 border-t border-black/[0.04]">
+        <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 border-t border-black/[0.04] pt-40">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
               <div>
