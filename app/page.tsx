@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
 import FAQFun from "./components/faqfun";
+import FAQ from "./components/faq";
 import TestimonialSection from "./components/testimonial";
 import Footer from "./components/footer";
 
@@ -440,8 +441,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Fun Section */}
       <FAQFun />
+
+      {/* Scattered Pills FAQ Section */}
+      <FAQ />
 
       {/* Criss-Crossing Ticker Ribbons Section */}
       <section className="relative w-full my-40 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">

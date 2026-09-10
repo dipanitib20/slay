@@ -12,10 +12,11 @@ interface FooterProps {
 
 export default function Footer({
   navLinks = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/About" },
     { name: "Services", href: "/Services" },
     { name: "Work", href: "/Work" },
-    { name: "Insights", href: "#insights" },
+    { name: "Terms & Conditions", href: "/TnC" },
   ],
   attributionText = "A agency created by",
   creatorName = "Designncode",

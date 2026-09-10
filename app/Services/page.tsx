@@ -61,35 +61,23 @@ export default function ServicesPage() {
   ];
 
   const industryCol1 = [
-    { name: "Real Estate", rotation: -8 },
-    { name: "Healthcare", rotation: 6 },
-    { name: "Fintech", rotation: -5 },
-    { name: "E-commerce", rotation: 7 },
-    { name: "Food & Beverage", rotation: -6 },
-  ];
-
-  const industryCol2 = [
     { name: "E-commerce", rotation: 6 },
     { name: "SaaS & AI", rotation: -7 },
     { name: "Fashion & Retail", rotation: 5 },
-    { name: "Real Estate", rotation: -9 },
+    { name: "Real Estate", rotation: -8 },
     { name: "Crypto & Web3", rotation: 6 },
+    { name: "Fintech", rotation: -5 },
+    { name: "Food & Beverage", rotation: 6 },
   ];
 
-  const industryCol3 = [
+  const industryCol2 = [
     { name: "Healthcare", rotation: 7 },
     { name: "Education", rotation: -6 },
     { name: "Luxury Goods", rotation: 8 },
     { name: "Automotive", rotation: -5 },
     { name: "Media & Culture", rotation: 7 },
-  ];
-
-  const industryCol4 = [
     { name: "Beauty & Wellness", rotation: -7 },
-    { name: "Travel & Tourism", rotation: 6 },
-    { name: "Hospitality", rotation: -4 },
-    { name: "Entertainment", rotation: 8 },
-    { name: "Logistics", rotation: -5 },
+    { name: "Hospitality", rotation: 5 },
   ];
 
   return (
@@ -186,10 +174,10 @@ export default function ServicesPage() {
                 <div className="absolute top-0 inset-x-0 h-20 sm:h-28 bg-gradient-to-b from-white via-white/85 to-transparent pointer-events-none z-10" />
                 <div className="absolute bottom-0 inset-x-0 h-16 sm:h-24 bg-gradient-to-t from-white via-white/85 to-transparent pointer-events-none z-10" />
 
-                {/* Staggered Vertical Columns (2 on mobile, 3 on sm, 4 on md+) */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 h-full items-start justify-items-center max-w-5xl mx-auto">
+                {/* Staggered Vertical Columns (Only 2 Middle Columns Centered) */}
+                <div className="grid grid-cols-2 gap-6 sm:gap-10 md:gap-14 h-full items-start justify-items-center max-w-2xl mx-auto">
                   {/* Column 1 */}
-                  <div className="flex flex-col animate-marquee-vertical gap-6 sm:gap-8 items-center py-2 shrink-0">
+                  <div className="flex flex-col animate-marquee-vertical-fast gap-6 sm:gap-8 items-center py-2 shrink-0">
                     {[...industryCol1, ...industryCol1].map((item, idx) => (
                       <div
                         key={`col1-${idx}`}
@@ -202,36 +190,10 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Column 2 */}
-                  <div className="flex flex-col animate-marquee-vertical-fast gap-6 sm:gap-8 items-center py-2 shrink-0">
+                  <div className="flex flex-col animate-marquee-vertical-slow gap-6 sm:gap-8 items-center py-2 shrink-0">
                     {[...industryCol2, ...industryCol2].map((item, idx) => (
                       <div
                         key={`col2-${idx}`}
-                        style={{ transform: `rotate(${item.rotation}deg)` }}
-                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-sm sm:text-[15px] md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
-                      >
-                        {item.name}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Column 3 */}
-                  <div className="hidden sm:flex flex-col animate-marquee-vertical-slow gap-6 sm:gap-8 items-center py-2 shrink-0">
-                    {[...industryCol3, ...industryCol3].map((item, idx) => (
-                      <div
-                        key={`col3-${idx}`}
-                        style={{ transform: `rotate(${item.rotation}deg)` }}
-                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-sm sm:text-[15px] md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
-                      >
-                        {item.name}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Column 4 */}
-                  <div className="hidden md:flex flex-col animate-marquee-vertical gap-6 sm:gap-8 items-center py-2 shrink-0">
-                    {[...industryCol4, ...industryCol4].map((item, idx) => (
-                      <div
-                        key={`col4-${idx}`}
                         style={{ transform: `rotate(${item.rotation}deg)` }}
                         className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-sm sm:text-[15px] md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
                       >
