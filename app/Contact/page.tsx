@@ -81,7 +81,7 @@ export default function ContactPage() {
 
   const ShortInTimeCard = ({ className = "" }: { className?: string }) => (
     <div
-      className={`bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04] max-w-sm ${className}`}
+      className={`bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 border border-black/[0.04] max-w-sm ${className}`}
     >
       {/* Calendly Logo */}
       <div className="mb-5 sm:mb-6">
