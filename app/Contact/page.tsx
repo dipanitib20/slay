@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import Navbar from "../components/navbar";
 import SimpleFAQ from "../components/simplefaq";
 import Footer from "../components/footer";
@@ -82,21 +83,15 @@ export default function ContactPage() {
     <div
       className={`bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04] max-w-sm ${className}`}
     >
-      {/* Coral/Salmon Accent Block */}
-      <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#E68782] flex items-center justify-center text-white mb-5 sm:mb-6 shadow-sm">
-        <svg
-          className="w-7 h-7 sm:w-8 sm:h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-          />
-        </svg>
+      {/* Calendly Logo */}
+      <div className="mb-5 sm:mb-6">
+        <Image
+          src="/Calendly.png"
+          alt="Calendly"
+          width={130}
+          height={27}
+          className="h-7 sm:h-8 w-auto object-contain"
+        />
       </div>
 
       {/* Card Title */}
