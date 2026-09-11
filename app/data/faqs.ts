@@ -10,33 +10,45 @@ export interface FAQItem {
 export const contactFAQs: FAQItem[] = [
   {
     id: "contact-1",
-    question: "How quickly will you get back to my message?",
+    question: "What happens after I send this?",
     answer:
-      "We respond to all contact requests and inquiries within 24 business hours. If you need immediate scheduling, booking a direct calendar call is the fastest route.",
+      "We reply within one working day. If it looks like a fit, we set up a 30 minute call. If it does not, we will tell you that honestly rather than putting you through a process that goes nowhere.",
   },
   {
     id: "contact-2",
-    question: "What details should I prepare before our call?",
+    question: "Does the first call cost anything?",
     answer:
-      "A brief overview of your brand goals, target timeline, rough budget range, and any inspirational references or current pain points help us hit the ground running.",
+      "No. The first call runs 30 minutes and costs nothing. It is a conversation about where your brand is and what is not working, not a pitch deck.",
   },
   {
     id: "contact-3",
-    question: "Do you sign Non-Disclosure Agreements (NDAs)?",
+    question: "What should I have ready for the call?",
     answer:
-      "Yes, absolutely. We take client confidentiality and intellectual property seriously and are happy to review or sign a mutual NDA prior to discussing sensitive project details.",
+      "Nothing formal. Your social handles or website, a rough sense of budget, and what you would consider a good outcome six months from now. If you have none of that yet, come anyway and we will work it out on the call.",
   },
   {
     id: "contact-4",
-    question: "Are your discovery and intro calls free?",
+    question: "When will I get a proposal?",
     answer:
-      "Yes, our initial discovery call is 100% free with no obligation. We use this time to assess fit, understand your needs, and outline actionable recommendations.",
+      "Within two to three working days of the call. It carries an exact number and an exact scope, not a package sheet.",
   },
   {
     id: "contact-5",
-    question: "What timezones does your team work across?",
+    question: "What if I am not ready to start yet?",
     answer:
-      "We operate with a flexible core team that collaborates seamlessly across US, European, and Asian/Pacific time zones to accommodate your schedule.",
+      "Reach out anyway. Plenty of brands talk to us a few months before they are ready. We would rather have the context early than start cold later.",
+  },
+  {
+    id: "contact-6",
+    question: "Do you work with brands outside India?",
+    answer:
+      "Yes. We work across time zones, communicate in English, and schedule calls and reporting around your working hours rather than ours.",
+  },
+  {
+    id: "contact-7",
+    question: "I already have an agency. Is it worth talking?",
+    answer:
+      "Yes, and we will be straight with you. If what you have is working and the issue is a fixable one, we will say so. We are not interested in winning an account we cannot improve.",
   },
 ];
 

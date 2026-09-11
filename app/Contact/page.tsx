@@ -138,13 +138,22 @@ export default function ContactPage() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] text-[#536757] font-normal tracking-tight leading-[1.12]">
-                Got a project in 
-                <br />mind?
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-normal tracking-tight leading-[1.12]">
+                <span className="text-[#536757]/65">Got a project</span>
+                <br />
+                <span className="text-[#536757]">in mind?</span>
               </h1>
 
+              {/* Intro Subtext */}
+              <div className="mt-6 sm:mt-8 space-y-2.5 max-w-md">
+                
+                <p className="font-body text-[#242424]/80 text-sm sm:text-[15px] leading-relaxed">
+                  Fashion, jewellery, wellness, education, hospitality and B2B. Some came for one campaign and stayed for the year. If your brand is somewhere on that list, we have probably already solved the problem you are about to describe on the call.
+                </p>
+              </div>
+
               {/* "Short in time?" Card (Visible on Desktop here) */}
-              <ShortInTimeCard className="hidden lg:block mt-10 sm:mt-14" />
+              <ShortInTimeCard className="hidden lg:block mt-10 sm:mt-12" />
             </div>
 
             {/* Right Column: Contact Request Form (Aligned to Right Edge) */}
