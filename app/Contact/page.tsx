@@ -458,7 +458,7 @@ export default function ContactPage() {
       </main>
 
       {/* FAQ Section */}
-      <SimpleFAQ />
+      <SimpleFAQ pageKey="contact" />
 
       {/* Footer Section */}
       <Footer />

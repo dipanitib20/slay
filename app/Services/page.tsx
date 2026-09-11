@@ -222,7 +222,7 @@ export default function ServicesPage() {
       </main>
 
       {/* FAQ Section */}
-      <SimpleFAQ />
+      <SimpleFAQ pageKey="services" />
 
       {/* Footer Section */}
       <Footer />

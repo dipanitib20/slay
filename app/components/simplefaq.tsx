@@ -1,55 +1,33 @@
 "use client";
 
 import React, { useState } from "react";
+import { FAQItem, defaultFAQs, pageFAQs } from "../data/faqs";
 
-export interface FAQItem {
-  id?: string | number;
-  question: string;
-  answer: string;
-}
+export type { FAQItem };
 
 interface SimpleFAQProps {
   titlePrimary?: string;
   titleSecondary?: string;
   faqs?: FAQItem[];
+  pageKey?: keyof typeof pageFAQs | string;
   className?: string;
 }
-
-const defaultFAQs: FAQItem[] = [
-  {
-    question: "What services do you offer?",
-    answer:
-      "We specialize in end-to-end digital solutions, including brand strategy, UI/UX design, modern web development, conversion-focused landing pages, and ongoing creative support.",
-  },
-  {
-    question: "How long does a typical project take?",
-    answer:
-      "Most projects range between 2 to 6 weeks depending on the complexity, scope of work, and feedback turnaround. We always establish clear milestone timelines at kickoff.",
-  },
-  {
-    question: "What is your pricing and engagement model?",
-    answer:
-      "We offer flexible project-based fixed pricing as well as monthly dedicated design & development retainers. Every proposal is transparent with zero hidden costs.",
-  },
-  {
-    question: "Do you provide ongoing support after launch?",
-    answer:
-      "Yes, we offer ongoing maintenance, performance optimization, content updates, and continuous design support to ensure your website scales effortlessly.",
-  },
-  {
-    question: "How do we get started?",
-    answer:
-      "Simply book an introductory call or reach out via our contact form. We'll discuss your goals, requirements, and provide a tailored plan within 24-48 hours.",
-  },
-];
 
 export default function SimpleFAQ({
   titlePrimary = "Questions?",
   titleSecondary = "We are here to help",
-  faqs = defaultFAQs,
+  faqs,
+  pageKey,
   className = "",
 }: SimpleFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const activeFaqs =
+    faqs && faqs.length > 0
+      ? faqs
+      : pageKey && pageFAQs[pageKey as keyof typeof pageFAQs]
+      ? pageFAQs[pageKey as keyof typeof pageFAQs]
+      : defaultFAQs;
 
   const toggleFAQ = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -82,7 +60,7 @@ export default function SimpleFAQ({
 
           {/* Right Column: FAQ Accordion List */}
           <div className="lg:col-span-7 flex flex-col divide-y divide-[#E2DFD9]">
-            {faqs.map((faq, index) => {
+            {activeFaqs.map((faq, index) => {
               const isOpen = openIndex === index;
               return (
                 <div key={faq.id || index} className="py-4 sm:py-5 first:pt-0 last:pb-0">

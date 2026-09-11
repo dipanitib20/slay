@@ -7,6 +7,7 @@ import { useParams } from "next/navigation";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { getServiceBySlug, servicesData } from "../../data/services";
+import { serviceDetailFAQs, defaultFAQs } from "../../data/faqs";
 
 export default function ServiceSlugPage() {
   const params = useParams();
@@ -191,28 +192,7 @@ export default function ServiceSlugPage() {
 
                 {/* FAQ Accordion List */}
                 <div className="flex flex-col divide-y divide-[#E2DFD9] border-t border-[#E2DFD9]">
-                  {[
-                    {
-                      question: "What is included in the initial discovery phase?",
-                      answer:
-                        "We conduct an in-depth audit of your current brand, market competitors, target demographics, and business objectives before writing a single line of code or designing a single asset.",
-                    },
-                    {
-                      question: "How long does a typical engagement take?",
-                      answer:
-                        "Project timelines typically range between 2 to 6 weeks depending on scope, deliverables, and feedback turnaround cycles.",
-                    },
-                    {
-                      question: "Can this service be tailored to our specific stack?",
-                      answer:
-                        "Absolutely. Every deliverable is bespoke and custom-engineered to seamlessly integrate with your existing tools, tech stack, and internal workflows.",
-                    },
-                    {
-                      question: "Do you provide ongoing support after launch?",
-                      answer:
-                        "Yes, we offer monthly retainer packages for continuous design, performance optimization, content iterations, and technical maintenance.",
-                    },
-                  ].map((faq, fIdx) => (
+                  {(serviceDetailFAQs[service.slug] || defaultFAQs).map((faq, fIdx) => (
                     <details
                       key={fIdx}
                       className="group py-4 sm:py-5 first:pt-4 last:pb-4 focus:outline-none cursor-pointer"
