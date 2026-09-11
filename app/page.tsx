@@ -12,133 +12,25 @@ import Footer from "./components/footer";
 export default function Home() {
   const [activeCard, setActiveCard] = useState<number>(0);
 
-  const logos = [
-    {
-      id: "logo1",
-      element: (
-        <div className="flex items-center gap-3 text-[#242424] opacity-85 hover:opacity-100 hover:text-[#536757] transition-all duration-200 shrink-0">
-          <svg
-            className="h-8 sm:h-9 w-auto"
-            viewBox="0 0 48 48"
-            fill="currentColor"
-          >
-            <circle cx="10" cy="24" r="5" />
-            <circle cx="24" cy="12" r="5" />
-            <circle cx="24" cy="36" r="5" />
-            <circle cx="38" cy="24" r="5" />
-            <path
-              d="M10 24L24 12M10 24L24 36M24 12L38 24M24 36L38 24M24 12V36"
-              stroke="currentColor"
-              strokeWidth="4"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="text-2xl sm:text-[28px] font-extrabold tracking-tight">
-            logoipsum
-          </span>
-        </div>
-      ),
-    },
-    {
-      id: "logo2",
-      element: (
-        <div className="flex items-center text-[#242424] opacity-85 hover:opacity-100 transition-all duration-200 shrink-0">
-          <svg
-            className="h-9 sm:h-10 w-auto"
-            viewBox="0 0 120 70"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M18 48L32 62H74L60 48H18Z" fill="#242424" />
-            <path d="M74 62L88 48V20L74 34V62Z" fill="#242424" />
-            <path d="M32 62V48H60V62H32Z" fill="#242424" />
-            <path d="M80 20L96 36H114L98 20H80Z" fill="#242424" />
-            <path d="M114 36L120 30V12L114 18V36Z" fill="#242424" />
-            <polygon
-              points="12,18 48,18 42,46 6,46"
-              fill="white"
-              stroke="#242424"
-              strokeWidth="7"
-              strokeLinejoin="round"
-            />
-            <polygon points="22,26 38,26 34,38 18,38" fill="#242424" />
-            <polygon
-              points="52,18 88,18 82,46 46,46"
-              fill="white"
-              stroke="#242424"
-              strokeWidth="7"
-              strokeLinejoin="round"
-            />
-            <polygon points="62,26 78,26 74,38 58,38" fill="#242424" />
-            <polygon points="84,10 96,10 93,18 81,18" fill="#242424" />
-            <polygon points="99,10 111,10 108,18 96,18" fill="#242424" />
-          </svg>
-        </div>
-      ),
-    },
-    {
-      id: "logo3",
-      element: (
-        <div className="flex items-center text-[#242424] opacity-85 hover:opacity-100 hover:text-[#536757] transition-all duration-200 shrink-0">
-          <svg
-            className="h-8 sm:h-9 w-auto"
-            viewBox="0 0 200 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <text
-              x="0"
-              y="30"
-              fontFamily="system-ui, -apple-system, sans-serif"
-              fontSize="32"
-              fontWeight="900"
-              fontStyle="italic"
-              fill="#242424"
-              letterSpacing="-1"
-            >
-              Logoipsum
-            </text>
-            <line
-              x1="-5"
-              y1="16"
-              x2="105"
-              y2="16"
-              stroke="#F5F4F3"
-              strokeWidth="2.5"
-            />
-            <line
-              x1="-10"
-              y1="16"
-              x2="25"
-              y2="16"
-              stroke="#242424"
-              strokeWidth="2.5"
-            />
-          </svg>
-        </div>
-      ),
-    },
-    {
-      id: "logo4",
-      element: (
-        <div className="flex items-center gap-3 text-[#242424] opacity-85 hover:opacity-100 hover:text-[#536757] transition-all duration-200 shrink-0">
-          <svg
-            className="h-8 sm:h-9 w-auto"
-            viewBox="0 0 40 40"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M20 38C29.9411 38 38 29.9411 38 20C38 10.0589 29.9411 2 20 2C10.0589 2 2 10.0589 2 20C2 29.9411 10.0589 38 20 38ZM20 28C24.4183 28 28 24.4183 28 20C28 15.5817 24.4183 12 20 12C16.8 12 14.05 13.88 12.8 16.6C12.3 14.8 13.2 12.7 15 11.5C10 13.5 7.5 19 9.5 24C11.5 29 17 31.5 22 29.5C20.5 28.5 20 28 20 28Z"
-            />
-          </svg>
-          <span className="text-2xl sm:text-[28px] font-extrabold tracking-tight">
-            Logoipsum
-          </span>
-        </div>
-      ),
-    },
+  const clientLogos = [
+    { id: "1", src: "/Homelogocarousel/1.svg", alt: "Client Logo 1" },
+    { id: "2", src: "/Homelogocarousel/2.svg", alt: "Client Logo 2" },
+    { id: "3", src: "/Homelogocarousel/3.svg", alt: "Client Logo 3" },
+    { id: "4", src: "/Homelogocarousel/4.svg", alt: "Client Logo 4" },
+    { id: "5", src: "/Homelogocarousel/5.svg", alt: "Client Logo 5" },
+    { id: "6", src: "/Homelogocarousel/6.svg", alt: "Client Logo 6" },
+    { id: "7", src: "/Homelogocarousel/7.svg", alt: "Client Logo 7" },
+    { id: "8", src: "/Homelogocarousel/8.svg", alt: "Client Logo 8" },
+    { id: "9", src: "/Homelogocarousel/9.svg", alt: "Client Logo 9" },
+    { id: "10", src: "/Homelogocarousel/10.svg", alt: "Client Logo 10" },
+    { id: "11", src: "/Homelogocarousel/11.svg", alt: "Client Logo 11" },
+    { id: "12", src: "/Homelogocarousel/12.svg", alt: "Client Logo 12" },
+    { id: "13", src: "/Homelogocarousel/13.svg", alt: "Client Logo 13" },
+    { id: "16", src: "/Homelogocarousel/16.svg", alt: "Client Logo 16" },
+    { id: "17", src: "/Homelogocarousel/17.svg", alt: "Client Logo 17" },
+    { id: "18", src: "/Homelogocarousel/18.svg", alt: "Client Logo 18" },
+    { id: "19", src: "/Homelogocarousel/19.svg", alt: "Client Logo 19" },
+    { id: "20", src: "/Homelogocarousel/20.svg", alt: "Client Logo 20" },
   ];
 
   const services = [
@@ -234,18 +126,34 @@ export default function Home() {
         <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
 
         {/* Infinite Carousel Track */}
-        <div className="animate-marquee flex items-center gap-16 sm:gap-24">
-          {logos.map((logo, index) => (
-            <div key={`set1-${logo.id}-${index}`}>{logo.element}</div>
+        <div className="animate-marquee flex items-center gap-5 sm:gap-7 md:gap-9 shrink-0">
+          {clientLogos.map((logo, index) => (
+            <div
+              key={`set1-${logo.id}-${index}`}
+              className="flex items-center justify-center shrink-0"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={264}
+                height={115}
+                className="h-[60px] sm:h-[70px] md:h-[82px] w-auto max-w-[190px] sm:max-w-[234px] md:max-w-[275px] object-contain opacity-85 hover:opacity-100 transition-opacity duration-200"
+              />
+            </div>
           ))}
-          {logos.map((logo, index) => (
-            <div key={`set2-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`set3-${logo.id}-${index}`}>{logo.element}</div>
-          ))}
-          {logos.map((logo, index) => (
-            <div key={`set4-${logo.id}-${index}`}>{logo.element}</div>
+          {clientLogos.map((logo, index) => (
+            <div
+              key={`set2-${logo.id}-${index}`}
+              className="flex items-center justify-center shrink-0"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={264}
+                height={115}
+                className="h-[60px] sm:h-[70px] md:h-[82px] w-auto max-w-[190px] sm:max-w-[234px] md:max-w-[275px] object-contain opacity-85 hover:opacity-100 transition-opacity duration-200"
+              />
+            </div>
           ))}
         </div>
       </section>

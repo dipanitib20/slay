@@ -30,14 +30,14 @@ export default function AboutPage() {
 
               {/* Main Headline */}
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
-                WE BUILD BRANDS
+                <span className="text-[#536757]/65">WE BUILD BRANDS</span>
                 <br />
-                THAT MOVE FORWARD
+                <span className="text-[#536757]">THAT MOVE FORWARD</span>
               </h1>
 
               {/* Subheading / Description Paragraph */}
               <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-                We bring strategy, creativity, and technology together to create impactful brands, content, campaigns, and digital experiences that help businesses stand out and grow.
+                We are a full service social media and digital marketing agency, built in house and run small on purpose. Strategy, content, campaigns and design, made by people who know your brand rather than a rotating cast who do not.
               </p>
             </div>
 
@@ -59,14 +59,13 @@ export default function AboutPage() {
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Creativity with Purpose Section Header */}
             <div className="text-center max-w-2xl mx-auto">
-              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[56px] tracking-tight leading-[1.12]">
-                <span className="text-[#9BA59D] font-normal italic">Creativity </span>
-                <span className="text-[#242424] font-medium">with</span>
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[56px] tracking-tight leading-[1.12]">
+                <span className="text-[#536757]/65 font-normal">We build brands that make people </span>
                 <br />
-                <span className="text-[#536757] font-medium">purpose</span>
+                <span className="text-[#536757] font-medium">stop and actually look</span>
               </h2>
               <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-                We combine bold ideas with smart strategy and seamless execution to create digital work that moves businesses forward.
+                Every creative decision we make is answering a question. Who is this for, what should it make them do, and how will we know it worked. Pretty is the baseline, not the point.
               </p>
             </div>
 
@@ -77,13 +76,10 @@ export default function AboutPage() {
                 {/* Left Column: Text */}
                 <div className="flex flex-col">
                   <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
-                    OUR APPROACH
+                    OUR MISSION
                   </h3>
                   <p className="font-subheading text-[#242424] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-3 sm:mb-4">
-                    We bring strategy, creativity, and technology together to build digital experiences that actually move businesses forward.
-                  </p>
-                  <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
-                    From social media and performance marketing to brand identity and web development, every piece is designed with a clear purpose: get attention, build trust, and drive action.
+                    Slay The Strategy exists to close the gap between what a founder has actually built and what the world sees online. Too many good brands are let down by content that makes them look like everybody else. We bring strategy to every piece of content and accountability to every strategy, so the brands we work with look exactly as good as they are.  
                   </p>
                 </div>
 
@@ -149,13 +145,10 @@ export default function AboutPage() {
                 {/* Right Column: Text */}
                 <div className="order-1 lg:order-3 flex flex-col lg:items-end lg:text-right">
                   <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
-                    OUR BELIEF
+                    OUR VISION
                   </h3>
                   <p className="font-subheading text-[#242424] font-medium text-xs sm:text-sm md:text-[15px] leading-snug mb-2 sm:mb-3">
-                    Great marketing should do more than look good.
-                  </p>
-                  <p className="font-subheading text-neutral-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
-                    We believe strong brands are built when bold ideas meet smart execution. That means creating content people want to watch, campaigns people want to click, and digital experiences people want to remember.
+                    To become the first agency ambitious founders think of when average is not an option, in India and in every market we build into. We want Slay The Strategy to be the reference point for what a modern brand should look and sound like online, with a body of work sharp enough that clients arrive already convinced. 
                   </p>
                 </div>
               </div>
@@ -184,32 +177,26 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* 4 Metrics Columns with Vertical Divider Lines */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-0 lg:divide-x lg:divide-neutral-300/80">
+          {/* 3 Metrics Columns with Vertical Divider Lines */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-0 md:divide-x md:divide-neutral-300/80">
             {[
               {
-                label: "Brands Transformed",
-                value: "75+",
+                label: "Brands Worked With",
+                value: "25+",
                 description:
-                  "Helping ambitious brands build stronger digital experiences.",
-              },
-              {
-                label: "Projects Delivered",
-                value: "120+",
-                description:
-                  "From strategy and branding to design, development, and growth.",
+                  "Across social media, content, performance marketing, and brand identity since 2024.",
               },
               {
                 label: "Years of Experience",
-                value: "8Y",
+                value: "7.5Y",
                 description:
-                  "Bringing together creativity, technology, and business thinking.",
+                  "Marketing experience across agency and corporate backgrounds before building this.",
               },
               {
-                label: "Client Satisfaction",
-                value: "98%",
+                label: "Based in Delhi NCR",
+                value: "NCR",
                 description:
-                  "Building partnerships that turn first projects into long-term work.",
+                  "Delhi NCR based. Working with clients across India. Time zones have not stopped us yet.",
               },
             ].map((stat, idx) => (
               <div

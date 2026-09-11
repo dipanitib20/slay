@@ -120,12 +120,11 @@ export default function WorldMap() {
         {/* Section Header */}
         <div className="relative max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-14">
           <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.14]">
-            <span className="text-[#9BA59D] font-normal">Connect with teams & </span>
-            <span className="text-[#536757] font-medium">clients worldwide</span>
+            <span className="text-[#9BA59D] font-normal">Built</span>
+            <span className="text-[#536757] font-medium">Without Borders</span>
           </h2>
           <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-            Our platform enables seamless collaboration across continents,
-            bringing the world to your workspace.
+            We are set up to work anywhere. Calls, approvals and reporting run around your working hours rather than ours, we communicate in English, and remote is not a compromise here, it is how the agency was built.
           </p>
         </div>
 
