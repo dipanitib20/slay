@@ -111,7 +111,7 @@ export default function ContactPage() {
           href="https://cal.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-[#242424] hover:bg-[#383838] text-white font-body font-medium text-sm sm:text-base px-7 sm:px-8 py-3 rounded-[12px] shadow-[0_8px_20px_rgba(0,0,0,0.35)] active:scale-95 transition-all duration-200"
+          className="inline-flex items-center justify-center bg-[#242424] hover:bg-[#383838] text-white font-body font-medium text-sm sm:text-base px-7 sm:px-8 py-3 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.35)] active:scale-95 transition-all duration-200"
         >
           Book a call
         </a>
@@ -443,7 +443,7 @@ export default function ContactPage() {
                 <div className="flex flex-col items-center gap-3 pt-2">
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[0_12px_28px_rgba(0,0,0,0.35)] active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                    className="w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.35)] active:scale-[0.98] transition-all duration-200 cursor-pointer"
                   >
                     {isSubmitted ? "Request Submitted! ✓" : "Submit"}
                   </button>

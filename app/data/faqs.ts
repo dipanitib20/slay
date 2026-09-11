@@ -58,33 +58,45 @@ export const contactFAQs: FAQItem[] = [
 export const servicesFAQs: FAQItem[] = [
   {
     id: "services-1",
-    question: "What core services do you specialize in?",
+    question: "Do I have to take all of this?",
     answer:
-      "We specialize in end-to-end digital solutions: Web Design & Development, Brand Identity & Strategy, Performance Marketing, Social Media Management, and UGC Content Shoots.",
+      "No. Most brands start with one or two services and add more once something is working. We would rather do two things properly than six things thinly, and we will tell you which two on the first call.",
   },
   {
     id: "services-2",
-    question: "Can I hire you for a single service or only full packages?",
+    question: "Which services should I start with?",
     answer:
-      "You can engage us for a specific standalone service (such as a high-impact website redesign or brand identity sprint) or an integrated full-service growth retainer.",
+      "It depends on where the gap actually is. If your content is inconsistent, social media management comes first. If content is fine but nothing is converting, the problem is usually the funnel or the site. On the first call we look at what you have and tell you honestly where the money is best spent.",
   },
   {
     id: "services-3",
-    question: "What tech stacks and platforms do you build with?",
+    question: "Can I combine services into one retainer?",
     answer:
-      "We build modern, fast web applications using Next.js, React, TypeScript, Tailwind CSS, Webflow, Shopify, and headless CMS platforms tailored to your business needs.",
+      "Yes, and this is how most of our accounts run. Social media management, performance marketing and content shoots sit together naturally. Web design, brand identity and shoots are quoted as projects and can run alongside a retainer.",
   },
   {
     id: "services-4",
-    question: "How do you handle revisions and design feedback?",
+    question: "Do you take on one off projects, or is it retainer only?",
     answer:
-      "We provide structured iterative review cycles via Figma and live staging environments with dedicated feedback checkpoints at every major project milestone.",
+      "Both. Websites, brand identity and content shoots are regularly done as standalone projects. Social media management and performance marketing work best as retainers, because both compound over time.",
   },
   {
     id: "services-5",
-    question: "What is your pricing and engagement model?",
+    question: "What is the minimum commitment?",
     answer:
-      "We offer transparent project-based fixed pricing as well as monthly dedicated design & engineering retainers with zero hidden costs.",
+      "Retainers run on a three month minimum, then continue monthly. Projects run to the timeline set out in the proposal, with no ongoing commitment attached.",
+  },
+  {
+    id: "services-6",
+    question: "Is everything done in house?",
+    answer:
+      "Yes. Strategy, content, design, editing and performance all run through our own team. Where a shoot needs specialist crew or talent, we bring them in and manage them, and you will know that upfront.",
+  },
+  {
+    id: "services-7",
+    question: "Can you work alongside my existing team?",
+    answer:
+      "Often yes. Some clients have an in house designer or a content person and bring us in for strategy and the parts they cannot cover. We will be clear about where the line sits so nothing gets done twice or missed entirely.",
   },
 ];
 

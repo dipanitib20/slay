@@ -7,77 +7,24 @@ import Navbar from "../components/navbar";
 import SimpleFAQ from "../components/simplefaq";
 import Footer from "../components/footer";
 
-interface ServiceItem {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  buttonText: string;
-  image: string;
-}
+import { servicesData } from "../data/services";
 
 export default function ServicesPage() {
-  const services: ServiceItem[] = [
-    {
-      id: "web-design",
-      slug: "web-design-development",
-      title: "Web Design & Development",
-      description:
-        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that feel effortless, load fast, and turn visitors into customers.",
-      buttonText: "Explore web design",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      id: "brand-identity",
-      slug: "brand-identity-strategy",
-      title: "Brand Identity & Strategy",
-      description:
-        "We build brands that connect and endure — from visual systems, typography, and logos to comprehensive positioning and voice guidelines.",
-      buttonText: "Explore branding",
-      image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      id: "social-media",
-      slug: "social-media-management",
-      title: "Social Media Management",
-      description:
-        "We turn your social presence into a brand people remember — with strategic content, consistent posting, and a voice that feels truly yours.",
-      buttonText: "Explore social growth",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-      id: "performance-marketing",
-      slug: "performance-marketing",
-      title: "Performance Marketing",
-      description:
-        "Data-driven ad campaigns designed to convert, scale your revenue, and maximize ROI across paid social and search channels.",
-      buttonText: "Explore marketing",
-      image:
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-    },
-  ];
 
   const industryCol1 = [
-    { name: "E-commerce", rotation: 6 },
-    { name: "SaaS & AI", rotation: -7 },
-    { name: "Fashion & Retail", rotation: 5 },
-    { name: "Real Estate", rotation: -8 },
-    { name: "Crypto & Web3", rotation: 6 },
-    { name: "Fintech", rotation: -5 },
-    { name: "Food & Beverage", rotation: 6 },
+    { name: "Fashion and Lifestyle", rotation: 5 },
+    { name: "Wellness and D2C", rotation: -6 },
+    { name: "Education", rotation: 6 },
+    { name: "Legal and Professional Services", rotation: -5 },
+    { name: "Media and Entertainment", rotation: 6 },
   ];
 
   const industryCol2 = [
-    { name: "Healthcare", rotation: 7 },
-    { name: "Education", rotation: -6 },
-    { name: "Luxury Goods", rotation: 8 },
-    { name: "Automotive", rotation: -5 },
-    { name: "Media & Culture", rotation: 7 },
-    { name: "Beauty & Wellness", rotation: -7 },
-    { name: "Hospitality", rotation: 5 },
+    { name: "Jewellery and Luxury", rotation: -7 },
+    { name: "Food and Beverage", rotation: 6 },
+    { name: "Events and Nightlife", rotation: -6 },
+    { name: "Corporate and B2B", rotation: 7 },
+    { name: "Fashion and Lifestyle", rotation: -5 },
   ];
 
   return (
@@ -92,31 +39,23 @@ export default function ServicesPage() {
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Section Header */}
             <div className="relative max-w-4xl mx-auto text-center">
-              {/* Doodle "What We Do" on Top Left */}
-              <div className="absolute -top-7 sm:-top-9 md:-top-11 left-2 sm:left-10 md:left-18 lg:left-24 -rotate-12 pointer-events-none select-none">
-                <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#7E8B80]/80">
-                  What We Do
-                </span>
-              </div>
-
               {/* Main Headline */}
               <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[#536757] font-normal leading-[1.08]">
-                FROM BIG IDEAS
+                <span className="text-[#536757]/65">What we</span>
                 <br />
-                TO BIGGER IMPACT
+                <span className="text-[#536757]">actually do</span>
               </h1>
 
               {/* Subheading / Description Paragraph */}
               <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
-                From strategy and branding to content, marketing, and web
-                development, we create digital experiences designed to connect,
-                convert, and grow your business.
+                We work with brands that want strategy behind the content and results behind the strategy. Six things, all of it in house, none of it outsourced to someone you will never meet. Here is where we spend our time and why we are good at it.
+
               </p>
             </div>
 
-            {/* 2x2 Services Grid */}
+            {/* 6 Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 mt-12 sm:mt-16 md:mt-20">
-              {services.map((service, index) => (
+              {servicesData.map((service, index) => (
                 <div
                   key={`${service.id}-${index}`}
                   className="bg-white rounded-[28px] sm:rounded-[36px] p-3 sm:p-4 lg:p-4.5 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04] flex flex-col justify-between group hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300"
@@ -127,7 +66,7 @@ export default function ServicesPage() {
                     className="block relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-[22px] sm:rounded-[28px] overflow-hidden bg-[#ECEAE6]"
                   >
                     <Image
-                      src={service.image}
+                      src={service.heroImage}
                       alt={service.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -152,7 +91,7 @@ export default function ServicesPage() {
                     <div className="mt-6 sm:mt-8 flex justify-center">
                       <Link
                         href={`/Services/${service.slug}`}
-                        className="w-full inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[0_12px_28px_rgba(0,0,0,0.5)] active:scale-95 transition-all duration-300 hover:bg-[#3B4A3D]"
+                        className="w-full inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.45)] active:scale-95 transition-all duration-300"
                       >
                         {service.buttonText}
                       </Link>
@@ -207,10 +146,10 @@ export default function ServicesPage() {
               {/* Bottom Headline & Description */}
               <div className="relative z-20 text-center max-w-3xl mx-auto mt-6 sm:mt-10">
                 <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.14]">
-                  <span className="text-neutral-400 font-normal">Different industries. </span>
-                  <span className="text-[#2B382E] font-medium">Same</span>
+                  <span className="text-neutral-400 font-normal">Industries we </span>
+                  <span className="text-[#2B382E] font-medium">have</span>
                   <br />
-                  <span className="text-[#2B382E] font-medium">ambition.</span>
+                  <span className="text-[#2B382E] font-medium">built in </span>
                 </h2>
                 <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-sm sm:text-base md:text-[17px] leading-relaxed mt-4 sm:mt-5">
                   We work across industries to solve unique challenges with thoughtful design, technology, and strategy.
