@@ -255,94 +255,96 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Staggered 3-Column Team Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-x-12 lg:gap-y-16">
+          {/* Centered 2-Column Team Grid */}
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 lg:gap-14 justify-center">
             {[
               {
                 id: "member-1",
-                name: "Arjun Mehta",
+                name: "Dipani Tibrewala",
                 role: "Founder & CEO",
+                bio: "Hi, I am Dipani. Before Slay the Strategy, I spent 7.5 years in corporate marketing: Plan.Net TechNest India, Accenture, Edelman. I have worked on campaigns for Jaguar, BMW, Microsoft, HPE, and Infosys. I know what brand building looks like at scale and I know exactly what goes wrong when strategy turns into safe, recycled, forgettable content. That is what I left behind in 2024. Slay the Strategy is built for founders and brands who are done blending in. We work with D2C brands, creators, luxury names, professional service businesses, schools, and everyone in between who wants a presence that actually reflects how good what they have built really is. I oversee strategy personally on every account. We move fast, communicate like real people, and do not deliver work we are not proud to put our name on. If you are here, you already know you want more than what you have been getting. Let us talk.",
                 image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
-                gridPlacement: "lg:col-start-1 lg:row-start-1",
               },
               {
                 id: "member-2",
-                name: "Arjun Mehta",
-                role: "Founder & CEO",
+                name: "Srivats Tibrewala",
+                role: "Co-Founder",
+                bio: "Every great creative operation needs someone who makes sure the whole thing actually runs. That is Srivats. Srivats Tibrewala is the Co-Founder of Slay the Strategy and the person responsible for keeping the agency financially sharp and operationally tight. While strategy and creative work happens at the front, Srivats makes sure everything behind it—the numbers, the processes, the structure—is solid enough to scale. He is the reason we move fast without things falling apart. The backbone of everything we build here.",
                 image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
-                gridPlacement: "lg:col-start-2 lg:row-start-1",
-              },
-              {
-                id: "member-3",
-                name: "Arjun Mehta",
-                role: "Founder & CEO",
-                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
-                gridPlacement: "lg:col-start-2 lg:row-start-2",
-              },
-              {
-                id: "member-4",
-                name: "Arjun Mehta",
-                role: "Founder & CEO",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop",
-                gridPlacement: "lg:col-start-3 lg:row-start-2",
               },
             ].map((member) => (
               <div
                 key={member.id}
-                className={`flex flex-col group ${member.gridPlacement}`}
+                className="flex flex-col group flip-card-perspective w-full"
               >
-                {/* Image Frame Card */}
-                <div className="relative w-full aspect-[4/5] rounded-[28px] sm:rounded-[34px] md:rounded-[40px] bg-[#ECEAE6]/70 border border-black/[0.04] overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)] group-hover:border-[#536757]/20">
-                  {/* Fallback / Mockup Style Placeholder Vector */}
-                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                    <svg
-                      className="w-16 h-16 sm:w-20 sm:h-20 text-[#BAC7BE]/70 group-hover:text-[#536757]/60 transition-colors duration-300"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="8"
-                        y="8"
-                        width="64"
-                        height="64"
-                        rx="16"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                {/* 3D Revolving Card Frame */}
+                <div className="flip-card-inner aspect-[4/5] rounded-[28px] sm:rounded-[34px] md:rounded-[40px] cursor-pointer">
+                  {/* FRONT FACE (Photo & Details) */}
+                  <div className="flip-card-front rounded-[28px] sm:rounded-[34px] md:rounded-[40px] bg-[#ECEAE6]/70 border border-black/[0.04] overflow-hidden flex items-center justify-center shadow-sm group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-shadow duration-500">
+                    {/* Fallback Placeholder Vector */}
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <svg
+                        className="w-16 h-16 sm:w-20 sm:h-20 text-[#BAC7BE]/70"
+                        viewBox="0 0 80 80"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <rect
+                          x="8"
+                          y="8"
+                          width="64"
+                          height="64"
+                          rx="16"
+                          stroke="currentColor"
+                          strokeWidth="3.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle cx="52" cy="28" r="2.5" fill="currentColor" />
+                        <path
+                          d="M14 56L30 38C32.5 35.5 36.5 35.5 39 38L52 52"
+                          stroke="currentColor"
+                          strokeWidth="3.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M44 46L49 40C51.5 37.5 55.5 37.5 58 40L66 50"
+                          stroke="currentColor"
+                          strokeWidth="3.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+
+                    {/* Portrait Image */}
+                    {member.image && (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover"
                       />
-                      <circle cx="52" cy="28" r="2.5" fill="currentColor" />
-                      <path
-                        d="M14 56L30 38C32.5 35.5 36.5 35.5 39 38L52 52"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <path
-                        d="M44 46L49 40C51.5 37.5 55.5 37.5 58 40L66 50"
-                        stroke="currentColor"
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    )}
+
+                    {/* Subtle Flip Badge Hint */}
+                    <div className="absolute bottom-4 right-4 sm:bottom-5 sm:right-5 bg-black/40 backdrop-blur-md text-white/90 text-[10px] sm:text-[11px] font-subheading tracking-wider px-3 py-1.5 rounded-full border border-white/15 opacity-80 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none flex items-center gap-1.5">
+                      <span>Hover to flip</span>
+                      <span>↺</span>
+                    </div>
                   </div>
 
-                  {/* Actual Portrait Image if present */}
-                  {member.image && (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                  )}
+                  {/* BACK FACE (Full Text Content) */}
+                  <div className="flip-card-back rounded-[28px] sm:rounded-[34px] md:rounded-[40px] bg-[#222222] text-white p-6 sm:p-7 md:p-8 flex flex-col justify-center overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.35)] bg-[radial-gradient(ellipse_at_top_right,rgba(83,103,87,0.25),transparent_70%)]">
+                    <p className="font-subheading text-white/90 text-xs sm:text-[13px] md:text-[13.5px] lg:text-[14px] leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Name & Role Text */}
+                {/* Name & Role Text Below Card */}
                 <div className="mt-4 sm:mt-5 text-left">
                   <h3 className="font-heading text-2xl sm:text-[26px] md:text-[28px] text-[#536757] font-normal tracking-tight">
                     {member.name}
