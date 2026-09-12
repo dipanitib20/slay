@@ -37,31 +37,31 @@ export default function Home() {
   const services = [
     {
       number: "01/N",
-      slug: "social-media-management",
-      title: "Social Media Management",
+      slug: "Social media management",
+      title: "Social media management",
       description:
-        "We turn your social presence into a brand people remember — with strategic content, consistent posting, and a voice that feels truly yours.",
+        "Instagram is no longer optional. It is your storefront, your first impression and your most visited sales page. We manage it end to end, so it consistently reflects the true value of your brand.",
     },
     {
       number: "02/N",
-      slug: "performance-marketing",
+      slug: "Performance Marketing",
       title: "Performance Marketing",
       description:
-        "Data-driven ad campaigns designed to convert, scale your revenue, and maximize ROI across paid social and search channels.",
+        "Anyone can boost a post. We build actual campaigns. Audience research, creative strategy, ad copy, testing and optimisation based on what the data says. Every rupee tracked. ",
     },
     {
       number: "03/N",
-      slug: "brand-identity-strategy",
+      slug: "UGC & Content shoots",
       title: "Brand Identity & Strategy",
       description:
-        "We shape memorable brand identities, timeless design systems, and positioning strategies that build trust and command authority.",
+        "We plan the shoot, direct the creative and coordinate production from concept to final edit. Every piece of content is built around your brand aesthetic and what your specific audience actually responds to.",
     },
     {
       number: "04/N",
-      slug: "web-design-development",
-      title: "Web Design & Development",
+      slug: "Founder Led Marketing",
+      title: "Founder Led Marketing",
       description:
-        "From high-converting landing pages to complete brand websites, we design and develop digital experiences that turn visitors into customers.",
+        "The most underused marketing asset at any founder led company is the founder. Your story, your perspective, your presence on LinkedIn and Instagram builds trust faster than any ad campaign. We write, we post, we position. You grow.",
     },
   ];
 
@@ -180,13 +180,13 @@ export default function Home() {
 
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">Built to make </span>
-              <span className="text-[#536757] font-medium">your brand grow.</span>
+              <span className="text-neutral-400 font-normal">We build brands that make people </span>
+              <span className="text-[#536757] font-medium">stop and actually look.</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
             <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mt-6">
-              From bold brand identities and scroll-stopping content to high-performing campaigns and seamless websites, we bring creativity, strategy, and technology together to build brands that stand out and perform.
+              Most brands blend into the scroll. Same formats, same captions, same energy. Slay the Strategy exists to change that. We are a full service social media and digital marketing agency crafting aesthetic, intentional content for founders who refuse to be forgettable. No average work. No noise. Just work worth stopping for.
             </p>
           </div>
 
@@ -284,13 +284,13 @@ export default function Home() {
 
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">Work That </span>
-              <span className="text-[#536757] font-medium">Makes an Impact</span>
+              <span className="text-neutral-400 font-normal">Real work.</span>
+              <span className="text-[#536757] font-medium">Real brands. </span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
             <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-base sm:text-lg leading-relaxed mt-4 sm:mt-5">
-              From strategy to execution, we create work that gets attention, builds brands, and drives results.
+              We have worked across fashion, wellness, education, entertainment, luxury, events and everything in between. Some of our work is featured below in full. The rest you can see as a quick look at what we did and why it worked.
             </p>
           </div>
 
