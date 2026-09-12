@@ -14,54 +14,55 @@ export interface FAQProps {
   items?: FAQItem[];
   title?: string;
   subtitle?: string;
+  subDescription?: string;
 }
 
 const defaultFAQItems: FAQItem[] = [
   {
-    question: "What services do you offer?",
-    shortLabel: "Strategy",
-    tags: "BRAND STRATEGY • MESSAGING • ROADMAP",
+    question: "The Conversation",
+    shortLabel: "The Conversation",
+    tags: "DISCOVERY • ALIGNMENT • FIT ASSESSMENT",
     answer:
-      "We define direction, structure, and positioning to support every design decision.",
+      "We start with a call, not a pitch deck. Where the brand is now, what is not working, and what success actually looks like in numbers. If we are not the right fit, we will tell you on that call.",
   },
   {
-    question: "How long does a project take?",
-    shortLabel: "Discovery",
-    tags: "RESEARCH • USER JOURNEYS • ARCHITECTURE",
+    question: "Audit and Strategy",
+    shortLabel: "Audit & Strategy",
+    tags: "AUDIENCE • COMPETITORS • POSITIONING",
     answer:
-      "We deep dive into your market landscape and user workflows to establish clear foundational blueprints.",
+      "We go through your existing presence, your competitors and your audience, then build the strategy. Positioning, content pillars, platform plan and what we are measuring. You approve it before anything gets made.",
   },
   {
-    question: "What is your pricing structure?",
-    shortLabel: "Design",
-    tags: "UI/UX DESIGN • DESIGN SYSTEMS • PROTOTYPES",
+    question: "The Build",
+    shortLabel: "The Build",
+    tags: "CONTENT CALENDAR • CREATIVE DIRECTION • SCRIPTS",
     answer:
-      "We craft high-fidelity visual concepts, responsive layouts, and interactive design systems tailored to your brand.",
+      "Content calendar, scripts, shoot plans, creative direction and design. This is where the brand world gets built. The first calendar reaches you before the month starts, never mid month.",
   },
   {
-    question: "Do you work with startups?",
-    shortLabel: "Development",
-    tags: "NEXT.JS • REACT • TAILWIND • PERFORMANCE",
+    question: "Execution",
+    shortLabel: "Execution",
+    tags: "PRODUCTION • SCHEDULING • COMMUNITY",
     answer:
-      "We build pixel-perfect, scalable web applications with high-performance animations and rock-solid codebases.",
+      "We shoot, edit, write, schedule, post and handle the comments and DMs. Consistent, on brand and on time. You stay in the loop without having to chase anyone for an update.",
   },
   {
-    question: "Do you provide ongoing support?",
-    shortLabel: "Launch & Scale",
-    tags: "DEPLOYMENT • MONITORING • CONTINUOUS GROWTH",
+    question: "Report and Sharpen",
+    shortLabel: "Report & Sharpen",
+    tags: "MONTHLY REPORTING • ANALYTICS • REFINEMENT",
     answer:
-      "We ensure smooth production deployment, continuous optimization, and scalable support for long-term growth.",
+      "Monthly reporting on what performed and what did not, and a strategy adjustment based on it. No agency should be running month six the same way it ran month one.",
   },
 ];
 
-const TOTAL = 5;
 const INITIAL_INDEX = 0;
 const STEP_COOLDOWN = 280; // ms — snappy, tactile wheel response
 
 export default function FAQFun({
   items = defaultFAQItems,
-  title = "A collaborative approach",
+  title = "How we actually work",
   subtitle = "PROCESS",
+  subDescription = "Five steps. No mystery, no jargon, no six week onboarding before anything gets made.",
 }: FAQProps = {}) {
   const faqList = items && items.length > 0 ? items : defaultFAQItems;
   const [activeIndex, setActiveIndex] = useState(INITIAL_INDEX);
@@ -148,181 +149,67 @@ export default function FAQFun({
   const isStepLockedRef = useRef(false);
   const resetDeltaTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Smoothly lock pin position and absorb entry momentum
-  const engagePin = useCallback(() => {
-    isPinnedRef.current = true;
-    setIsPinned(true);
-    // Absorb landing momentum from entry flick so it doesn't accidentally advance the wheel
-    isStepLockedRef.current = true;
-    setTimeout(() => {
-      isStepLockedRef.current = false;
-    }, 380);
-
-    if (wrapperRef.current) {
-      const rect = wrapperRef.current.getBoundingClientRect();
-      const targetY = window.scrollY + rect.top;
-      pinScrollYRef.current = targetY;
-      window.scrollTo({ top: targetY, behavior: "instant" as ScrollBehavior });
-    }
-  }, []);
-
-  // Release lock smoothly into adjacent sections without glitching or layout shifts
   const releasePin = useCallback((direction: "down" | "up") => {
     isPinnedRef.current = false;
     setIsPinned(false);
-    lastReleaseTimeRef.current = Date.now();
     exitDirectionRef.current = direction;
+    lastReleaseTimeRef.current = Date.now();
 
-    if (wrapperRef.current) {
-      const rect = wrapperRef.current.getBoundingClientRect();
-      const currentY = window.scrollY;
-      if (direction === "down") {
-        // Smoothly glide into the section below
-        const target = currentY + rect.bottom + 80;
-        window.scrollTo({ top: target, behavior: "smooth" });
-      } else {
-        // Smoothly glide into the section above
-        const target = Math.max(0, currentY + rect.top - window.innerHeight * 0.4);
-        window.scrollTo({ top: target, behavior: "smooth" });
-      }
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+
+    if (!wrapperRef.current) return;
+    const rect = wrapperRef.current.getBoundingClientRect();
+    const currentY = window.scrollY;
+
+    if (direction === "down") {
+      const targetY = currentY + rect.bottom;
+      window.scrollTo({ top: targetY, behavior: "instant" });
+    } else {
+      const targetY = currentY + rect.top - window.innerHeight;
+      window.scrollTo({ top: Math.max(0, targetY), behavior: "instant" });
     }
   }, []);
 
-  // Check if FAQ section has entered viewport and engage pin
-  const checkAndEngage = useCallback(() => {
-    if (window.innerWidth < 1024) return;
-    if (isPinnedRef.current) return;
-
-    // 700ms cooldown after boundary release to let exit scroll complete smoothly
-    if (Date.now() - lastReleaseTimeRef.current < 700) return;
-
-    const wrapper = wrapperRef.current;
-    if (!wrapper) return;
-
-    const rect = wrapper.getBoundingClientRect();
-    const vh = window.innerHeight;
-
-    // If user previously exited downwards (scrolled down past 6/6):
-    if (exitDirectionRef.current === "down") {
-      // If user scrolled all the way back above the FAQ section, clear exit direction
-      if (rect.top > vh) {
-        exitDirectionRef.current = null;
-      } else {
-        // Only re-pin if user reversed direction and is now scrolling UP back into FAQ
-        const isReEnteringFromBelow =
-          enterDirectionRef.current === "up" && rect.top <= 40 && rect.bottom >= vh * 0.7;
-        if (isReEnteringFromBelow) {
-          exitDirectionRef.current = null;
-          setActiveIndex(faqList.length - 1); // Keep at 6/6
-          engagePin();
-        }
-        return;
-      }
-    }
-
-    // If user previously exited upwards (scrolled up past 1/6):
-    if (exitDirectionRef.current === "up") {
-      // If user scrolled all the way back below the FAQ section, clear exit direction
-      if (rect.bottom < -50) {
-        exitDirectionRef.current = null;
-      } else {
-        // Only re-pin if user reversed direction and is now scrolling DOWN back into FAQ
-        const isReEnteringFromAbove =
-          enterDirectionRef.current === "down" && rect.top <= 40 && rect.top >= -120;
-        if (isReEnteringFromAbove) {
-          exitDirectionRef.current = null;
-          setActiveIndex(0); // Keep at 1/6
-          engagePin();
-        }
-        return;
-      }
-    }
-
-    // Standard entry:
-    const enteringFromAbove = enterDirectionRef.current === "down";
-    const isAligned = enteringFromAbove
-      ? rect.top <= 40 && rect.top >= -120
-      : rect.top <= 40 && rect.bottom >= vh * 0.7;
-
-    if (isAligned) {
-      if (enteringFromAbove) {
-        setActiveIndex(0);
-      }
-      engagePin();
-    }
-  }, [engagePin, faqList.length]);
-
-  // Track scroll direction and check for engagement on scroll
+  // Wheel listener: Single notch per question step with locked scroll
   useEffect(() => {
-    lastScrollYRef.current = window.scrollY;
-    const onScroll = () => {
-      if (isPinnedRef.current) {
-        // While pinned, container is fixed inset-0.
-        // Never call window.scrollTo in onScroll — fighting browser momentum causes 60Hz/120Hz vibration.
-        return;
-      }
-      enterDirectionRef.current = window.scrollY >= lastScrollYRef.current ? "down" : "up";
-      lastScrollYRef.current = window.scrollY;
-      checkAndEngage();
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [checkAndEngage]);
-
-  // ---- Discrete stepping while pinned ----
-  useEffect(() => {
-    if (!isPinned || window.innerWidth < 1024) return;
-
     let accumulatedDelta = 0;
+    const DELTA_THRESHOLD = 30;
 
     const handleWheel = (e: WheelEvent) => {
-      // Unconditionally prevent default window scroll while pinned
-      e.preventDefault();
+      if (!isPinnedRef.current) return;
 
-      // If currently animating or locked during a point-to-point transition, discard all momentum!
-      if (isStepLockedRef.current) {
-        return;
-      }
+      e.preventDefault();
+      e.stopPropagation();
 
       accumulatedDelta += e.deltaY;
 
-      // Clear any pending pause-reset timer
-      if (resetDeltaTimerRef.current) {
-        clearTimeout(resetDeltaTimerRef.current);
-      }
-      // If user stops scrolling for 180ms without reaching threshold, reset accumulator
+      if (resetDeltaTimerRef.current) clearTimeout(resetDeltaTimerRef.current);
       resetDeltaTimerRef.current = setTimeout(() => {
         accumulatedDelta = 0;
-      }, 180);
+      }, 200);
 
-      // Reduced sensitivity: requires a deliberate, comfortable scroll gesture (65px)
-      // This prevents accidental double-stepping on normal scrolls
-      const THRESHOLD = 65;
-      const STEP_LOCK_MS = 480; // Swallows full trackpad momentum deceleration curve
+      if (isStepLockedRef.current) return;
 
-      if (accumulatedDelta >= THRESHOLD) {
+      if (accumulatedDelta > DELTA_THRESHOLD) {
         accumulatedDelta = 0;
-        if (resetDeltaTimerRef.current) clearTimeout(resetDeltaTimerRef.current);
-
         if (activeIndexRef.current < faqList.length - 1) {
           isStepLockedRef.current = true;
           setActiveIndex((i) => i + 1);
           setTimeout(() => {
             isStepLockedRef.current = false;
-          }, STEP_LOCK_MS);
+          }, STEP_COOLDOWN);
         } else {
           releasePin("down");
         }
-      } else if (accumulatedDelta <= -THRESHOLD) {
+      } else if (accumulatedDelta < -DELTA_THRESHOLD) {
         accumulatedDelta = 0;
-        if (resetDeltaTimerRef.current) clearTimeout(resetDeltaTimerRef.current);
-
         if (activeIndexRef.current > 0) {
           isStepLockedRef.current = true;
           setActiveIndex((i) => i - 1);
           setTimeout(() => {
             isStepLockedRef.current = false;
-          }, STEP_LOCK_MS);
+          }, STEP_COOLDOWN);
         } else {
           releasePin("up");
         }
@@ -334,9 +221,62 @@ export default function FAQFun({
       window.removeEventListener("wheel", handleWheel);
       if (resetDeltaTimerRef.current) clearTimeout(resetDeltaTimerRef.current);
     };
-  }, [isPinned, releasePin, faqList.length]);
+  }, [faqList.length, releasePin]);
 
-  // Keyboard navigation for cycling FAQs
+  // Scroll listener: Detects entry to lock screen in place
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isPinnedRef.current) return;
+
+      const currentScrollY = window.scrollY;
+      const scrollingDown = currentScrollY > lastScrollYRef.current;
+      lastScrollYRef.current = currentScrollY;
+
+      if (!wrapperRef.current) return;
+
+      if (Date.now() - lastReleaseTimeRef.current < 450) {
+        return;
+      }
+
+      const rect = wrapperRef.current.getBoundingClientRect();
+      const targetPinY = currentScrollY + rect.top;
+
+      if (scrollingDown && rect.top <= 0 && rect.bottom > window.innerHeight * 0.3) {
+        enterDirectionRef.current = "down";
+        pinScrollYRef.current = targetPinY;
+        isPinnedRef.current = true;
+        setIsPinned(true);
+
+        if (exitDirectionRef.current === "up") {
+          setActiveIndex(0);
+        } else if (isFirstEntryRef.current) {
+          setActiveIndex(0);
+          isFirstEntryRef.current = false;
+        }
+
+        window.scrollTo({ top: targetPinY, behavior: "instant" });
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+      } else if (!scrollingDown && rect.bottom >= window.innerHeight && rect.top < window.innerHeight * 0.7) {
+        enterDirectionRef.current = "up";
+        pinScrollYRef.current = targetPinY;
+        isPinnedRef.current = true;
+        setIsPinned(true);
+
+        if (exitDirectionRef.current === "down") {
+          setActiveIndex(faqList.length - 1);
+        }
+
+        window.scrollTo({ top: targetPinY, behavior: "instant" });
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.overflow = "hidden";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [faqList.length]);
+
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent) => {
       if (isStepLockedRef.current) return;
@@ -375,16 +315,12 @@ export default function FAQFun({
 
   // Arc Geometry parameters:
   const radius = Math.min(Math.max(containerWidth * 0.65, 750), 920);
-  const apexY = 125; // Lowered top apex position for plenty of top clearance
+  const apexY = 195; // Positioned below header
   const centerY = apexY + radius;
   const centerX = containerWidth / 2;
 
   // Clockwise arc progression on scroll down:
-  // When activeIndex increments (scrolling down), all pointers move in a CLOCKWISE direction (+angle)
-  // Upcoming items arrive from the left (-angle), move up to apex (0°), and exit to the right (+angle)
   const getSlotAngle = (idx: number, active: number): { angle: number; isVisible: boolean; opacity: number } => {
-    // diff = active - idx:
-    // When active increases, diff increases for all items -> positive angle change -> CLOCKWISE rotation!
     const diff = active - idx;
     const clampedDiff = Math.max(Math.min(diff, 3.5), -3.5);
     const angle = clampedDiff * 26;
@@ -394,7 +330,7 @@ export default function FAQFun({
     if (diff === 0) opacity = 1;
     else if (Math.abs(diff) === 1) opacity = 1;
     else if (Math.abs(diff) === 2) opacity = 0.85;
-    else opacity = 0; // Off-screen items fade smoothly to 0 and remain parked on their side
+    else opacity = 0;
 
     return { angle, isVisible, opacity };
   };
@@ -419,7 +355,18 @@ export default function FAQFun({
             height: "100vh",
           }}
         >
-          <div className="max-w-7xl mx-auto w-full h-full relative">
+          <div className="max-w-7xl mx-auto w-full h-full relative flex flex-col justify-between">
+            {/* Top Section Header */}
+            <div className="relative max-w-3xl mx-auto text-center pt-6 xl:pt-10 mb-2 select-none z-30 pointer-events-none">
+              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[50px] tracking-tight leading-[1.14]">
+                <span className="text-[#9BA59D] font-normal">How we </span>
+                <span className="text-[#536757] font-medium">actually work</span>
+              </h2>
+              <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-[15px] leading-relaxed mt-2.5">
+                {subDescription}
+              </p>
+            </div>
+
             {/* ── CIRCULAR ARC LAYOUT ── */}
             <div
               ref={containerRef}
@@ -475,7 +422,7 @@ export default function FAQFun({
                 })()}
               </svg>
 
-              {/* 6 Arc FAQ Pills positioned cleanly along the curve */}
+              {/* Arc Step Pills positioned cleanly along the curve */}
               {faqList.map((faq, idx) => {
                 const isActive = idx === activeIndex;
                 const { angle: angleDeg, isVisible, opacity } = getSlotAngle(idx, activeIndex);
@@ -496,16 +443,12 @@ export default function FAQFun({
                         opacity: 1,
                       }}
                     >
-                      {/* Floating FAQ label anchored above the active pill */}
-                      <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1.5 text-[11px] font-bold tracking-[0.25em] text-[#536757] uppercase drop-shadow-sm pointer-events-none whitespace-nowrap">
-                        FAQ
-                      </span>
                       {/* Active Pill centered exactly on the arc line */}
                       <div className="bg-[#536757] text-white font-medium text-sm lg:text-[15px] px-5 py-2.5 rounded-2xl shadow-[0_12px_28px_rgba(83,103,87,0.32)] border border-white/20 flex items-center gap-2.5 whitespace-nowrap">
                         <span className="font-bold text-xs bg-white/20 px-2 py-0.5 rounded-md">
                           0{idx + 1}
                         </span>
-                        <span>{faq.shortLabel || `Question 0${idx + 1}`}</span>
+                        <span>{faq.shortLabel || faq.question}</span>
                       </div>
                     </div>
                   );
@@ -531,20 +474,20 @@ export default function FAQFun({
                     <span className="font-bold text-xs bg-neutral-100 text-neutral-500 px-1.5 py-0.5 rounded">
                       0{idx + 1}
                     </span>
-                    <span>{faq.shortLabel || `Question 0${idx + 1}`}</span>
+                    <span>{faq.shortLabel || faq.question}</span>
                   </button>
                 );
               })}
 
-              {/* Center Card / Answer Display Panel (Agnos Style) */}
-              <div className="absolute top-[210px] xl:top-[230px] inset-x-0 mx-auto max-w-2xl px-6 flex flex-col items-center text-center z-30 pointer-events-auto">
-                {/* Main Question Title in Serif */}
+              {/* Center Card / Step Display Panel */}
+              <div className="absolute top-[280px] xl:top-[295px] inset-x-0 mx-auto max-w-2xl px-6 flex flex-col items-center text-center z-30 pointer-events-auto">
+                {/* Main Step Title in Serif */}
                 <div
                   key={`title-${activeIndex}`}
                   className="transition-all duration-300 ease-out animate-fadeIn"
                 >
                   <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] text-[#242424] font-medium tracking-tight leading-[1.25]">
-                    {faqList[activeIndex]?.question}
+                    0{activeIndex + 1} {faqList[activeIndex]?.question}
                   </h3>
                 </div>
 
@@ -559,7 +502,7 @@ export default function FAQFun({
                 </div>
 
                 {/* Dashed divider */}
-                <div className="w-full max-w-md mx-auto my-4 border-t border-dashed border-[#242424]/15" />
+                <div className="w-full max-w-md mx-auto my-3.5 border-t border-dashed border-[#242424]/15" />
 
                 {/* Sub-tags in tracked uppercase */}
                 <div
@@ -574,20 +517,20 @@ export default function FAQFun({
                 {/* CTA Action Button */}
                 <a
                   href="#contact"
-                  className="mt-5 inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-[#536757] text-white font-medium text-xs lg:text-sm hover:bg-[#435346] shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] transition-all duration-200 cursor-pointer"
+                  className="mt-4 inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-[#536757] text-white font-medium text-xs lg:text-sm hover:bg-[#435346] shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] transition-all duration-200 cursor-pointer"
                 >
                   Start your project
                 </a>
 
-                {/* Counter & 6 Progress Navigation Dots */}
-                <div className="mt-5 flex flex-col items-center gap-1.5">
+                {/* Counter & 5 Progress Navigation Dots */}
+                <div className="mt-4 flex flex-col items-center gap-1.5">
                   <span className="font-body text-[10px] font-semibold text-neutral-400 tracking-widest uppercase">
                     0{activeIndex + 1} / 0{faqList.length}
                   </span>
                   <div
                     className="flex items-center gap-2"
                     role="tablist"
-                    aria-label="FAQ question progress"
+                    aria-label="Process step progress"
                   >
                     {faqList.map((item, idx) => {
                       const isCurrent = idx === activeIndex;
@@ -596,7 +539,7 @@ export default function FAQFun({
                           key={idx}
                           type="button"
                           onClick={() => setActiveIndex(idx)}
-                          aria-label={`Go to question ${idx + 1}: ${item.question}`}
+                          aria-label={`Go to step ${idx + 1}: ${item.question}`}
                           aria-selected={isCurrent}
                           role="tab"
                           className={`h-2 transition-all duration-300 rounded-full cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#536757] focus-visible:ring-offset-1 ${
@@ -617,17 +560,16 @@ export default function FAQFun({
 
       {/* ── HORIZONTAL STEP SLIDER: Mobile (<1024px) ── */}
       <div className="block lg:hidden relative z-20 w-full py-16 px-4 sm:px-8 flex flex-col items-center select-none overflow-hidden">
-        {/* Top Eyebrow Tag */}
-        <div className="inline-flex items-center justify-center gap-2 text-[11px] font-semibold tracking-[0.24em] text-[#536757] uppercase mb-2">
-          <span className="text-[10px] text-[#536757]/70">⁝</span>
-          <span>{subtitle}</span>
-          <span className="text-[10px] text-[#536757]/70">⁝</span>
-        </div>
-
         {/* Section Heading */}
         <h2 className="font-heading text-3xl sm:text-4xl text-[#242424] font-medium tracking-tight text-center max-w-xs sm:max-w-sm mx-auto leading-tight">
-          {title}
+          <span className="text-[#9BA59D] font-normal">How we </span>
+          <span className="text-[#536757] font-medium">actually work</span>
         </h2>
+
+        {/* Subheading */}
+        <p className="font-subheading text-neutral-500 max-w-sm sm:max-w-md mx-auto text-xs sm:text-sm leading-relaxed text-center mt-2.5 mb-2">
+          {subDescription}
+        </p>
 
         {/* Step Eyebrow + Straight Horizontal Line with Sliding Number Badge */}
         <div className="w-full flex flex-col items-center mt-9 mb-7">
@@ -684,7 +626,7 @@ export default function FAQFun({
                 >
                   {/* Title */}
                   <h3 className="font-heading text-2xl sm:text-3xl font-bold text-[#242424] tracking-tight">
-                    {item.shortLabel || item.question}
+                    0{idx + 1} {item.question}
                   </h3>
 
                   {/* Description */}
@@ -781,4 +723,3 @@ export default function FAQFun({
     </section>
   );
 }
-
