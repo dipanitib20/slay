@@ -368,14 +368,16 @@ export default function Home() {
               {Array.from({ length: 6 }).map((_, setIdx) => (
                 <div key={`black-set-${setIdx}`} className="flex items-center">
                   {[
-                    "Trusted by Global Startups",
-                    "Conversion Focused",
-                    "Built to Scale",
-                    "Fast Turnaround",
-                    "Seamless User Experience",
-                    "World-Class Quality",
-                    "Data-Driven Growth",
-                    "End-to-End Execution",
+                    "Social Media Management",
+                    "Performance Marketing",
+                    "UGC and Content Shoots",
+                    "AI Generated Videos",
+                    "Web Design and Development",
+                    "Brand Identity",
+                    "Founder Led Marketing",
+                    "Strategy First",
+                    "Built In House",
+                    "Trusted by 25+ Brands",
                   ].map((item, idx) => (
                     <React.Fragment key={`black-${setIdx}-${idx}`}>
                       <span className="font-geist font-medium text-base sm:text-lg md:text-[21px] tracking-tight text-white whitespace-nowrap">
@@ -401,14 +403,16 @@ export default function Home() {
               {Array.from({ length: 6 }).map((_, setIdx) => (
                 <div key={`green-set-${setIdx}`} className="flex items-center">
                   {[
-                    "Web Development",
-                    "UI/UX Design",
-                    "Conversion-Focused Design",
-                    "Digital Marketing",
-                    "Brand Strategy",
+                    "Social Media Management",
                     "Performance Marketing",
-                    "Content Production",
-                    "Next.js & React",
+                    "UGC and Content Shoots",
+                    "AI Generated Videos",
+                    "Web Design and Development",
+                    "Brand Identity",
+                    "Founder Led Marketing",
+                    "Strategy First",
+                    "Built In House",
+                    "Trusted by 25+ Brands",
                   ].map((item, idx) => (
                     <React.Fragment key={`green-${setIdx}-${idx}`}>
                       <span className="font-geist font-medium text-base sm:text-lg md:text-[21px] tracking-tight text-white whitespace-nowrap">

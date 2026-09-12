@@ -1,14 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 
 export interface Testimonial {
   id: string;
   quote: string;
   author: string;
   role: string;
-  avatar: string;
 }
 
 interface TestimonialSet {
@@ -24,210 +22,162 @@ interface TestimonialSet {
   }[];
 }
 
+const t1: Testimonial = {
+  id: "t1",
+  quote:
+    "“Dipani is hands on and hardworking. I chose to work with her because of her clear vision and strong knowledge. Within just one month she understood the deliverables and went beyond the initial requirements by continuously improving on the ask. She is easy to work with, proactive, and brings a thoughtful approach to her work.”",
+  author: "Bineet",
+  role: "Founder, Mahru",
+};
+
+const t2: Testimonial = {
+  id: "t2",
+  quote:
+    "“Dipani supported us with social media planning and execution including content direction, posting, and performance tracking. Her approach was structured and thoughtful with a clear understanding of brand positioning and audience behaviour. Communication was smooth, timelines were respected, and the work consistently reflected what we were aiming to build.”",
+  author: "Binod Kumar",
+  role: "Founder, Orient Polyfilms",
+};
+
+const t3: Testimonial = {
+  id: "t3",
+  quote:
+    "“You handled our work with professionalism and clear understanding. The experience has been smooth and the results are excellent.”",
+  author: "Ritu and Manav",
+  role: "Maple Bear Canadian Preschool",
+};
+
+const t4: Testimonial = {
+  id: "t4",
+  quote:
+    "“The content was consistent, on brand, and actually got noticed. Working with the team felt seamless and the quality never dropped.”",
+  author: "Rohit",
+  role: "Founder, Wallora",
+};
+
+const t5: Testimonial = {
+  id: "t5",
+  quote:
+    "“The team understood the soul of the brand before they created a single piece of content. Everything felt intentional and completely aligned with what we were building.”",
+  author: "Minakshi",
+  role: "Founder, The Sacred Nook",
+};
+
+const t6: Testimonial = {
+  id: "t6",
+  quote:
+    "“The reels capture the craft in a way I never thought content could. Every shoot feels considered, every edit feels right. The work speaks for the jewellery the way it deserves to be spoken for.”",
+  author: "Punitta Trikha",
+  role: "Jewellery Designer & Craftswoman",
+};
+
 const testimonialSets: TestimonialSet[] = [
   // Set 1
   {
     items: [
       {
-        testimonial: {
-          id: "t1",
-          quote:
-            "“We came to Slay with a rough idea, and they turned it into a beautiful, functional MVP in weeks. Highly recommended.”",
-          author: "Rachel Lin",
-          role: "Co-Founder at Driftly",
-          avatar:
-            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=256&auto=format&fit=crop",
-        },
+        testimonial: t1,
         position: {
-          top: "8%",
-          left: "3%",
-          width: "360px",
+          top: "4%",
+          left: "2%",
+          width: "390px",
         },
       },
       {
-        testimonial: {
-          id: "t2",
-          quote:
-            "“The design quality and attention to micro-interactions blew our investors away. Truly a world-class team.”",
-          author: "Marcus Vance",
-          role: "Head of Product at Rayon",
-          avatar:
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=256&auto=format&fit=crop",
+        testimonial: t2,
+        position: {
+          top: "2%",
+          right: "2%",
+          width: "400px",
         },
+      },
+      {
+        testimonial: t3,
+        position: {
+          bottom: "6%",
+          left: "5%",
+          width: "370px",
+        },
+      },
+      {
+        testimonial: t4,
+        position: {
+          bottom: "6%",
+          right: "4%",
+          width: "380px",
+        },
+      },
+    ],
+  },
+  // Set 2
+  {
+    items: [
+      {
+        testimonial: t5,
+        position: {
+          top: "5%",
+          left: "4%",
+          width: "380px",
+        },
+      },
+      {
+        testimonial: t6,
+        position: {
+          top: "3%",
+          right: "3%",
+          width: "390px",
+        },
+      },
+      {
+        testimonial: t1,
+        position: {
+          bottom: "5%",
+          left: "2%",
+          width: "390px",
+        },
+      },
+      {
+        testimonial: t2,
+        position: {
+          bottom: "4%",
+          right: "2%",
+          width: "400px",
+        },
+      },
+    ],
+  },
+  // Set 3
+  {
+    items: [
+      {
+        testimonial: t3,
+        position: {
+          top: "6%",
+          left: "3%",
+          width: "370px",
+        },
+      },
+      {
+        testimonial: t4,
         position: {
           top: "4%",
           right: "4%",
-          width: "370px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t3",
-          quote:
-            "“Our conversion rate doubled within 30 days of launching the new site. The strategy behind their work is second to none.”",
-          author: "Elena Rostova",
-          role: "CMO at Lumina Brands",
-          avatar:
-            "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          bottom: "6%",
-          left: "6%",
           width: "380px",
         },
       },
       {
-        testimonial: {
-          id: "t4",
-          quote:
-            "“Fast turnaround, unmatched visual polish, and zero friction throughout the whole process. They are our go-to partner.”",
-          author: "David Chen",
-          role: "Founder & CEO at Kroma",
-          avatar:
-            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=256&auto=format&fit=crop",
-        },
+        testimonial: t5,
         position: {
-          bottom: "8%",
-          right: "3%",
-          width: "370px",
-        },
-      },
-    ],
-  },
-  // Set 2 (Different positions & different testimonials)
-  {
-    items: [
-      {
-        testimonial: {
-          id: "t5",
-          quote:
-            "“Slay redefined our entire visual identity and built a high-speed web app that our users love. Couldn’t be happier.”",
-          author: "Sophia Sterling",
-          role: "VP of Brand at NexaTech",
-          avatar:
-            "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          top: "14%",
-          left: "7%",
-          width: "370px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t6",
-          quote:
-            "“They don’t just design; they understand consumer psychology and scalability. Exceptional collaboration from day one.”",
-          author: "Jameson Bell",
-          role: "Co-Founder at Aerow",
-          avatar:
-            "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          top: "9%",
-          right: "2%",
+          bottom: "5%",
+          left: "4%",
           width: "380px",
         },
       },
       {
-        testimonial: {
-          id: "t7",
-          quote:
-            "“Working with Slay felt like an extension of our internal team. They delivered on every promise ahead of schedule.”",
-          author: "Amina Al-Mansoor",
-          role: "Product Lead at Qubit Labs",
-          avatar:
-            "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          bottom: "10%",
-          left: "3%",
-          width: "360px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t8",
-          quote:
-            "“The smoothest agency engagement we’ve ever experienced. Their work helped us secure our Series A funding effortlessly.”",
-          author: "Lucas Moreau",
-          role: "CEO at Veloce Digital",
-          avatar:
-            "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=256&auto=format&fit=crop",
-        },
+        testimonial: t6,
         position: {
           bottom: "4%",
-          right: "7%",
-          width: "380px",
-        },
-      },
-    ],
-  },
-  // Set 3 (Different positions & different testimonials)
-  {
-    items: [
-      {
-        testimonial: {
-          id: "t9",
-          quote:
-            "“Slay turned a complex B2B workflow into a sleek, consumer-grade experience. Our team’s productivity skyrocketed.”",
-          author: "Chloe Dubois",
-          role: "Head of Growth at Synergo",
-          avatar:
-            "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          top: "6%",
-          left: "5%",
-          width: "360px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t10",
-          quote:
-            "“Their team is relentless about excellence. The animations, speed, and design finesse exceeded all expectations.”",
-          author: "Vikram Mehta",
-          role: "Co-Founder at Pulse Commerce",
-          avatar:
-            "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          top: "13%",
-          right: "5%",
-          width: "370px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t11",
-          quote:
-            "“Every single deliverable was sharp, polished, and ready for production. 10/10 would partner again.”",
-          author: "Hannah Zimmerman",
-          role: "Creative Director at Studio 9",
-          avatar:
-            "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          bottom: "8%",
-          left: "8%",
-          width: "370px",
-        },
-      },
-      {
-        testimonial: {
-          id: "t12",
-          quote:
-            "“The feedback on our relaunch has been 100% positive. Slay set a new standard for our digital brand.”",
-          author: "Liam O'Connor",
-          role: "Founder at Apex Studio",
-          avatar:
-            "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=256&auto=format&fit=crop",
-        },
-        position: {
-          bottom: "12%",
-          right: "2%",
-          width: "380px",
+          right: "3%",
+          width: "390px",
         },
       },
     ],
@@ -267,10 +217,10 @@ export default function TestimonialSection() {
             <div className="relative inline-block">
               <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
                 <span className="text-neutral-400 font-normal block">
-                  Hear It From
+                  Straight from the chat.
                 </span>
                 <span className="text-[#536757] font-medium block mt-1">
-                  Our Clients
+                  Real words
                 </span>
               </h2>
 
@@ -321,25 +271,14 @@ export default function TestimonialSection() {
                 </p>
               </div>
 
-              {/* Author & Avatar Info Below Card */}
-              <div className="flex items-center gap-3 mt-3.5 ml-2">
-                <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
-                  <Image
-                    src={item.testimonial.avatar}
-                    alt={item.testimonial.author}
-                    fill
-                    className="object-cover"
-                    unoptimized
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="font-body font-bold text-sm sm:text-base text-[#242424] leading-tight">
-                    {item.testimonial.author}
-                  </span>
-                  <span className="font-body text-xs sm:text-[13px] text-neutral-500 leading-tight mt-0.5">
-                    {item.testimonial.role}
-                  </span>
-                </div>
+              {/* Author Info Below Card */}
+              <div className="flex flex-col mt-3.5 ml-2">
+                <span className="font-body font-bold text-sm sm:text-base text-[#242424] leading-tight">
+                  {item.testimonial.author}
+                </span>
+                <span className="font-body text-xs sm:text-[13px] text-neutral-500 leading-tight mt-0.5">
+                  {item.testimonial.role}
+                </span>
               </div>
             </div>
           ))}
@@ -351,10 +290,10 @@ export default function TestimonialSection() {
           <div className="flex flex-col items-center text-center mb-10">
             <h2 className="font-heading text-4xl sm:text-5xl tracking-tight leading-[1.12]">
               <span className="text-neutral-400 font-normal block">
-                Hear It From
+                Straight from the chat.
               </span>
               <span className="text-[#536757] font-medium block mt-1">
-                Our Clients
+                Real words
               </span>
             </h2>
             <div className="flex items-center gap-2 mt-3">
@@ -381,24 +320,13 @@ export default function TestimonialSection() {
                     {item.testimonial.quote}
                   </p>
                 </div>
-                <div className="flex items-center gap-3 mt-3 ml-2">
-                  <div className="relative w-9 h-9 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
-                    <Image
-                      src={item.testimonial.avatar}
-                      alt={item.testimonial.author}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="font-body font-bold text-sm text-[#242424]">
-                      {item.testimonial.author}
-                    </span>
-                    <span className="font-body text-xs text-neutral-500">
-                      {item.testimonial.role}
-                    </span>
-                  </div>
+                <div className="flex flex-col mt-3 ml-2">
+                  <span className="font-body font-bold text-sm text-[#242424]">
+                    {item.testimonial.author}
+                  </span>
+                  <span className="font-body text-xs text-neutral-500">
+                    {item.testimonial.role}
+                  </span>
                 </div>
               </div>
             ))}

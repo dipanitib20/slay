@@ -86,29 +86,29 @@ function FAQPill({
 
 const defaultItems: FAQItem[] = [
   {
-    question: "What services do you offer?",
+    question: "What does a retainer cost?",
     answer:
-      "We provide end-to-end digital solutions including brand strategy, custom UI/UX design, Next.js & React web development, e-commerce, and high-growth performance marketing.",
+      "Retainers start at INR 35,000 per month and scale with scope. Content shoots, ad management and website work are quoted separately. You get an exact number after the first call, not a generic package sheet.",
   },
   {
-    question: "How long does a project take?",
+    question: "Is there a minimum commitment?",
     answer:
-      "Typical web design and development projects range between 2 to 6 weeks from discovery to deployment, depending on project scope and deliverables.",
+      "We ask for three months. Social media compounds and one month tells nobody anything. After three months it runs monthly.",
   },
   {
-    question: "What is your pricing structure?",
+    question: "Do you work with brands outside India?",
     answer:
-      "We offer tailored project-based quotes as well as flexible monthly retainer plans designed to fit your team's specific roadmap and growth targets.",
+      "Yes. We work across time zones, communicate in English, and schedule calls and reporting around your working hours rather than ours.",
   },
   {
-    question: "Do you work with startups?",
+    question: "Who actually works on my account?",
     answer:
-      "Yes! We partner with ambitious early-stage startups as well as established global enterprises looking to scale their digital presence.",
+      "A dedicated team of a strategist, an editor and a designer, with Dipani reviewing strategy and creative personally on every account.",
   },
   {
-    question: "Do you provide ongoing support?",
+    question: "How do I get started?",
     answer:
-      "Yes, we offer post-launch maintenance, performance optimization, content updates, and continuous design support to ensure your website scales effortlessly.",
+      "Email hello@slaystrategy.com or call the number on the contact page. The first call runs 30 minutes and costs nothing.",
   },
 ];
 
@@ -126,13 +126,13 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
         <div className="absolute inset-x-0 top-[31%] flex flex-col items-center text-center select-none pointer-events-none z-10">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-[56px] lg:text-[62px] tracking-tight leading-[1.12]">
             <span className="text-neutral-400 font-normal relative inline-block">
-              You ask.
+              Questions people
               <span className="absolute -top-3 -right-8 sm:-top-4 sm:-right-11 font-doodle text-2xl sm:text-3xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal">
                 FAQs
               </span>
             </span>
             <span className="text-[#536757] font-medium block">
-              We make it simple.
+              usually ask 
             </span>
           </h2>
         </div>
@@ -193,13 +193,13 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
         <div className="flex flex-col items-center text-center mb-8">
           <h2 className="font-heading text-3xl sm:text-4xl tracking-tight leading-[1.12]">
             <span className="text-neutral-400 font-normal relative inline-block">
-              You ask.
+              Questions people
               <span className="absolute -top-3 -right-7 font-doodle text-2xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal">
                 FAQs
               </span>
             </span>
             <span className="text-[#536757] font-medium block">
-              We make it simple.
+              usually ask
             </span>
           </h2>
         </div>

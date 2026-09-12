@@ -8,6 +8,8 @@ interface FooterProps {
   navLinks?: { name: string; href: string }[];
   attributionText?: string;
   creatorName?: string;
+  phone?: string;
+  email?: string;
 }
 
 export default function Footer({
@@ -20,21 +22,10 @@ export default function Footer({
   ],
   attributionText = "A agency created by",
   creatorName = "Designncode",
+  phone = "+91 90363 83777",
+  email = "hello@slaystrategy.com",
 }: FooterProps) {
   const socialLinks = [
-    {
-      name: "Twitter/X",
-      href: "https://twitter.com",
-      icon: (
-        <svg
-          className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-        </svg>
-      ),
-    },
     {
       name: "Facebook",
       href: "https://facebook.com",
@@ -113,17 +104,60 @@ export default function Footer({
 
           {/* Heading */}
           <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#4A4A4A] tracking-tight leading-[1.18] max-w-2xl px-2">
-            Let&apos;s build brands{" "}
-            <span className="font-semibold text-[#242424]">people</span>
+            Build it once.{" "}
             <br />
-            <span className="font-semibold text-[#242424]">remember</span>
+            <span className="font-semibold text-[#242424]">Build it right. </span>
           </h2>
 
           {/* Subheading */}
           <p className="font-subheading text-[#4A4A4A]/85 text-sm sm:text-base md:text-lg max-w-xl mx-auto mt-3 sm:mt-5 leading-relaxed px-4">
-            Follow us for marketing insights, creative inspiration, and product
-            updates.
+            If you are ready to show up online the way your brand actually deserves, let us talk.
           </p>
+
+          {/* Direct Contact Pills: Email & Phone */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+            <a
+              href={`mailto:${email}`}
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-[#536757] text-[#242424] hover:text-white border border-neutral-200/90 hover:border-[#536757] px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(83,103,87,0.25)] transition-all duration-200 group"
+            >
+              <svg
+                className="w-4 h-4 text-[#536757] group-hover:text-white transition-colors"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              <span>{email}</span>
+            </a>
+
+            <a
+              href={`tel:${phone.replace(/[^0-9+]/g, "")}`}
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-[#536757] text-[#242424] hover:text-white border border-neutral-200/90 hover:border-[#536757] px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_20px_rgba(83,103,87,0.25)] transition-all duration-200 group"
+            >
+              <svg
+                className="w-4 h-4 text-[#536757] group-hover:text-white transition-colors"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              <span>{phone}</span>
+            </a>
+          </div>
 
           {/* Social Cards: 2x2 Grid on Mobile, Flex Row on Desktop */}
           <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2.5 sm:gap-4 md:gap-6 lg:gap-8 mt-8 sm:mt-12 md:mt-14 w-full max-w-sm sm:max-w-lg md:max-w-none">
