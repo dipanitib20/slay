@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "./components/navbar";
+import AboutUsSection from "./components/about-us";
 import FAQFun from "./components/faqfun";
 import FAQ from "./components/faq";
 import TestimonialSection from "./components/testimonial";
@@ -348,6 +349,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* "The People Behind the Work" / About Us Section */}
+      <AboutUsSection />
 
       {/* FAQ Fun Section */}
       <FAQFun />
