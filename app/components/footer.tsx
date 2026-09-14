@@ -28,7 +28,7 @@ export default function Footer({
   const socialLinks = [
     {
       name: "Facebook",
-      href: "https://facebook.com",
+      href: "https://www.facebook.com/profile.php?id=61586631632667",
       icon: (
         <svg
           className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"
@@ -41,7 +41,7 @@ export default function Footer({
     },
     {
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/slaythestrategy.agency?stkn=MTJnbDJsbm5qNG5xZw==",
       icon: (
         <svg
           className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-none stroke-current"
@@ -59,7 +59,7 @@ export default function Footer({
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/company/slay-the-strategy/",
       icon: (
         <svg
           className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current"

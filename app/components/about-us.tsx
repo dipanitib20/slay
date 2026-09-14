@@ -60,7 +60,7 @@ export default function AboutUsSection() {
             {/* Social Links (Instagram, LinkedIn, Facebook) */}
             <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-5 mt-7 sm:mt-8">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/slaywithdipani"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 active:scale-95 transition-transform duration-300 shrink-0"
@@ -76,7 +76,7 @@ export default function AboutUsSection() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dipani-h-tibrewala"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 active:scale-95 transition-transform duration-300 shrink-0"
@@ -92,7 +92,7 @@ export default function AboutUsSection() {
               </a>
 
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61574319477171"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 active:scale-95 transition-transform duration-300 shrink-0"

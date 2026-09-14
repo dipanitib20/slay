@@ -186,7 +186,7 @@ export default function ContactPage() {
       {/* Book a Call Button */}
       <div className="mt-6">
         <a
-          href="https://cal.com"
+          href="https://calendly.com/dipanitib20/30min"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center bg-[#242424] hover:bg-[#383838] text-white font-body font-medium text-sm sm:text-base px-7 sm:px-8 py-3 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.35)] active:scale-95 transition-all duration-200"
