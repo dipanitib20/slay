@@ -30,6 +30,11 @@ export default function ContactPage() {
   const [isCountryOpen, setIsCountryOpen] = useState(false);
   const [countrySearch, setCountrySearch] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [phoneError, setPhoneError] = useState("");
+  const [serverError, setServerError] = useState("");
 
   const serviceRef = useRef<HTMLDivElement>(null);
   const countryRef = useRef<HTMLDivElement>(null);
@@ -63,11 +68,75 @@ export default function ContactPage() {
       c.code.toLowerCase().includes(countrySearch.toLowerCase())
   );
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateEmail = (emailStr: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(emailStr.trim());
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
+    setServerError("");
+    setNameError("");
+    setEmailError("");
+    setPhoneError("");
+
+    // Client-side validations
+    let hasError = false;
+
+    if (!formData.name.trim()) {
+      setNameError("Please enter your name.");
+      hasError = true;
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.name.trim())) {
+      setNameError("Name can only contain alphabetic letters and spaces.");
+      hasError = true;
+    }
+
+    if (!formData.email.trim()) {
+      setEmailError("Please enter your email.");
+      hasError = true;
+    } else if (!validateEmail(formData.email)) {
+      setEmailError("Please enter a valid email address (e.g. name@example.com).");
+      hasError = true;
+    }
+
+    if (!formData.phone.trim()) {
+      setPhoneError("Please enter your phone number.");
+      hasError = true;
+    } else if (!/^\d+$/.test(formData.phone.trim())) {
+      setPhoneError("Phone number must contain only numeric digits.");
+      hasError = true;
+    } else if (formData.phone.trim().length < 5 || formData.phone.trim().length > 16) {
+      setPhoneError("Please enter a valid phone number (5-16 digits).");
+      hasError = true;
+    }
+
+    if (hasError) return;
+
+    try {
+      setIsSubmitting(true);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          companyName: formData.companyName.trim(),
+          serviceNeeded: formData.serviceNeeded,
+          brandDetails: formData.brandDetails.trim(),
+          email: formData.email.trim(),
+          countryCode,
+          phone: formData.phone.trim(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Failed to submit request.");
+      }
+
+      setIsSubmitted(true);
       setFormData({
         name: "",
         companyName: "",
@@ -76,7 +145,16 @@ export default function ContactPage() {
         email: "",
         phone: "",
       });
-    }, 4000);
+
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 6000);
+    } catch (err: any) {
+      console.error("Submission error:", err);
+      setServerError(err?.message || "Failed to send your request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const ShortInTimeCard = ({ className = "" }: { className?: string }) => (
@@ -172,12 +250,20 @@ export default function ContactPage() {
                     id="name"
                     required
                     value={formData.name}
-                    onChange={(e) =>
-                      setFormData({ ...formData, name: e.target.value })
-                    }
+                    onChange={(e) => {
+                      // Only alphabets and spaces allowed
+                      const filtered = e.target.value.replace(/[^a-zA-Z\s]/g, "");
+                      setFormData((prev) => ({ ...prev, name: filtered }));
+                      if (nameError) setNameError("");
+                    }}
                     placeholder="Enter your name"
-                    className="w-full bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-black/[0.05] focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all"
+                    className={`w-full bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border ${
+                      nameError ? "border-red-400 ring-1 ring-red-400/50" : "border-black/[0.05]"
+                    } focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all`}
                   />
+                  {nameError && (
+                    <p className="text-xs text-red-500 font-body pl-1">{nameError}</p>
+                  )}
                 </div>
 
                 {/* 2. Your brand or company name */}
@@ -320,12 +406,26 @@ export default function ContactPage() {
                     id="email"
                     required
                     value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setFormData((prev) => ({ ...prev, email: val }));
+                      if (emailError && (validateEmail(val) || !val)) {
+                        setEmailError("");
+                      }
+                    }}
+                    onBlur={() => {
+                      if (formData.email && !validateEmail(formData.email)) {
+                        setEmailError("Please enter a valid email address.");
+                      }
+                    }}
                     placeholder="yourname@gmail.com"
-                    className="w-full bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-black/[0.05] focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all"
+                    className={`w-full bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border ${
+                      emailError ? "border-red-400 ring-1 ring-red-400/50" : "border-black/[0.05]"
+                    } focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all`}
                   />
+                  {emailError && (
+                    <p className="text-xs text-red-500 font-body pl-1">{emailError}</p>
+                  )}
                 </div>
 
                 {/* 6. Your phone number */}
@@ -429,23 +529,69 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       id="phone"
+                      required
                       value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
+                      onChange={(e) => {
+                        // Only numerics allowed
+                        const numeric = e.target.value.replace(/\D/g, "");
+                        setFormData((prev) => ({ ...prev, phone: numeric }));
+                        if (phoneError) setPhoneError("");
+                      }}
                       placeholder="Enter your phone number"
-                      className="flex-1 bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border border-black/[0.05] focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all min-w-0"
+                      className={`flex-1 bg-white rounded-[16px] px-5 py-3.5 sm:py-4 text-base font-body text-[#242424] placeholder:text-neutral-400/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] border ${
+                        phoneError ? "border-red-400 ring-1 ring-red-400/50" : "border-black/[0.05]"
+                      } focus:outline-none focus:ring-2 focus:ring-[#536757]/30 transition-all min-w-0`}
                     />
                   </div>
+                  {phoneError && (
+                    <p className="text-xs text-red-500 font-body pl-1">{phoneError}</p>
+                  )}
                 </div>
 
                 {/* Submit Button & Disclaimer */}
                 <div className="flex flex-col items-center gap-3 pt-2">
+                  {serverError && (
+                    <div className="w-full bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-[14px] text-sm font-body text-center">
+                      {serverError}
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.35)] active:scale-[0.98] transition-all duration-200 cursor-pointer"
+                    disabled={isSubmitting}
+                    className={`w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.35)] active:scale-[0.98] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed ${
+                      isSubmitted ? "!bg-[#536757] hover:!bg-[#435346]" : ""
+                    }`}
                   >
-                    {isSubmitted ? "Request Submitted! ✓" : "Submit"}
+                    {isSubmitting ? (
+                      <span className="inline-flex items-center gap-2">
+                        <svg
+                          className="animate-spin h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          ></circle>
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          ></path>
+                        </svg>
+                        Submitting...
+                      </span>
+                    ) : isSubmitted ? (
+                      "Request Submitted! ✓"
+                    ) : (
+                      "Submit"
+                    )}
                   </button>
 
                   <p className="text-[12px] sm:text-[13px] text-neutral-400 font-body text-center">
