@@ -17,7 +17,7 @@ export default function AboutPage() {
       {/* Main Content Area */}
       <main className="flex-1">
         {/* Section 1: Hero & Workspace Image */}
-        <section className="pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
+        <section className="pt-32 sm:pt-40 md:pt-44 mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Hero Section Header */}
             <div className="relative max-w-4xl mx-auto text-center">
@@ -55,7 +55,7 @@ export default function AboutPage() {
         </section>
 
         {/* Section 2: Creativity with Purpose & Approach/Belief */}
-        <section className="my-40 px-4 sm:px-8 md:px-12">
+        <section className="my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Creativity with Purpose Section Header */}
             <div className="text-center max-w-2xl mx-auto">
@@ -164,7 +164,7 @@ export default function AboutPage() {
       <WorldMap />
 
       {/* "The Numbers Speak" Stats / Impact Section */}
-      <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      <section className="w-full bg-[#F5F4F3] my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
@@ -224,7 +224,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section ("The people behind the work") */}
-      <section className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      <section className="w-full bg-[#F5F4F3] my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 md:mb-20">

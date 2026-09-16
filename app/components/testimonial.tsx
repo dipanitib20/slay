@@ -205,16 +205,23 @@ export default function TestimonialSection() {
   const activeSet = testimonialSets[currentSetIndex];
 
   return (
-    <section className="relative w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12 overflow-hidden select-none">
+    <section className="relative w-full bg-[#F5F4F3] my-10 sm:my-24 lg:my-40 px-4 sm:px-8 md:px-12 overflow-hidden select-none">
       <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
         {/* ── DESKTOP SCATTERED LAYOUT ── */}
         <div
           className="hidden md:block relative z-20 w-full"
           style={{ minHeight: "840px" }}
         >
-          {/* Center Heading with Curved Arrow & Doodle */}
+          {/* Center Heading with Doodle Above */}
           <div className="absolute inset-x-0 top-[38%] flex flex-col items-center text-center select-none pointer-events-none z-10">
             <div className="relative inline-block">
+              {/* Doodle "Kind Words" above the heading */}
+              <div className="absolute -top-10 sm:-top-12 md:-top-14 left-0 sm:-left-4 pointer-events-none select-none -rotate-6">
+                <span className="font-doodle text-3xl sm:text-4xl lg:text-5xl text-[#536757] whitespace-nowrap">
+                  Kind Words
+                </span>
+              </div>
+
               <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
                 <span className="text-neutral-400 font-normal block">
                   Straight from the chat.
@@ -223,25 +230,6 @@ export default function TestimonialSection() {
                   Real words
                 </span>
               </h2>
-
-              {/* Hand-drawn Arrow & "Kind Words" Doodle on right */}
-              <div className="absolute left-[102%] top-1/2 -translate-y-1/2 ml-4 lg:ml-6 flex items-center gap-2 pointer-events-none select-none">
-                <svg
-                  className="w-16 h-16 lg:w-20 lg:h-20 text-[#536757] transform -rotate-12"
-                  viewBox="0 0 100 100"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="3.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M15,65 Q55,65 70,30" />
-                  <path d="M52,30 L70,30 L70,48" />
-                </svg>
-                <span className="font-doodle text-3xl lg:text-4xl text-[#536757] -rotate-6 whitespace-nowrap -translate-y-4">
-                  Kind Words
-                </span>
-              </div>
             </div>
           </div>
 
@@ -286,8 +274,13 @@ export default function TestimonialSection() {
 
         {/* ── MOBILE STACKED/AUTO-CYCLE LAYOUT ── */}
         <div className="block md:hidden relative z-20 w-full px-2 flex flex-col items-center select-none">
-          {/* Center Heading on Mobile */}
-          <div className="flex flex-col items-center text-center mb-10">
+          {/* Center Heading on Mobile with Kind Words Doodle above */}
+          <div className="flex flex-col items-center text-center mb-8">
+            <div className="flex items-center gap-2 mb-2 pointer-events-none select-none">
+              <span className="font-doodle text-3xl sm:text-4xl text-[#536757] -rotate-6">
+                Kind Words
+              </span>
+            </div>
             <h2 className="font-heading text-4xl sm:text-5xl tracking-tight leading-[1.12]">
               <span className="text-neutral-400 font-normal block">
                 Straight from the chat.
@@ -296,11 +289,6 @@ export default function TestimonialSection() {
                 Real words
               </span>
             </h2>
-            <div className="flex items-center gap-2 mt-3">
-              <span className="font-doodle text-2xl sm:text-3xl text-[#536757] -rotate-6">
-                Kind Words
-              </span>
-            </div>
           </div>
 
           {/* Cards Stack for Mobile with Subtle Fade Transitions */}

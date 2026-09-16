@@ -79,7 +79,7 @@ export default function Footer({
   };
 
   return (
-    <footer className="w-full bg-[#F5F4F3] mt-40 pt-10 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+    <footer className="w-full bg-[#F5F4F3] mt-10 sm:mt-16 lg:mt-24 pt-6 sm:pt-8 md:pt-10 px-4 sm:px-8 md:px-12 relative overflow-hidden">
       {/* Background Watermark Text "Slay" with Geist Font & Subtle Spacing */}
       <div
         className="absolute top-6 sm:top-8 md:top-10 left-1/2 -translate-x-[48%] pointer-events-none select-none z-0 font-geist font-regular text-[150px] sm:text-[270px] md:text-[380px] lg:text-[470px] leading-none tracking-[-0.01em] whitespace-nowrap bg-gradient-to-b from-[#536757]/[0.75] via-[#536757]/[0.1] to-transparent bg-clip-text text-transparent [mask-image:linear-gradient(to_bottom,black_15%,transparent_85%)]"
@@ -159,7 +159,7 @@ export default function Footer({
             </a>
           </div>
 
-          {/* Social Cards: 2x2 Grid on Mobile, Flex Row on Desktop */}
+          {/* Social Cards: 2x2 Grid on Mobile with centered 3rd item, Flex Row on Desktop */}
           <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2.5 sm:gap-4 md:gap-6 lg:gap-8 mt-8 sm:mt-12 md:mt-14 w-full max-w-sm sm:max-w-lg md:max-w-none">
             {socialLinks.map((social) => (
               <a
@@ -167,7 +167,7 @@ export default function Footer({
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center justify-between gap-2 sm:gap-5 md:gap-7 bg-[#F2F2F2] hover:bg-[#EBEBEB] border border-white/90 inner-shadow-card px-3 py-2.5 sm:px-5 sm:py-3.5 md:pl-6 md:pr-3.5 md:py-3.5 rounded-[14px] sm:rounded-[18px] md:rounded-[20px] transition-all duration-300 min-w-0 md:min-w-[200px] lg:min-w-[215px]"
+                className="group relative flex items-center justify-between gap-2 sm:gap-5 md:gap-7 bg-[#F2F2F2] hover:bg-[#EBEBEB] border border-white/90 inner-shadow-card px-3 py-2.5 sm:px-5 sm:py-3.5 md:pl-6 md:pr-3.5 md:py-3.5 rounded-[14px] sm:rounded-[18px] md:rounded-[20px] transition-all duration-300 min-w-0 md:min-w-[200px] lg:min-w-[215px] last:col-span-2 last:w-[calc(50%-5px)] sm:last:w-[calc(50%-8px)] md:last:w-auto md:last:col-span-1 last:mx-auto"
               >
                 <span className="font-heading font-bold text-[13.5px] sm:text-[16px] md:text-[18px] text-[#242424] tracking-tight truncate">
                   {social.name}

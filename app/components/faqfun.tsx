@@ -336,7 +336,7 @@ export default function FAQFun({
   };
 
   return (
-    <section className="relative w-full bg-[#F5F4F3] my-40 select-none no-scroll-animate">
+    <section className="relative w-full bg-[#F5F4F3] mt-4 sm:mt-16 lg:my-40 mb-10 sm:mb-20 select-none no-scroll-animate">
       {/* ── DESKTOP FIXED PINNED CONTAINER (≥1024px) ── */}
       <div
         ref={wrapperRef}
@@ -559,7 +559,7 @@ export default function FAQFun({
       </div>
 
       {/* ── HORIZONTAL STEP SLIDER: Mobile (<1024px) ── */}
-      <div className="block lg:hidden relative z-20 w-full py-16 px-4 sm:px-8 flex flex-col items-center select-none overflow-hidden">
+      <div className="block lg:hidden relative z-20 w-full pt-8 pb-4 sm:pt-12 sm:pb-6 px-4 sm:px-8 flex flex-col items-center select-none overflow-hidden">
         {/* Section Heading */}
         <h2 className="font-heading text-3xl sm:text-4xl text-[#242424] font-medium tracking-tight text-center max-w-xs sm:max-w-sm mx-auto leading-tight">
           <span className="text-[#9BA59D] font-normal">How we </span>

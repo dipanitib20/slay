@@ -5,126 +5,38 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-
-interface ProjectItem {
-  id: string;
-  slug: string;
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-  tags: string[];
-}
+import { projectsData, ProjectData } from "../data/projects";
 
 export default function WorkPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const categories = ["All", "Design", "Strategy", "Branding", "Development"];
-
-  const projects: ProjectItem[] = [
-    {
-      id: "project-1",
-      slug: "the-social-refresh",
-      title: "Indian Summer",
-      description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image: "/homework/indian-summer.png",
-      category: "Design",
-      tags: ["Design", "Strategy"],
-    },
-    {
-      id: "project-2",
-      slug: "lumen-brand-evolution",
-      title: "Law in Heels",
-      description:
-        "Evolving a modern brand into an iconic identity with warm human-centric design and engaging content.",
-      image: "/homework/law-in-heels.png",
-      category: "Branding",
-      tags: ["Branding", "Design"],
-    },
-    {
-      id: "project-3",
-      slug: "kinetic-motion-lab",
-      title: "Kinetic Motion Lab",
-      description:
-        "Dynamic motion identity and digital campaign built for high-voltage creative pioneers.",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
-      category: "Strategy",
-      tags: ["Design", "Strategy"],
-    },
-    {
-      id: "project-4",
-      slug: "nordic-living-space",
-      title: "Nordic Living Space",
-      description:
-        "A serene digital sanctuary for Scandinavian interior design, blending tactile craftsmanship with frictionless e-commerce.",
-      image:
-        "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-      category: "Development",
-      tags: ["Design", "Development"],
-    },
-    {
-      id: "project-5",
-      slug: "the-social-refresh",
-      title: "The Social Refresh",
-      description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
-      category: "Strategy",
-      tags: ["Design", "Strategy"],
-    },
-    {
-      id: "project-6",
-      slug: "nordic-living-space",
-      title: "Nordic Living Space",
-      description:
-        "Minimalist architectural e-commerce flagship engineered for speed, conversion, and spatial beauty.",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-      category: "Development",
-      tags: ["Design", "Development"],
-    },
-    {
-      id: "project-7",
-      slug: "lumen-brand-evolution",
-      title: "Lumen Brand Evolution",
-      description:
-        "Translating complex technology infrastructure into an effortless, warm, human-centric design language.",
-      image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
-      category: "Design",
-      tags: ["Design", "Strategy"],
-    },
-    {
-      id: "project-8",
-      slug: "kinetic-motion-lab",
-      title: "Kinetic Motion Lab",
-      description:
-        "High-voltage digital campaigns and motion language that captures the relentless pace of modern culture.",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
-      category: "Branding",
-      tags: ["Design", "Branding"],
-    },
+  const categories = [
+    "All",
+    "Social Media",
+    "Performance Marketing",
+    "Founder Led",
+    "UGC & Shoots",
+    "Personal Brand",
+    "B2B Marketing",
   ];
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    return projectsData.filter((project) => {
+      const q = searchQuery.toLowerCase().trim();
       const matchesSearch =
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.tags.some((tag) =>
-          tag.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+        !q ||
+        project.title.toLowerCase().includes(q) ||
+        project.description.toLowerCase().includes(q) ||
+        project.tags.some((tag) => tag.toLowerCase().includes(q));
 
       const matchesCategory =
         selectedCategory === "All" ||
-        project.category === selectedCategory ||
-        project.tags.includes(selectedCategory);
+        project.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+        project.tags.some((tag) =>
+          tag.toLowerCase().includes(selectedCategory.toLowerCase())
+        );
 
       return matchesSearch && matchesCategory;
     });
@@ -139,7 +51,7 @@ export default function WorkPage() {
       <Navbar />
 
       {/* Main Content Area */}
-      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
+      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-10 sm:mb-16 lg:mb-20 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Headline Section */}
           <div className="relative max-w-4xl mx-auto text-center z-40">
@@ -268,15 +180,26 @@ export default function WorkPage() {
                     href={`/Work/${project.slug}`}
                     className="group flex flex-col cursor-pointer"
                   >
-                    {/* Image Container */}
+                    {/* Image / Video Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        unoptimized
-                      />
+                      {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
+                        <video
+                          src={project.image}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                          unoptimized
+                        />
+                      )}
                     </div>
 
                     {/* Project Info */}
@@ -314,15 +237,26 @@ export default function WorkPage() {
                     href={`/Work/${project.slug}`}
                     className="group flex flex-col cursor-pointer"
                   >
-                    {/* Image Container */}
+                    {/* Image / Video Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        unoptimized
-                      />
+                      {project.image.endsWith(".mp4") || project.image.endsWith(".webm") ? (
+                        <video
+                          src={project.image}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                        />
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                          unoptimized
+                        />
+                      )}
                     </div>
 
                     {/* Project Info */}

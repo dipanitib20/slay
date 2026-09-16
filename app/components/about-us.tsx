@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutUsSection() {
   return (
-    <section id="about" className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12">
+    <section id="about" className="w-full bg-[#F5F4F3] my-14 sm:my-24 lg:my-40 px-4 sm:px-8 md:px-12">
       <div className="max-w-7xl mx-auto flex flex-col gap-24 sm:gap-32 md:gap-40">
         
         {/* Top Block: Centered Team Showcase with "Meet the Minds" */}
@@ -31,10 +31,10 @@ export default function AboutUsSection() {
             </p>
           </div>
 
-          {/* Team Graphic Card Container (About us.svg) */}
+          {/* Team Graphic Card Container (Aboutusnew.svg) */}
           <div className="relative w-full max-w-3xl md:max-w-3xl lg:max-w-4xl mx-auto rounded-[24px] sm:rounded-[32px] md:rounded-[38px] overflow-hidden bg-white/40">
             <Image
-              src="/About us.svg"
+              src="/Aboutusnew.svg"
               alt="Meet the Minds - Slay Agency Team"
               width={1408}
               height={710}

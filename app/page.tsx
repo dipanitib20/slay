@@ -67,22 +67,22 @@ export default function Home() {
 
   const projects = [
     {
-      id: "project-1",
-      slug: "the-social-refresh",
-      title: "Indian Summer",
+      id: "indian-summer-atelier",
+      slug: "indian-summer-atelier",
+      title: "Indian Summer Atelier",
       description:
-        "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image: "/homework/indian-summer.png",
-      tags: ["Design", "Strategy"],
+        "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content.",
+      image: "/indian summer/indian summer  (2).png",
+      tags: ["Social Media", "Performance Marketing", "Founder Led", "UGC & Content Shoot"],
     },
     {
-      id: "project-2",
-      slug: "lumen-brand-evolution",
+      id: "law-in-heels",
+      slug: "law-in-heels",
       title: "Law in Heels",
       description:
-        "Evolving a modern brand into an iconic identity with warm human-centric design and engaging content.",
+        "Aka Anvi Jain, lawyer turned legal creator, needed a platform. We built her consistent, aesthetic content system, shoot planning, scripting, calendars, and purposeful strategy.",
       image: "/homework/law-in-heels.png",
-      tags: ["Branding", "Design"],
+      tags: ["Social Media", "LinkedIn", "YouTube", "Personal Brand", "Content Shoot"],
     },
   ];
 
@@ -358,7 +358,7 @@ export default function Home() {
       <FAQ />
 
       {/* Criss-Crossing Ticker Ribbons Section */}
-      <section className="relative w-full my-40 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">
+      <section className="relative w-full mt-4 sm:mt-6 mb-10 sm:mb-24 lg:mb-40 overflow-hidden bg-[#F5F4F3] select-none no-scroll-animate">
         <div className="relative w-full flex items-center justify-center h-[220px] sm:h-[260px] md:h-[290px]">
           {/* Black Strip Ribbon (Angled bottom-left to top-right, moving right-to-left) */}
           <div className="absolute w-[300vw] left-1/2 -translate-x-1/2 py-3.5 sm:py-4 md:py-5 bg-[#1C1C1C] text-white shadow-[0_12px_28px_rgba(0,0,0,0.35)] rotate-[6.5deg] sm:rotate-[5deg] md:rotate-[3.8deg] z-10 overflow-hidden flex items-center">

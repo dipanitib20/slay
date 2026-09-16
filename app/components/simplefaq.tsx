@@ -34,7 +34,7 @@ export default function SimpleFAQ({
   };
 
   return (
-    <section className={`w-full my-40 px-4 sm:px-8 md:px-12 relative ${className}`}>
+    <section className={`w-full my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12 relative ${className}`}>
       <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Left Column: Heading */}

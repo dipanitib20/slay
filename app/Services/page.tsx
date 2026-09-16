@@ -35,7 +35,7 @@ export default function ServicesPage() {
       {/* Main Content Area */}
       <main className="flex-1">
         {/* Section 1: Services Grid */}
-        <section className="pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
+        <section className="pt-32 sm:pt-40 md:pt-44 mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Section Header */}
             <div className="relative max-w-4xl mx-auto text-center">
@@ -104,7 +104,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Section 2: Industries Showcase Section */}
-        <section className="my-40 w-full px-4 sm:px-8 md:px-12">
+        <section className="my-16 sm:my-24 lg:my-32 w-full px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             <div className="bg-white rounded-[32px] sm:rounded-[44px] md:rounded-[52px] border border-black/[0.04] shadow-[0_4px_32px_rgba(0,0,0,0.03)] overflow-hidden relative pt-10 sm:pt-14 md:pt-16 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-8 md:px-12">
               {/* Floating Pills Moving Bottom to Top Container */}

@@ -116,14 +116,14 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
   const faqList = items && items.length > 0 ? items : defaultItems;
 
   return (
-    <section className="relative w-full my-40 select-none no-scroll-animate overflow-visible">
+    <section className="relative w-full mt-8 sm:mt-16 md:mt-36 mb-4 sm:mb-6 select-none no-scroll-animate overflow-visible">
       {/* ── DESKTOP SCATTERED PILLS LAYOUT (≥768px) ── */}
       <div
-        className="hidden md:block relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-8 pb-12"
-        style={{ minHeight: "780px", height: "780px" }}
+        className="hidden md:block relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-8 pb-4"
+        style={{ minHeight: "560px", height: "560px" }}
       >
         {/* Central Heading */}
-        <div className="absolute inset-x-0 top-[31%] flex flex-col items-center text-center select-none pointer-events-none z-10">
+        <div className="absolute inset-x-0 top-[26%] flex flex-col items-center text-center select-none pointer-events-none z-10">
           <h2 className="font-heading text-4xl sm:text-5xl md:text-[56px] lg:text-[62px] tracking-tight leading-[1.12]">
             <span className="text-neutral-400 font-normal relative inline-block">
               Questions people
@@ -139,7 +139,7 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
 
         {/* Top Left Pill (Item 0) */}
         {faqList[0] && (
-          <div className="absolute left-[2%] top-[4%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
+          <div className="absolute left-[2%] top-[3%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
             <FAQPill
               question={faqList[0].question}
               answer={faqList[0].answer}
@@ -149,7 +149,7 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
 
         {/* Top Right Pill (Item 1) */}
         {faqList[1] && (
-          <div className="absolute right-[2%] top-[2%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
+          <div className="absolute right-[2%] top-[3%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
             <FAQPill
               question={faqList[1].question}
               answer={faqList[1].answer}
@@ -159,7 +159,7 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
 
         {/* Middle Left Pill (Item 2) */}
         {faqList[2] && (
-          <div className="absolute left-[2%] top-[50%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
+          <div className="absolute left-[2%] top-[51%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
             <FAQPill
               question={faqList[2].question}
               answer={faqList[2].answer}
@@ -169,7 +169,7 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
 
         {/* Middle Right Pill (Item 3) */}
         {faqList[3] && (
-          <div className="absolute right-[2%] top-[48%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
+          <div className="absolute right-[2%] top-[49%] w-[315px] sm:w-[355px] lg:w-[365px] z-20">
             <FAQPill
               question={faqList[3].question}
               answer={faqList[3].answer}
@@ -179,7 +179,7 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
 
         {/* Bottom Center Pill (Item 4) */}
         {faqList[4] && (
-          <div className="absolute left-1/2 -translate-x-1/2 top-[72%] w-[335px] sm:w-[380px] lg:w-[390px] z-20">
+          <div className="absolute left-1/2 -translate-x-1/2 top-[76%] w-[335px] sm:w-[380px] lg:w-[390px] z-20">
             <FAQPill
               question={faqList[4].question}
               answer={faqList[4].answer}
