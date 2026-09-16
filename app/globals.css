@@ -81,16 +81,11 @@ body {
   background: rgba(83, 103, 87, 0.6);
 }
 
-/* Buttery-Smooth, Cinematic Scroll Animations across all pages */
-.scroll-animate,
-section:not(.hero-fullscreen):not(.no-scroll-animate),
-main > div > div:not(.no-scroll-animate),
-.scroll-reveal,
-footer {
-  transition: opacity 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 1.05s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 1.05s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform, filter;
+/* Buttery-Smooth, High-Performance Scroll Animations */
+.scroll-animate {
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .no-scroll-animate,
@@ -103,16 +98,12 @@ footer {
 
 .scroll-hidden {
   opacity: 0 !important;
-  transform: translateY(48px) scale(0.975);
-  filter: blur(5px);
-  pointer-events: none;
+  transform: translateY(20px);
 }
 
 .scroll-visible {
   opacity: 1 !important;
-  transform: translateY(0) scale(1);
-  filter: blur(0px);
-  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .font-heading {

@@ -111,14 +111,25 @@ export default function AboutUsSection() {
 
           {/* Right Column: Sticky / Founder's Note Image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md sm:max-w-lg lg:max-w-none flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[440px] sm:max-w-[480px] xl:max-w-[520px]">
               <Image
                 src="/foundersnote.png"
                 alt="Founder's Note"
                 width={800}
                 height={800}
-                className="w-full max-w-[480px] xl:max-w-[520px] h-auto object-contain select-none drop-shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-transform duration-500 ease-out"
+                className="w-full h-auto object-contain select-none drop-shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-transform duration-500 ease-out"
               />
+
+              {/* Founder Image at bottom-left corner */}
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-bottom-8 md:-left-8 w-28 sm:w-36 md:w-44 aspect-square overflow-hidden shadow-[0_14px_34px_rgba(0,0,0,0.18)] border-4 sm:border-[5px] border-white -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-300 z-10 select-none bg-white">
+                <Image
+                  src="/founder-image.png"
+                  alt="Founder Dipani"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -66,7 +66,7 @@ export default function ServicesPage() {
                     className="block relative w-full aspect-[16/11] sm:aspect-[16/10] rounded-[22px] sm:rounded-[28px] overflow-hidden bg-[#ECEAE6]"
                   >
                     <Image
-                      src={service.heroImage}
+                      src={service.cardImage || service.heroImage}
                       alt={service.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"

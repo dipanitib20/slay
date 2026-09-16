@@ -64,12 +64,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["EVERY DETAIL CRAFTED", "FOR MAXIMUM ENGAGEMENT"],
     heroDescription:
       "No generic templates and no recycled aesthetics. Real creative strategy, tactile typography, and visual systems built to command attention across modern digital channels.",
-    heroImage:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1800&auto=format&fit=crop",
+    heroImage: "/homework/indian-summer.png",
     description:
       "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-    image:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+    image: "/homework/indian-summer.png",
     meta: {
       client: "Aura Creative Studio",
       year: "2026",
@@ -198,12 +196,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["STRATEGY MEETS", "UNAPOLOGETIC ELEGANCE"],
     heroDescription:
       "Translating complex technology infrastructure into an effortless, warm, human-centric design language that stands out in a crowded market.",
-    heroImage:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1800&auto=format&fit=crop",
+    heroImage: "/homework/law-in-heels.png",
     description:
-      "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-    image:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+      "Evolving a modern brand into an iconic identity with warm human-centric design and engaging content.",
+    image: "/homework/law-in-heels.png",
     meta: {
       client: "Lumen Technologies",
       year: "2026",

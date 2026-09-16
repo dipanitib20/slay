@@ -27,22 +27,20 @@ export default function WorkPage() {
     {
       id: "project-1",
       slug: "the-social-refresh",
-      title: "The Social Refresh",
+      title: "Indian Summer",
       description:
         "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+      image: "/homework/indian-summer.png",
       category: "Design",
       tags: ["Design", "Strategy"],
     },
     {
       id: "project-2",
       slug: "lumen-brand-evolution",
-      title: "Lumen Brand Evolution",
+      title: "Law in Heels",
       description:
-        "Evolving an enterprise tech platform into an iconic modern brand with warm human-centric design.",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+        "Evolving a modern brand into an iconic identity with warm human-centric design and engaging content.",
+      image: "/homework/law-in-heels.png",
       category: "Branding",
       tags: ["Branding", "Design"],
     },

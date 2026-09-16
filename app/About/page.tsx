@@ -41,14 +41,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Large Office Image Container */}
-            <div className="relative w-full aspect-[16/9] sm:aspect-[2.1/1] md:aspect-[2.4/1] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#ECEAE6] mt-10 sm:mt-14 md:mt-16 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+            {/* Large Hero Image Container */}
+            <div className="relative w-full aspect-[16/9] sm:aspect-[2.1/1] md:aspect-[2.4/1] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#FAF9EE] mt-10 sm:mt-14 md:mt-16 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
               <Image
-                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1600&auto=format&fit=crop"
-                alt="Office Workspace"
+                src="/about-main.png"
+                alt="Slay The Strategy Studio Office"
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
           </div>
@@ -104,8 +104,8 @@ export default function AboutPage() {
                 {/* Right Column: Image Card */}
                 <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
                   <Image
-                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
-                    alt="Our Approach"
+                    src="/mission.png"
+                    alt="Our Mission"
                     fill
                     className="object-cover"
                   />
@@ -117,8 +117,8 @@ export default function AboutPage() {
                 {/* Left Column: Image Card */}
                 <div className="order-2 lg:order-1 relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[16/10] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
                   <Image
-                    src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop"
-                    alt="Our Belief"
+                    src="/vision.png"
+                    alt="Our Vision"
                     fill
                     className="object-cover"
                   />
@@ -263,14 +263,14 @@ export default function AboutPage() {
                 name: "Dipani Tibrewala",
                 role: "Founder & CEO",
                 bio: "Hi, I am Dipani. Before Slay the Strategy, I spent 7.5 years in corporate marketing: Plan.Net TechNest India, Accenture, Edelman. I have worked on campaigns for Jaguar, BMW, Microsoft, HPE, and Infosys. I know what brand building looks like at scale and I know exactly what goes wrong when strategy turns into safe, recycled, forgettable content. That is what I left behind in 2024. Slay the Strategy is built for founders and brands who are done blending in. We work with D2C brands, creators, luxury names, professional service businesses, schools, and everyone in between who wants a presence that actually reflects how good what they have built really is. I oversee strategy personally on every account. We move fast, communicate like real people, and do not deliver work we are not proud to put our name on. If you are here, you already know you want more than what you have been getting. Let us talk.",
-                image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+                image: "/dipani.png",
               },
               {
                 id: "member-2",
                 name: "Srivats Tibrewala",
                 role: "Co-Founder",
                 bio: "Every great creative operation needs someone who makes sure the whole thing actually runs. That is Srivats. Srivats Tibrewala is the Co-Founder of Slay the Strategy and the person responsible for keeping the agency financially sharp and operationally tight. While strategy and creative work happens at the front, Srivats makes sure everything behind it—the numbers, the processes, the structure—is solid enough to scale. He is the reason we move fast without things falling apart. The backbone of everything we build here.",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+                image: "/srivats.png",
               },
             ].map((member) => (
               <div

@@ -6,6 +6,7 @@ export interface ServiceData {
   summary: string;
   description: string;
   heroImage: string;
+  cardImage?: string;
   midImage: string;
   deliverables: string[];
   overview: string[];
@@ -27,10 +28,9 @@ export const servicesData: ServiceData[] = [
       "We run your social presence end to end, from strategy and content to posting and community, so your profile finally works as hard as your product does.",
     description:
       "Instagram is no longer optional. It is your storefront, your first impression and your most visited sales page. We manage it end to end, so it consistently reflects the true value of your brand.",
-    heroImage:
-      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/social-media-hero.png",
+    cardImage: "/Servicecards/social-media.png",
+    midImage: "/serviceslug middleimage/social-media-mid.png",
     deliverables: [
       "Monthly content strategy and calendar",
       "Reels, carousels and statics, designed in house",
@@ -82,10 +82,9 @@ export const servicesData: ServiceData[] = [
       "We build campaigns that are meant to sell, not campaigns that are meant to look busy. Audience research, creative, testing and optimisation, with every rupee accounted for.",
     description:
       "Anyone can boost a post. We build actual campaigns. Audience research, creative strategy, ad copy, testing and optimisation based on what the data says. Every rupee tracked.",
-    heroImage:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/performance-hero.png",
+    cardImage: "/Servicecards/performance-marketing.png",
+    midImage: "/serviceslug middleimage/performance-mid.png",
     deliverables: [
       "Audience research and campaign strategy",
       "Ad creative and copy, built for the platform",
@@ -138,10 +137,9 @@ export const servicesData: ServiceData[] = [
       "We plan the shoot, direct the creative and run production from concept to final edit, so you finish with a content bank that lasts months rather than a folder of photos nobody uses.",
     description:
       "We plan the shoot, direct the creative and coordinate production from concept to final edit. Every piece of content is built around your brand aesthetic and what your specific audience actually responds to.",
-    heroImage:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/ugc-hero.png",
+    cardImage: "/Servicecards/ugc-shoots.png",
+    midImage: "/serviceslug middleimage/ugc-mid.png",
     deliverables: [
       "Shoot concept, moodboard and creative direction",
       "Shot list, scripts and production planning",
@@ -194,10 +192,9 @@ export const servicesData: ServiceData[] = [
       "The most underused asset at a founder led company is the founder. We turn your perspective into a presence on LinkedIn and Instagram that builds trust faster than any ad ever will.",
     description:
       "The most underused marketing asset at any founder led company is the founder. Your story, your perspective, your presence on LinkedIn and Instagram builds trust faster than any ad campaign. We write, we post, we position. You grow.",
-    heroImage:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/founder-hero.png",
+    cardImage: "/Servicecards/founder-led.png",
+    midImage: "/serviceslug middleimage/founder-mid.png",
     deliverables: [
       "Positioning and narrative for you, not just your company",
       "Content pillars and a monthly calendar",
@@ -250,10 +247,9 @@ export const servicesData: ServiceData[] = [
       "We design and build sites that look expensive and behave like a salesperson. Fast, clear, and built for how people actually browse in 2026, on a phone, in a hurry.",
     description:
       "A site that looks expensive and behaves like a salesperson. We design and build for the way people actually browse in 2026, on a phone, in a hurry, deciding in seconds whether you are worth their time.",
-    heroImage:
-      "https://images.unsplash.com/photo-1556742049-0a67e55722c3?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/web-design-hero.png",
+    cardImage: "/Servicecards/web-design.png",
+    midImage: "/serviceslug middleimage/web-design-mid.png",
     deliverables: [
       "Site structure, user journey and wireframes",
       "Design in your brand world, page by page",
@@ -306,10 +302,9 @@ export const servicesData: ServiceData[] = [
       "Positioning, visual system and voice, built so your brand still looks and sounds like itself on a reel, an invoice and a shopfront.",
     description:
       "Logo, colour, type, tone and the rules that hold it all together. Built so your brand still looks like itself on a reel, an invoice and a shopfront.",
-    heroImage:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1800&auto=format&fit=crop",
-    midImage:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/serviceslugsmain heroimage/brand-identity-hero.png",
+    cardImage: "/Servicecards/brand-identity.png",
+    midImage: "/serviceslug middleimage/brand-identity-mid.png",
     deliverables: [
       "Brand positioning and messaging framework",
       "Logo suite and marks",

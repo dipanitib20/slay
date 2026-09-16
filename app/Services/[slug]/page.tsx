@@ -72,7 +72,7 @@ export default function ServiceSlugPage() {
             </div>
 
             {/* Large Hero Banner Image */}
-            <div className="relative w-full aspect-[2.1/1] sm:aspect-[2.4/1] md:aspect-[2.6/1] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#ECEAE6] mt-8 sm:mt-12 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+            <div className="relative w-full aspect-[16/9] rounded-[28px] sm:rounded-[36px] md:rounded-[44px] overflow-hidden bg-[#ECEAE6] mt-8 sm:mt-12 shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-black/[0.04]">
               <Image
                 src={service.heroImage}
                 alt={service.title}
@@ -140,7 +140,7 @@ export default function ServiceSlugPage() {
               </div>
 
               {/* Mid-Content Image */}
-              <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-[24px] sm:rounded-[32px] md:rounded-[36px] overflow-hidden my-10 sm:my-14 bg-[#ECEAE6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-black/[0.04]">
+              <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] md:aspect-[3/2] min-h-[320px] sm:min-h-[420px] md:min-h-[480px] rounded-[24px] sm:rounded-[32px] md:rounded-[36px] overflow-hidden my-10 sm:my-14 bg-[#ECEAE6] shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-black/[0.04]">
                 <Image
                   src={service.midImage}
                   alt={`${service.title} in action`}

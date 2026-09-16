@@ -69,21 +69,19 @@ export default function Home() {
     {
       id: "project-1",
       slug: "the-social-refresh",
-      title: "The Social Refresh",
+      title: "Indian Summer",
       description:
         "Reimagining a growing brand’s social presence with bold visuals, sharper storytelling, and a strategy built for engagement.",
-      image:
-        "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1200&auto=format&fit=crop",
+      image: "/homework/indian-summer.png",
       tags: ["Design", "Strategy"],
     },
     {
       id: "project-2",
       slug: "lumen-brand-evolution",
-      title: "Lumen Brand Evolution",
+      title: "Law in Heels",
       description:
-        "Evolving an enterprise tech platform into an iconic modern brand with warm human-centric design.",
-      image:
-        "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
+        "Evolving a modern brand into an iconic identity with warm human-centric design and engaging content.",
+      image: "/homework/law-in-heels.png",
       tags: ["Branding", "Design"],
     },
   ];
@@ -121,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* Client Logos Carousel Section (Single Row) */}
-      <section className="relative w-full bg-[#F5F4F3] my-40 overflow-hidden">
+      <section className="relative w-full bg-[#F5F4F3] my-40 overflow-hidden no-scroll-animate">
         {/* Left & Right Gradient Fade Masks */}
         <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
