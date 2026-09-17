@@ -203,7 +203,7 @@ export default function ContactPage() {
       <Navbar bookCallHref="/Contact" />
 
       {/* Main Contact Section */}
-      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-40 px-4 sm:px-8 md:px-12">
+      <main className="flex-1 pt-32 sm:pt-40 md:pt-44 mb-20 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             {/* Left Column: Heading & Quick Call Card */}
@@ -613,7 +613,7 @@ export default function ContactPage() {
       </main>
 
       {/* FAQ Section */}
-      <SimpleFAQ pageKey="contact" />
+      <SimpleFAQ pageKey="contact" className="!mt-0 !mb-0" />
 
       {/* Footer Section */}
       <Footer />

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Navbar from "./components/navbar";
 import AboutUsSection from "./components/about-us";
 import FAQFun from "./components/faqfun";
@@ -11,6 +12,7 @@ import TestimonialSection from "./components/testimonial";
 import Footer from "./components/footer";
 
 export default function Home() {
+  const router = useRouter();
   const [activeCard, setActiveCard] = useState<number>(0);
 
   const clientLogos = [
@@ -37,28 +39,28 @@ export default function Home() {
   const services = [
     {
       number: "01/N",
-      slug: "Social media management",
+      slug: "social-media-management",
       title: "Social media management",
       description:
         "Instagram is no longer optional. It is your storefront, your first impression and your most visited sales page. We manage it end to end, so it consistently reflects the true value of your brand.",
     },
     {
       number: "02/N",
-      slug: "Performance Marketing",
+      slug: "performance-marketing",
       title: "Performance Marketing",
       description:
         "Anyone can boost a post. We build actual campaigns. Audience research, creative strategy, ad copy, testing and optimisation based on what the data says. Every rupee tracked. ",
     },
     {
       number: "03/N",
-      slug: "UGC & Content shoots",
+      slug: "brand-identity-strategy",
       title: "Brand Identity & Strategy",
       description:
-        "We plan the shoot, direct the creative and coordinate production from concept to final edit. Every piece of content is built around your brand aesthetic and what your specific audience actually responds to.",
+        "Logo, colour, type, tone and the rules that hold it all together. Built so your brand still looks and sounds like itself on a reel, an invoice and a shopfront.",
     },
     {
       number: "04/N",
-      slug: "Founder Led Marketing",
+      slug: "founder-led-marketing",
       title: "Founder Led Marketing",
       description:
         "The most underused marketing asset at any founder led company is the founder. Your story, your perspective, your presence on LinkedIn and Instagram builds trust faster than any ad campaign. We write, we post, we position. You grow.",
@@ -119,7 +121,7 @@ export default function Home() {
       </section>
 
       {/* Client Logos Carousel Section (Single Row) */}
-      <section className="relative w-full bg-[#F5F4F3] my-40 overflow-hidden no-scroll-animate">
+      <section className="relative w-full bg-[#F5F4F3] mt-20 mb-40 overflow-hidden no-scroll-animate">
         {/* Left & Right Gradient Fade Masks */}
         <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-r from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-44 bg-gradient-to-l from-[#F5F4F3] to-transparent z-10 pointer-events-none" />
@@ -198,8 +200,14 @@ export default function Home() {
                   <div
                     key={service.number}
                     onMouseEnter={() => setActiveCard(index)}
-                    onClick={() => setActiveCard(index)}
-                    className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-between ${
+                    onClick={() => {
+                      if (isActive) {
+                        router.push(`/Services/${service.slug}`);
+                      } else {
+                        setActiveCard(index);
+                      }
+                    }}
+                    className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-between group/card ${
                       isActive
                         ? "flex-[2.8] md:flex-[2.2] bg-[#222222] text-white rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 lg:p-9 shadow-xl"
                         : "flex-1 bg-[#F0EEEB] text-[#242424] hover:bg-[#EAE7E3] rounded-[22px] sm:rounded-[28px] p-5 sm:p-6"
@@ -228,6 +236,7 @@ export default function Home() {
                       <div className="flex flex-col gap-2.5 sm:gap-3 transition-all duration-500 delay-100 ease-out">
                         <Link
                           href={`/Services/${service.slug}`}
+                          onClick={(e) => e.stopPropagation()}
                           className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight hover:text-[#9BA59D] transition-colors inline-flex items-center gap-2 group/title"
                         >
                           <span>{service.title}</span>

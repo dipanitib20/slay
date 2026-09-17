@@ -351,7 +351,15 @@ export const servicesData: ServiceData[] = [
 ];
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
-  return servicesData.find((s) => s.slug === slug);
+  if (!slug) return undefined;
+  const decoded = decodeURIComponent(slug).toLowerCase().trim();
+  return servicesData.find(
+    (s) =>
+      s.slug.toLowerCase() === decoded ||
+      s.slug.toLowerCase() === decoded.replace(/\s+/g, "-") ||
+      s.title.toLowerCase() === decoded ||
+      s.id.toLowerCase() === decoded
+  );
 }
 
 export function getAllServices(): ServiceData[] {

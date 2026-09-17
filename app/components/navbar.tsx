@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 interface NavbarProps {
   logoText?: string;
@@ -32,9 +33,37 @@ export default function Navbar({
   phone = "(510) 895-6500",
   email = "hello@slayagency.com",
 }: NavbarProps) {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
+
+  useEffect(() => {
+    const checkScrollPosition = () => {
+      if (pathname === "/") {
+        const hero = document.querySelector(".hero-fullscreen");
+        if (hero) {
+          const rect = hero.getBoundingClientRect();
+          setIsPastHero(rect.bottom <= 90);
+        } else {
+          setIsPastHero(window.scrollY > 400);
+        }
+      } else {
+        setIsPastHero(true);
+      }
+    };
+
+    checkScrollPosition();
+    window.addEventListener("scroll", checkScrollPosition, { passive: true });
+    window.addEventListener("resize", checkScrollPosition, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", checkScrollPosition);
+      window.removeEventListener("resize", checkScrollPosition);
+    };
+  }, [pathname]);
+
+  const isHeroActive = pathname === "/" && !isPastHero;
 
   // Open with smooth transition
   const handleOpenMenu = () => {
@@ -83,7 +112,9 @@ export default function Navbar({
           {/* Left Navigation Pill */}
           <nav
             aria-label="Main Navigation"
-            className="flex items-center gap-8 sm:gap-11 bg-white/95 backdrop-blur-md px-7 sm:px-9 py-3.5 sm:py-4 rounded-full transition-transform duration-300"
+            className={`flex items-center gap-8 sm:gap-11 backdrop-blur-md px-7 sm:px-9 py-3.5 sm:py-4 rounded-full transition-colors duration-300 ${
+              isHeroActive ? "bg-[#F5F4F3]" : "bg-white"
+            }`}
           >
             {/* Logo */}
             <Link
