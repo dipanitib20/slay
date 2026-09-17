@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
+import Link from "next/link";
 
 export interface FAQItem {
   question: string;
@@ -515,12 +516,12 @@ export default function FAQFun({
                 </div>
 
                 {/* CTA Action Button */}
-                <a
-                  href="#contact"
+                <Link
+                  href="/Contact"
                   className="mt-4 inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-[#536757] text-white font-medium text-xs lg:text-sm hover:bg-[#435346] shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] transition-all duration-200 cursor-pointer"
                 >
                   Start your project
-                </a>
+                </Link>
 
                 {/* Counter & 5 Progress Navigation Dots */}
                 <div className="mt-4 flex flex-col items-center gap-1.5">
@@ -644,12 +645,12 @@ export default function FAQFun({
                   )}
 
                   {/* CTA Button */}
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/Contact"
                     className="inline-flex items-center justify-center px-8 py-3.5 rounded-2xl bg-[#536757] text-white font-semibold text-sm shadow-[0_4px_16px_rgba(83,103,87,0.25)] hover:bg-[#435346] active:scale-95 transition-all duration-200 cursor-pointer"
                   >
                     Start your project
-                  </a>
+                  </Link>
                 </div>
               );
             })}

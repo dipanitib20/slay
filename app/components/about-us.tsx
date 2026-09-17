@@ -67,7 +67,7 @@ export default function AboutUsSection() {
                 aria-label="Instagram"
               >
                 <Image
-                  src="/instagram.png"
+                  src="/instagram.webp"
                   alt="Instagram"
                   width={48}
                   height={48}
@@ -83,7 +83,7 @@ export default function AboutUsSection() {
                 aria-label="LinkedIn"
               >
                 <Image
-                  src="/linkedin.png"
+                  src="/linkedin.webp"
                   alt="LinkedIn"
                   width={48}
                   height={48}
@@ -99,7 +99,7 @@ export default function AboutUsSection() {
                 aria-label="Facebook"
               >
                 <Image
-                  src="/facebook.png"
+                  src="/facebook.webp"
                   alt="Facebook"
                   width={48}
                   height={48}
@@ -113,7 +113,7 @@ export default function AboutUsSection() {
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
             <div className="relative w-full max-w-[440px] sm:max-w-[480px] xl:max-w-[520px]">
               <Image
-                src="/foundersnote.png"
+                src="/foundersnote.webp"
                 alt="Founder's Note"
                 width={800}
                 height={800}
@@ -123,7 +123,7 @@ export default function AboutUsSection() {
               {/* Founder Image at bottom-left corner */}
               <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-bottom-8 md:-left-8 w-28 sm:w-36 md:w-44 aspect-square overflow-hidden shadow-[0_14px_34px_rgba(0,0,0,0.18)] border-4 sm:border-[5px] border-white -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-300 z-10 select-none bg-white">
                 <Image
-                  src="/founder-image.png"
+                  src="/founder-image.webp"
                   alt="Founder Dipani"
                   width={300}
                   height={300}

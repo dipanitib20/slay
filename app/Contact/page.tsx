@@ -164,7 +164,7 @@ export default function ContactPage() {
       {/* Calendly Logo */}
       <div className="mb-5 sm:mb-6">
         <Image
-          src="/Calendly.png"
+          src="/Calendly.webp"
           alt="Calendly"
           width={130}
           height={27}

@@ -98,33 +98,49 @@ function ProjectCarouselRow({
         className="flex gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scroll-smooth scrollbar-none snap-x snap-mandatory py-2 -mx-4 px-4 sm:-mx-8 sm:px-8 md:-mx-12 md:px-12 lg:mx-0 lg:px-0"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {carousel.images.map((imgSrc, imgIdx) => (
-          <div
-            key={imgIdx}
-            onClick={() => onImageClick(imgSrc, carousel.title, carousel.subtitle)}
-            className="group relative shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] aspect-[3/4] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] border border-black/[0.05] shadow-[0_4px_24px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300"
-          >
-            <Image
-              src={imgSrc}
-              alt={`${carousel.title || "Project visual"} - Slide ${imgIdx + 1}`}
-              fill
-              unoptimized
-              sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
-              className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-            />
-            {/* Subtle Gradient Overlay on Hover with Zoom Icon */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-5 text-white">
-              <span className="font-subheading text-xs font-semibold tracking-wider uppercase text-white/90">
-                Slide 0{imgIdx + 1}
-              </span>
-              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
-                </svg>
+        {carousel.images.map((imgSrc, imgIdx) => {
+          const isVid =
+            imgSrc.trim().toLowerCase().endsWith(".webm") ||
+            imgSrc.trim().toLowerCase().endsWith(".webm");
+          return (
+            <div
+              key={imgIdx}
+              onClick={() => onImageClick(imgSrc, carousel.title, carousel.subtitle)}
+              className="group relative shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] aspect-[4/5] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] border border-black/[0.05] shadow-[0_4px_24px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300"
+            >
+              {isVid ? (
+                <video
+                  src={encodeURI(imgSrc.trim())}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              ) : (
+                <Image
+                  src={imgSrc}
+                  alt={`${carousel.title || "Project visual"} - Slide ${imgIdx + 1}`}
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              )}
+              {/* Subtle Gradient Overlay on Hover with Zoom Icon */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-5 text-white pointer-events-none">
+                <span className="font-subheading text-xs font-semibold tracking-wider uppercase text-white/90">
+                  Slide 0{imgIdx + 1}
+                </span>
+                <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
@@ -139,9 +155,9 @@ function BentoMediaItem({
   onClick: () => void;
 }) {
   const isVid =
-    item.image.trim().toLowerCase().endsWith(".mp4") ||
     item.image.trim().toLowerCase().endsWith(".webm") ||
-    item.image.trim().toLowerCase().endsWith(".mov");
+    item.image.trim().toLowerCase().endsWith(".webm") ||
+    item.image.trim().toLowerCase().endsWith(".webm");
 
   const cleanSrc = encodeURI(item.image.trim());
 
@@ -409,7 +425,7 @@ export default function ProjectSlugPage() {
               href={`/Work/${nextProject.slug}`}
               className="group block relative w-full aspect-[16/9] sm:aspect-[2.2/1] md:aspect-[2.6/1] rounded-[28px] sm:rounded-[40px] overflow-hidden bg-[#ECEAE6] border border-black/[0.06] shadow-lg"
             >
-              {nextProject.heroImage?.trim().toLowerCase().endsWith(".mp4") ||
+              {nextProject.heroImage?.trim().toLowerCase().endsWith(".webm") ||
               nextProject.heroImage?.trim().toLowerCase().endsWith(".webm") ? (
                 <video
                   src={encodeURI(nextProject.heroImage.trim())}
@@ -491,9 +507,9 @@ export default function ProjectSlugPage() {
             className="relative max-w-5xl max-h-[85vh] w-full h-full flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {activeLightbox.image.trim().toLowerCase().endsWith(".mp4") ||
+            {activeLightbox.image.trim().toLowerCase().endsWith(".webm") ||
             activeLightbox.image.trim().toLowerCase().endsWith(".webm") ||
-            activeLightbox.image.trim().toLowerCase().endsWith(".mov") ? (
+            activeLightbox.image.trim().toLowerCase().endsWith(".webm") ? (
               <video
                 src={encodeURI(activeLightbox.image.trim())}
                 autoPlay

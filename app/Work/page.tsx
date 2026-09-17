@@ -182,7 +182,7 @@ export default function WorkPage() {
                   >
                     {/* Image / Video Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      {project.image.trim().toLowerCase().endsWith(".mp4") ||
+                      {project.image.trim().toLowerCase().endsWith(".webm") ||
                       project.image.trim().toLowerCase().endsWith(".webm") ? (
                         <video
                           src={encodeURI(project.image.trim())}
@@ -240,7 +240,7 @@ export default function WorkPage() {
                   >
                     {/* Image / Video Container */}
                     <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      {project.image.trim().toLowerCase().endsWith(".mp4") ||
+                      {project.image.trim().toLowerCase().endsWith(".webm") ||
                       project.image.trim().toLowerCase().endsWith(".webm") ? (
                         <video
                           src={encodeURI(project.image.trim())}

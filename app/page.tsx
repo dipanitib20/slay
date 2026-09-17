@@ -72,7 +72,7 @@ export default function Home() {
       title: "Indian Summer Atelier",
       description:
         "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content.",
-      image: "/indian summer/indian summer  (2).png",
+      image: "/indian summer/indian summer  (2).webp",
       tags: ["Social Media", "Performance Marketing", "Founder Led", "UGC & Content Shoot"],
     },
     {
@@ -81,7 +81,7 @@ export default function Home() {
       title: "Law in Heels",
       description:
         "Aka Anvi Jain, lawyer turned legal creator, needed a platform. We built her consistent, aesthetic content system, shoot planning, scripting, calendars, and purposeful strategy.",
-      image: "/homework/law-in-heels.png",
+      image: "/homework/law-in-heels.webp",
       tags: ["Social Media", "LinkedIn", "YouTube", "Personal Brand", "Content Shoot"],
     },
   ];

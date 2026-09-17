@@ -87,7 +87,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "lih-1",
-          image: "/anvi/A colour that doesn’t whisper.It owns the room.Pink, but make it powerful...luxury fashion aesth.mp4",
+          image: "/anvi/A colour that doesn’t whisper.It owns the room.Pink, but make it powerful...luxury fashion aesth.webm",
           title: "Power in Pink: Legal Fashion Reel",
           caption: "High-production luxury aesthetic styling and confident legal branding",
           aspectClass: "aspect-[9/16]",
@@ -103,7 +103,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-3",
-          image: "/anvi/Not every act of surveillance is stalking. But the line matters.Professional surveillance may be.mp4",
+          image: "/anvi/Not every act of surveillance is stalking. But the line matters.Professional surveillance may be.webm",
           title: "Surveillance vs Stalking Breakdown",
           caption: "Nuanced legal analysis on surveillance laws and personal rights",
           aspectClass: "aspect-[9/16]",
@@ -113,7 +113,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "lih-4",
-          image: "/anvi/linkedin shots.png",
+          image: "/anvi/linkedin shots.webp",
           title: "LinkedIn Thought Leadership",
           caption: "Viral LinkedIn carousel templates and authority engagement formats",
           aspectClass: "aspect-[9/16]",
@@ -121,7 +121,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-5",
-          image: "/anvi/Artificial Intelligence may understand patterns, but the law has always been about people. ⚖️Alg.jpg",
+          image: "/anvi/Artificial Intelligence may understand patterns, but the law has always been about people. ⚖️Alg.webp",
           title: "AI & Human Law Analysis",
           caption: "Thought leadership post on algorithms, intellectual property & human justice",
           aspectClass: "aspect-[4/5]",
@@ -129,7 +129,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-6",
-          image: "/anvi/We often hear about detectives, investigations, and the mysteries they solve.But what is it like.mp4",
+          image: "/anvi/We often hear about detectives, investigations, and the mysteries they solve.But what is it like.webm",
           title: "Private Investigation & Evidence Law",
           caption: "Engaging case-study storytelling on investigative evidence rules",
           aspectClass: "aspect-[9/16]",
@@ -147,7 +147,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-8",
-          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody .jpg",
+          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody .webp",
           title: "The Grey Areas of Law",
           caption: "Provocative commentary driving hundreds of insightful discussions",
           aspectClass: "aspect-[4/5]",
@@ -161,13 +161,13 @@ export const projectsData: ProjectData[] = [
         title: "Everyday Legal Scenarios & Consumer Rights",
         subtitle: "High-retention multi-slide breakdown translating everyday legal dilemmas into simple, actionable guidance.",
         images: [
-          "/anvi/carousel/c1.1.jpg",
-          "/anvi/carousel/c1.2.jpg",
-          "/anvi/carousel/c1.3.jpg",
-          "/anvi/carousel/c1.4.jpg",
-          "/anvi/carousel/c1.5.jpg",
-          "/anvi/carousel/c1.6.jpg",
-          "/anvi/carousel/c1.7.jpg",
+          "/anvi/carousel/c1.1.webp",
+          "/anvi/carousel/c1.2.webp",
+          "/anvi/carousel/c1.3.webp",
+          "/anvi/carousel/c1.4.webp",
+          "/anvi/carousel/c1.5.webp",
+          "/anvi/carousel/c1.6.webp",
+          "/anvi/carousel/c1.7.webp",
         ],
       },
       {
@@ -216,10 +216,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["FASHION CRAFT", "LANDING AS IT DESERVES"],
     heroDescription:
       "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content. Same brand, finally landing the way it deserves to.",
-    heroImage: "/indian summer/indian summer  (2).png",
+    heroImage: "/indian summer/indian summer  (2).webp",
     description:
       "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content. Same brand, finally landing the way it deserves to.",
-    image: "/indian summer/indian summer  (2).png",
+    image: "/indian summer/indian summer  (2).webp",
     meta: {
       client: "Indian Summer Atelier",
       year: "2026",
@@ -232,7 +232,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "isa-1",
           image:
-            "/indian summer/Ajrakh carries an air of distinction that fast fashion can never recreate. ⚜️Rooted in centuries.mp4",
+            "/indian summer/Ajrakh carries an air of distinction that fast fashion can never recreate. ⚜️Rooted in centuries.webm",
           title: "Ajrakh Heritage Reel",
           caption: "Centuries-old craft and distinguished silhouette storytelling",
           aspectClass: "aspect-[9/16]",
@@ -240,7 +240,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "isa-2",
-          image: "/indian summer/ad (33).png",
+          image: "/indian summer/ad (33).webp",
           title: "Performance Ad Lookbook",
           caption: "Targeted Meta ad testing and conversion asset",
           aspectClass: "aspect-[3/4]",
@@ -251,7 +251,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "isa-3",
           image:
-            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. #ajrakhcollection #ajrakhp.mp4",
+            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. #ajrakhcollection #ajrakhp.webm",
           title: "Ajrakh Comeback Drop",
           caption: "High energy collection restock and announcement reel",
           aspectClass: "aspect-[9/16]",
@@ -259,7 +259,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "isa-4",
-          image: "/indian summer/ad (34).png",
+          image: "/indian summer/ad (34).webp",
           title: "Campaign Creative",
           caption: "Editorial styling and product focus",
           aspectClass: "aspect-[3/4]",
@@ -270,7 +270,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "isa-5",
           image:
-            "/indian summer/••Mehar Hand-Embroidered Stripped Tissue Panelled Long Dress•••Long dress in pure silk and strip.mp4",
+            "/indian summer/••Mehar Hand-Embroidered Stripped Tissue Panelled Long Dress•••Long dress in pure silk and strip.webm",
           title: "Mehar Hand-Embroidered Dress",
           caption: "Pure silk and tissue panelled movement video",
           aspectClass: "aspect-[9/16]",
@@ -278,7 +278,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "isa-6",
-          image: "/indian summer/indian summer  (2).png",
+          image: "/indian summer/indian summer  (2).webp",
           title: "Atelier Studio Shoot",
           caption: "In-house editorial portrait establishing brand presence",
           aspectClass: "aspect-[3/4]",
@@ -292,12 +292,12 @@ export const projectsData: ProjectData[] = [
         title: "Collection Lookbook & Silhouettes",
         subtitle: "In-house editorial photography highlighting hand-embroidered textiles and draping.",
         images: [
-          "/indian summer/carousel 1/1.png",
-          "/indian summer/carousel 1/2.png",
-          "/indian summer/carousel 1/3.png",
-          "/indian summer/carousel 1/4.png",
-          "/indian summer/carousel 1/5.png",
-          "/indian summer/carousel 1/6.png",
+          "/indian summer/carousel 1/1.webp",
+          "/indian summer/carousel 1/2.webp",
+          "/indian summer/carousel 1/3.webp",
+          "/indian summer/carousel 1/4.webp",
+          "/indian summer/carousel 1/5.webp",
+          "/indian summer/carousel 1/6.webp",
         ],
       },
       {
@@ -305,12 +305,12 @@ export const projectsData: ProjectData[] = [
         title: "Seasonal Styling & Details",
         subtitle: "Macro fabric details and founder-led styling formats.",
         images: [
-          "/indian summer/carousel 2/1.jpg",
-          "/indian summer/carousel 2/2.jpg",
-          "/indian summer/carousel 2/3.jpg",
-          "/indian summer/carousel 2/4.jpg",
-          "/indian summer/carousel 2/5.jpg",
-          "/indian summer/carousel 2/6.jpg",
+          "/indian summer/carousel 2/1.webp",
+          "/indian summer/carousel 2/2.webp",
+          "/indian summer/carousel 2/3.webp",
+          "/indian summer/carousel 2/4.webp",
+          "/indian summer/carousel 2/5.webp",
+          "/indian summer/carousel 2/6.webp",
         ],
       },
     ],
@@ -345,10 +345,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["WARM, TRUST-LED", "CANADIAN PRESCHOOL STORYTELLING"],
     heroDescription:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    heroImage: "/maple/carousel 1/1.jpg",
+    heroImage: "/maple/carousel 1/1.webp",
     description:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    image: "/maple/carousel 1/1.jpg",
+    image: "/maple/carousel 1/1.webp",
     meta: {
       client: "MAPLE Preschool Bengaluru",
       year: "2026",
@@ -361,7 +361,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v1",
           image:
-            "/maple/At Maple Bear RMV Stage 2, learning comes alive through play! 🌟 Our little learners are explori.mp4",
+            "/maple/At Maple Bear RMV Stage 2, learning comes alive through play! 🌟 Our little learners are explori.webm",
           title: "Learning Through Play",
           caption: "Classroom immersion and playful learning",
           aspectClass: "aspect-[9/16]",
@@ -370,7 +370,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v2",
           image:
-            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s .mp4",
+            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s .webm",
           title: "Every Little Step",
           caption: "Nurturing milestones for future growth",
           aspectClass: "aspect-[9/16]",
@@ -381,7 +381,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v3",
           image:
-            "/maple/From heartfelt words to proud smiles our Maple RMV2 parents took the stage to share their journe.mp4",
+            "/maple/From heartfelt words to proud smiles our Maple RMV2 parents took the stage to share their journe.webm",
           title: "Parent Voices",
           caption: "Heartfelt testimonials from Bengaluru families",
           aspectClass: "aspect-[9/16]",
@@ -390,7 +390,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v4",
           image:
-            "/maple/Tiny chefs, big learning moments 👩_🍳✨From mixing healthy ingredients to creating delicious mul.mp4",
+            "/maple/Tiny chefs, big learning moments 👩_🍳✨From mixing healthy ingredients to creating delicious mul.webm",
           title: "Tiny Chefs",
           caption: "Sensory cooking & activity moments",
           aspectClass: "aspect-[9/16]",
@@ -401,7 +401,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v5",
           image:
-            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting .mp4",
+            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting .webm",
           title: "Tiny Explorers",
           caption: "Hands-on discovery and curiosity",
           aspectClass: "aspect-[9/16]",
@@ -410,7 +410,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v6",
           image:
-            "/maple/Tiny steps, big milestones ✨ From movement to coordination, every dance, jump & giggle at Maple  (1).mp4",
+            "/maple/Tiny steps, big milestones ✨ From movement to coordination, every dance, jump & giggle at Maple  (1).webm",
           title: "Movement & Coordination",
           caption: "Active play, dance & motor skills",
           aspectClass: "aspect-[9/16]",
@@ -424,9 +424,9 @@ export const projectsData: ProjectData[] = [
         title: "Play & Learning Highlights",
         subtitle: "Curated moments of early childhood discovery and interactive learning.",
         images: [
-          "/maple/carousel 1/1.jpg",
-          "/maple/carousel 1/2.jpg",
-          "/maple/carousel 1/3.jpg",
+          "/maple/carousel 1/1.webp",
+          "/maple/carousel 1/2.webp",
+          "/maple/carousel 1/3.webp",
         ],
       },
       {
@@ -434,12 +434,12 @@ export const projectsData: ProjectData[] = [
         title: "Classroom Life & Milestones",
         subtitle: "A glimpse inside the Canadian learning framework in action.",
         images: [
-          "/maple/carousel 2/1.jpg",
-          "/maple/carousel 2/2.jpg",
-          "/maple/carousel 2/3.jpg",
-          "/maple/carousel 2/4.jpg",
-          "/maple/carousel 2/5.jpg",
-          "/maple/carousel 2/6.jpg",
+          "/maple/carousel 2/1.webp",
+          "/maple/carousel 2/2.webp",
+          "/maple/carousel 2/3.webp",
+          "/maple/carousel 2/4.webp",
+          "/maple/carousel 2/5.webp",
+          "/maple/carousel 2/6.webp",
         ],
       },
       {
@@ -447,12 +447,12 @@ export const projectsData: ProjectData[] = [
         title: "Hands-on Discovery & Wonder",
         subtitle: "Messy hands, curious minds, and joyful milestone moments.",
         images: [
-          "/maple/carousel 3/1.jpg",
-          "/maple/carousel 3/2.jpg",
-          "/maple/carousel 3/3.jpg",
-          "/maple/carousel 3/The best learning happens when little hands get messy, curious minds start asking questions, and (4).jpg",
-          "/maple/carousel 3/5.jpg",
-          "/maple/carousel 3/6.jpg",
+          "/maple/carousel 3/1.webp",
+          "/maple/carousel 3/2.webp",
+          "/maple/carousel 3/3.webp",
+          "/maple/carousel 3/The best learning happens when little hands get messy, curious minds start asking questions, and (4).webp",
+          "/maple/carousel 3/5.webp",
+          "/maple/carousel 3/6.webp",
         ],
       },
       {
@@ -460,12 +460,12 @@ export const projectsData: ProjectData[] = [
         title: "Admissions & Campus Joy",
         subtitle: "Warm, trust-led storytelling connecting with parents across Bengaluru.",
         images: [
-          "/maple/carousel 4/1.jpg",
-          "/maple/carousel 4/2.jpg",
-          "/maple/carousel 4/3.jpg",
-          "/maple/carousel 4/4.jpg",
-          "/maple/carousel 4/5.jpg",
-          "/maple/carousel 4/6.jpg",
+          "/maple/carousel 4/1.webp",
+          "/maple/carousel 4/2.webp",
+          "/maple/carousel 4/3.webp",
+          "/maple/carousel 4/4.webp",
+          "/maple/carousel 4/5.webp",
+          "/maple/carousel 4/6.webp",
         ],
       },
     ],
@@ -497,10 +497,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["EVERY SET GETS ITS", "MAIN CHARACTER MOMENT"],
     heroDescription:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .jpg",
+    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
     description:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .jpg",
+    image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
     meta: {
       client: "Claw Nails Studio",
       year: "2026",
@@ -512,7 +512,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "claw-1",
-          image: "/claw/Polka dots, glossy French tips & the cutest little bows, serving main character energy, one nail.mp4",
+          image: "/claw/Polka dots, glossy French tips & the cutest little bows, serving main character energy, one nail.webm",
           title: "Main Character Bows & Tips",
           caption: "High-gloss French tips and polka dots serving main character energy",
           aspectClass: "aspect-[9/16]",
@@ -520,7 +520,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-2",
-          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .jpg",
+          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
           title: "Floral & French Set",
           caption: "Handcrafted floral accents with delicate polka dot French tips",
           aspectClass: "aspect-[4/5]",
@@ -528,7 +528,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-3",
-          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white .mp4",
+          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white .webm",
           title: "Playful Colorway Tips",
           caption: "Subverting classic French tips with bold seasonal colors",
           aspectClass: "aspect-[9/16]",
@@ -536,7 +536,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-4",
-          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment, .mp4",
+          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment, .webm",
           title: "Long Nails Lifestyle Test",
           caption: "Debunking long nail myths with everyday lifestyle testing",
           aspectClass: "aspect-[9/16]",
@@ -546,7 +546,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "claw-5",
-          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement. .mp4",
+          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement. .webm",
           title: "Sharp Claw Energy",
           caption: "Statement stiletto sets built for unmatched confidence",
           aspectClass: "aspect-[9/16]",
@@ -554,7 +554,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-6",
-          image: "/claw/Two types of Claw Nails girls 💅📌 The Pinterest Girl🔥 The “Aaj Kuch Toofani Karte Hai” GirlWhi.jpg",
+          image: "/claw/Two types of Claw Nails girls 💅📌 The Pinterest Girl🔥 The “Aaj Kuch Toofani Karte Hai” GirlWhi.webp",
           title: "Two Types of Claw Girls",
           caption: "Pinterest girl vs Toofani girl relatable personality format",
           aspectClass: "aspect-[4/5]",
@@ -562,7 +562,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-7",
-          image: "/claw/The best marketing isn’t always the loudest, it’s the experience people can’t stop talking about.mp4",
+          image: "/claw/The best marketing isn’t always the loudest, it’s the experience people can’t stop talking about.webm",
           title: "Salon Experience Storytelling",
           caption: "Documenting the pampering in-studio appointment experience",
           aspectClass: "aspect-[9/16]",
@@ -570,7 +570,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-8",
-          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl .jpg",
+          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl .webp",
           title: "Fresh Set Priorities",
           caption: "Engaging chat-format meme celebrating fresh salon sets",
           aspectClass: "aspect-[4/5]",
@@ -580,7 +580,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "claw-9",
-          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝘦 𝘳𝘰.mp4",
+          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝘦 𝘳𝘰.webm",
           title: "Founder Hot Seat with Reena Batra",
           caption: "Rapid-fire founder interview and nail care secrets",
           aspectClass: "aspect-[9/16]",
@@ -588,7 +588,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-10",
-          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.jpg",
+          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
           title: "Wispy Lashes & Eye Glam",
           caption: "Soft wispy lash extensions elevating the full studio look",
           aspectClass: "aspect-[4/5]",
@@ -596,7 +596,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-11",
-          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏 .mp4",
+          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏 .webm",
           title: "Galaxy On Her Fingertips",
           caption: "Celestial chrome and metallic shimmer nail art showcase",
           aspectClass: "aspect-[9/16]",
@@ -610,10 +610,10 @@ export const projectsData: ProjectData[] = [
         title: "Summer Nails Trends & Editorial Moodboards",
         subtitle: "Handcrafted illustrated guides and seasonal nail moodboards highlighting studio trends and signature styles.",
         images: [
-          "/claw/carousel/1.jpg",
-          "/claw/carousel/2.jpg",
-          "/claw/carousel/3.jpg",
-          "/claw/carousel/4.jpg",
+          "/claw/carousel/1.webp",
+          "/claw/carousel/2.webp",
+          "/claw/carousel/3.webp",
+          "/claw/carousel/4.webp",
         ],
       },
     ],
@@ -645,10 +645,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["CAKES THAT LOOK", "AS DELICIOUS AS THEY TASTE"],
     heroDescription:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    heroImage: "/baked love/baked love .png",
+    heroImage: "/baked love/baked love .webp",
     description:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    image: "/baked love/baked love .png",
+    image: "/baked love/baked love .webp",
     meta: {
       client: "Baked Love",
       year: "2026",
@@ -660,7 +660,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "bl-1",
-          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what .mp4",
+          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what .webm",
           title: "13 Years of Craft & Passion",
           caption: "Behind-the-scenes journey of 13 years of artisanal baking",
           aspectClass: "aspect-[9/16]",
@@ -668,7 +668,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-2",
-          image: "/baked love/baked love .png",
+          image: "/baked love/baked love .webp",
           title: "A Chef Vatsala Original",
           caption: "Signature handcrafted confection with rich filling and coconut zest",
           aspectClass: "aspect-[4/5]",
@@ -676,7 +676,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-3",
-          image: "/baked love/Watch it come together, one layer at a time.Generously soaked ladyfingers with a signature Baked.mp4",
+          image: "/baked love/Watch it come together, one layer at a time.Generously soaked ladyfingers with a signature Baked.webm",
           title: "One Layer At A Time: Tiramisu",
           caption: "Generously soaked artisanal ladyfingers layered with signature cream",
           aspectClass: "aspect-[9/16]",
@@ -686,7 +686,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "bl-4",
-          image: "/baked love/About once a month, someone tries to sell us a shortcut.Thirteen years of saying no. Because som.mp4",
+          image: "/baked love/About once a month, someone tries to sell us a shortcut.Thirteen years of saying no. Because som.webm",
           title: "Zero Shortcuts Philosophy",
           caption: "Saying no to industrial shortcuts in favor of pure, slow-crafted flavor",
           aspectClass: "aspect-[9/16]",
@@ -694,7 +694,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-5",
-          image: "/baked love/baked love  (5).png",
+          image: "/baked love/baked love  (5).webp",
           title: "Plot Twist: It's Vegan",
           caption: "Indulgent dairy-free chocolate tart with cocoa dusting",
           aspectClass: "aspect-[4/5]",
@@ -702,7 +702,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-6",
-          image: "/baked love/A glimpse of the vegan lineup, one tap away. Now delivering across Delhi, Gurgaon and Noida. Ord.mp4",
+          image: "/baked love/A glimpse of the vegan lineup, one tap away. Now delivering across Delhi, Gurgaon and Noida. Ord.webm",
           title: "Vegan Lineup & NCR Delivery",
           caption: "Showcasing conscious indulgence delivering across Delhi, Gurgaon & Noida",
           aspectClass: "aspect-[9/16]",
@@ -712,7 +712,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "bl-7",
-          image: "/baked love/Festive season is upon us- connect with us for bespoke gifts that don’t get forwarded ✨.mp4",
+          image: "/baked love/Festive season is upon us- connect with us for bespoke gifts that don’t get forwarded ✨.webm",
           title: "Bespoke Festive Gifting",
           caption: "Memorable holiday hampers and artisanal bespoke dessert boxes",
           aspectClass: "aspect-[9/16]",
@@ -720,7 +720,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-8",
-          image: "/baked love/Somebody in your family still remembers exactly which cake you fought over.Every Rakhi looks the.jpg",
+          image: "/baked love/Somebody in your family still remembers exactly which cake you fought over.Every Rakhi looks the.webp",
           title: "Family Memories & Celebrations",
           caption: "Emotional storytelling around festive family cake traditions",
           aspectClass: "aspect-[4/5]",
@@ -734,10 +734,10 @@ export const projectsData: ProjectData[] = [
         title: "Cake Architecture & Layered Flavor Cross-Sections",
         subtitle: "Macro cross-section breakdowns revealing sponge moisture, bespoke infusions, and artisanal textures.",
         images: [
-          "/baked love/carousel/baked love  (1).png",
-          "/baked love/carousel/baked love  (2).png",
-          "/baked love/carousel/baked love  (3).png",
-          "/baked love/carousel/baked love  (4).png",
+          "/baked love/carousel/baked love  (1).webp",
+          "/baked love/carousel/baked love  (2).webp",
+          "/baked love/carousel/baked love  (3).webp",
+          "/baked love/carousel/baked love  (4).webp",
         ],
       },
       {
@@ -745,11 +745,11 @@ export const projectsData: ProjectData[] = [
         title: "The Deliciousness Quotient & Pure Ingredients",
         subtitle: "Sensory storytelling celebrating unadulterated cocoa, pure Nutella swirls, and zero-shortcut ingredient purity.",
         images: [
-          "/baked love/carousel 2/baked love  (6).png",
-          "/baked love/carousel 2/baked love  (7).png",
-          "/baked love/carousel 2/baked love  (8).png",
-          "/baked love/carousel 2/baked love  (9).png",
-          "/baked love/carousel 2/baked love  (10).png",
+          "/baked love/carousel 2/baked love  (6).webp",
+          "/baked love/carousel 2/baked love  (7).webp",
+          "/baked love/carousel 2/baked love  (8).webp",
+          "/baked love/carousel 2/baked love  (9).webp",
+          "/baked love/carousel 2/baked love  (10).webp",
         ],
       },
     ],
@@ -781,10 +781,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["SEVEN NIGHTS, SEVEN VIBES,", "ZERO REPEATS"],
     heroDescription:
       "Seven nights, seven vibes, zero repeats. We designed the nightly creative engine for Underpass, motion graphic posters Sunday to Thursday and video invites for the weekend, giving every theme night from Techno Tuesday to Saturday Anthem its own identity.",
-    heroImage: "/underpass/Underpass Tuesday.mp4",
+    heroImage: "/underpass/Underpass Tuesday.webm",
     description:
       "Seven nights, seven vibes, zero repeats. We designed the nightly creative engine for Underpass, motion graphic posters Sunday to Thursday and video invites for the weekend, giving every theme night from Techno Tuesday to Saturday Anthem its own identity.",
-    image: "/underpass/Underpass Tuesday.mp4",
+    image: "/underpass/Underpass Tuesday.webm",
     meta: {
       client: "Underpass",
       year: "2026",
@@ -796,7 +796,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "up-1",
-          image: "/underpass/Underpass Tuesday.mp4",
+          image: "/underpass/Underpass Tuesday.webm",
           title: "Techno Tuesday",
           caption: "Kinetic typography motion poster",
           aspectClass: "aspect-[9/16]",
@@ -804,7 +804,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-2",
-          image: "/underpass/kokk saturday reel .mp4",
+          image: "/underpass/kokk saturday reel .webm",
           title: "Saturday Reel",
           caption: "High energy weekend video invite",
           aspectClass: "aspect-[9/16]",
@@ -812,7 +812,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-3",
-          image: "/underpass/kokkini saturday.mp4",
+          image: "/underpass/kokkini saturday.webm",
           title: "Saturday Anthem",
           caption: "Nightclub motion teaser",
           aspectClass: "aspect-[9/16]",
@@ -822,7 +822,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "up-4",
-          image: "/underpass/kokkinia monday 7.mp4",
+          image: "/underpass/kokkinia monday 7.webm",
           title: "Monday 7 Edition",
           caption: "Theme night motion graphics",
           aspectClass: "aspect-[9/16]",
@@ -830,7 +830,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-5",
-          image: "/underpass/kokkinia sunday.mp4",
+          image: "/underpass/kokkinia sunday.webm",
           title: "Sunday Session",
           caption: "Weekend mood invite trailer",
           aspectClass: "aspect-[9/16]",
@@ -838,7 +838,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-6",
-          image: "/underpass/konni 15 tues new .mp4",
+          image: "/underpass/konni 15 tues new .webm",
           title: "Tuesday Underground",
           caption: "Nightly creative series flyer",
           aspectClass: "aspect-[9/16]",
@@ -848,7 +848,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "up-7",
-          image: "/underpass/underpass monday .mp4",
+          image: "/underpass/underpass monday .webm",
           title: "Monday Series",
           caption: "Animated motion poster format",
           aspectClass: "aspect-[9/16]",
@@ -856,7 +856,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-8",
-          image: "/underpass/underpass tuesday 1.mp4",
+          image: "/underpass/underpass tuesday 1.webm",
           title: "Tuesday Techno Club",
           caption: "Dark kinetic motion engine",
           aspectClass: "aspect-[9/16]",
@@ -864,7 +864,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-9",
-          image: "/underpass/wed underpass 16 .mp4",
+          image: "/underpass/wed underpass 16 .webm",
           title: "Wednesday Frequency",
           caption: "Midweek groove video invite",
           aspectClass: "aspect-[9/16]",
@@ -900,10 +900,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["REFURBISHED TECH,", "ZERO BORING"],
     heroDescription:
       "Refurbished tech, zero boring. We built Costify's page around \"Naye jaisa, aadha daam\" with founder reels, Bollywood themed warranty carousels, educational content and trend formats that turned a trust heavy category into something people wanted to watch.",
-    heroImage: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.jpg",
+    heroImage: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     description:
       "Refurbished tech, zero boring. We built Costify's page around \"Naye jaisa, aadha daam\" with founder reels, Bollywood themed warranty carousels, educational content and trend formats that turned a trust heavy category into something people wanted to watch.",
-    image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.jpg",
+    image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     meta: {
       client: "Costify",
       year: "2026",
@@ -915,7 +915,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "cost-1",
-          image: "/costify/Ab toh Jethalal bhi bhaga bhaga aagya aap kab aenge •Visit our Costify store and get an EXTRA ₹1.mp4",
+          image: "/costify/Ab toh Jethalal bhi bhaga bhaga aagya aap kab aenge •Visit our Costify store and get an EXTRA ₹1.webm",
           title: "Jethalal Store Visit Reel",
           caption: "High-virality Bollywood comedy reel driving store footfall",
           aspectClass: "aspect-[9/16]",
@@ -923,7 +923,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "cost-2",
-          image: "/costify/Summer demand is rising, are you stock ready ❄️📈Upgrade your business with professionally refur.jpg",
+          image: "/costify/Summer demand is rising, are you stock ready ❄️📈Upgrade your business with professionally refur.webp",
           title: "Summer Stock Ready Deep Freezers",
           caption: "High-impact B2B refurbished cooling appliance creative",
           aspectClass: "aspect-[4/5]",
@@ -931,7 +931,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "cost-3",
-          image: "/costify/Why pay full price when you can bring home the same comfort for up to 60_ lessFrom air condition.mp4",
+          image: "/costify/Why pay full price when you can bring home the same comfort for up to 60_ lessFrom air condition.webm",
           title: "60% Off Comfort Campaign",
           caption: "Value proposition breakdown comparing new vs refurbished ACs",
           aspectClass: "aspect-[9/16]",
@@ -941,7 +941,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "cost-4",
-          image: "/costify/POV- Jab premium washing machine ka price dekh ke sapna hi spin cycle mein chala jaaye Par tensi.mp4",
+          image: "/costify/POV- Jab premium washing machine ka price dekh ke sapna hi spin cycle mein chala jaaye Par tensi.webm",
           title: "Premium Washing Machine POV",
           caption: "Relatable humor addressing high retail appliance price tags",
           aspectClass: "aspect-[9/16]",
@@ -949,7 +949,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "cost-5",
-          image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.jpg",
+          image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
           title: "Laundry Day Sorted Campaign",
           caption: "Direct-response scan-to-buy refurbished washing machine visual",
           aspectClass: "aspect-[4/5]",
@@ -957,7 +957,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "cost-6",
-          image: "/costify/When our customers say it, it means more than any advertisement ever couldFrom quality-checked r.mp4",
+          image: "/costify/When our customers say it, it means more than any advertisement ever couldFrom quality-checked r.webm",
           title: "Customer Trust & Testimonials",
           caption: "Authentic buyer unboxing and quality verification",
           aspectClass: "aspect-[9/16]",
@@ -967,7 +967,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "cost-7",
-          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment .mp4",
+          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment .webm",
           title: "Deep Freezer Transformation",
           caption: "Step-by-step restoration and 32-point technical overhaul",
           aspectClass: "aspect-[9/16]",
@@ -975,7 +975,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "cost-8",
-          image: "/costify/When Costify adds new products EVERY. SINGLE. DAY, store Drama is also a must EVERY. SINGLE. DAY.mp4",
+          image: "/costify/When Costify adds new products EVERY. SINGLE. DAY, store Drama is also a must EVERY. SINGLE. DAY.webm",
           title: "Daily Store Drama & Drops",
           caption: "Behind-the-scenes founder humor and inventory arrival reels",
           aspectClass: "aspect-[9/16]",
@@ -989,10 +989,10 @@ export const projectsData: ProjectData[] = [
         title: "Pop Culture & Comic Strips",
         subtitle: "Bollywood character integration and relatable comic frames turning refurbished tech into shareable entertainment.",
         images: [
-          "/costify/carousel 1/1.jpg",
-          "/costify/carousel 1/2.jpg",
-          "/costify/carousel 1/3.jpg",
-          "/costify/carousel 1/4.jpg",
+          "/costify/carousel 1/1.webp",
+          "/costify/carousel 1/2.webp",
+          "/costify/carousel 1/3.webp",
+          "/costify/carousel 1/4.webp",
         ],
       },
       {
@@ -1000,15 +1000,15 @@ export const projectsData: ProjectData[] = [
         title: "Bollywood Themed Warranty & Product Guides",
         subtitle: "Educational multi-slide breakdown debunking refurbished appliance myths and highlighting 6-month full warranty assurance.",
         images: [
-          "/costify/carousel 2/1.jpg",
-          "/costify/carousel 2/2.jpg",
-          "/costify/carousel 2/2(1).jpg",
-          "/costify/carousel 2/3.jpg",
-          "/costify/carousel 2/4.jpg",
-          "/costify/carousel 2/5.jpg",
-          "/costify/carousel 2/6.jpg",
-          "/costify/carousel 2/7.jpg",
-          "/costify/carousel 2/8.jpg",
+          "/costify/carousel 2/1.webp",
+          "/costify/carousel 2/2.webp",
+          "/costify/carousel 2/2(1).webp",
+          "/costify/carousel 2/3.webp",
+          "/costify/carousel 2/4.webp",
+          "/costify/carousel 2/5.webp",
+          "/costify/carousel 2/6.webp",
+          "/costify/carousel 2/7.webp",
+          "/costify/carousel 2/8.webp",
         ],
       },
     ],
@@ -1040,10 +1040,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["INCENSE, BUT MAKE IT", "AN EVERYDAY RITUAL"],
     heroDescription:
       "Incense, but make it a ritual. We took Aavarna from pre launch intrigue to launch day and beyond, with founder led shoots, scent mood storytelling and deadpan, sarcastic campaigns that made a quiet home category impossible to scroll past.",
-    heroImage: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     description:
       "Incense, but make it a ritual. We took Aavarna from pre launch intrigue to launch day and beyond, with founder led shoots, scent mood storytelling and deadpan, sarcastic campaigns that made a quiet home category impossible to scroll past.",
-    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1200&auto=format&fit=crop",
+    image: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     meta: {
       client: "Aavarna",
       year: "2026",
@@ -1055,82 +1055,134 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "aav-1",
-          image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?q=80&w=1000&auto=format&fit=crop",
-          title: "Minimalist Smoke Rituals",
-          caption: "High speed capture of natural aromatic smoke patterns",
-          aspectClass: "aspect-[3/4]",
-          tag: "Rituals",
+          image: "/aavarna/Can our incense impress everyone 👀We took Aavarna to the streets for honest reactions… and save.webm",
+          title: "Street Taste & Scent Reactions",
+          caption: "Taking Aavarna to the streets for honest, unfiltered reactions",
+          aspectClass: "aspect-[9/16]",
+          tag: "Social Experiment",
         },
         {
           id: "aav-2",
-          image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop",
-          title: "Meditative Living",
-          caption: "Curated lifestyle imagery for modern living spaces",
+          image: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
+          title: "A Sacred Pause: Morning Ritual",
+          caption: "Workday reminder turning incense into a sacred focus bell",
           aspectClass: "aspect-[4/5]",
-          tag: "Lifestyle",
+          tag: "Ritual",
         },
         {
           id: "aav-3",
-          image: "https://images.unsplash.com/photo-1602928321679-560bb453f190?q=80&w=1000&auto=format&fit=crop",
-          title: "Scent Mood Framework",
-          caption: "Translating olfactory notes into rich visual narratives",
-          aspectClass: "aspect-[16/10]",
-          tag: "Fragrance",
+          image: "/aavarna/Some days move too fast.So we made a ritual that slows you down for a second. ✨Light it.Breathe .webm",
+          title: "Light It. Breathe: Slowing Down",
+          caption: "Atmospheric sensory reel highlighting the slowing ritual",
+          aspectClass: "aspect-[9/16]",
+          tag: "Sensory",
+        },
+        {
+          id: "aav-4",
+          image: "/aavarna/After taking care of everyone else, dont forget the person who needs you too YOU. 🌿✨Pause. Br.webp",
+          title: "Pause. Breathe. Scent",
+          caption: "Self-care sanctuary narrative built around botanical aromas",
+          aspectClass: "aspect-[4/5]",
+          tag: "Wellness",
         },
       ],
       column2: [
         {
-          id: "aav-4",
-          image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop",
-          title: "Founder Sarcasm Campaigns",
-          caption: "Deadpan humor calling out cheap synthetic incense",
-          aspectClass: "aspect-[4/5]",
-          tag: "Campaigns",
-        },
-        {
           id: "aav-5",
-          image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop",
-          title: "Sculptural Burners",
-          caption: "Ceramic and brass burner product photography",
-          aspectClass: "aspect-[16/9]",
-          tag: "Hardware",
+          image: "/aavarna/Inspired by Vogue’s iconic 73 Questions, we asked our founder a few rapid fire questions of our .webm",
+          title: "73 Questions with the Founder",
+          caption: "Vogue-inspired fast-paced founder interview in the studio",
+          aspectClass: "aspect-[9/16]",
+          tag: "Founder Led",
         },
         {
           id: "aav-6",
-          image: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=1000&auto=format&fit=crop",
-          title: "Packaging Tactility",
-          caption: "Debossed gold foil on handmade cotton paper packaging",
-          aspectClass: "aspect-[3/4]",
-          tag: "Packaging",
+          image: "/aavarna/Some fragrances don’t just smell good, they feel like nature itself. 🌿Crafted with the richness.webp",
+          title: "Pure Nature Essence",
+          caption: "Raw resin, floral infusions, and zero-synthetic charcoal sticks",
+          aspectClass: "aspect-[4/5]",
+          tag: "Botanicals",
+        },
+        {
+          id: "aav-7",
+          image: "/aavarna/Answering what you’ve been asking!Not everything needs a long explanation.Some things you just f.webm",
+          title: "Direct Q&A Breakdown",
+          caption: "Concise answers debunking traditional synthetic incense myths",
+          aspectClass: "aspect-[9/16]",
+          tag: "Education",
+        },
+        {
+          id: "aav-8",
+          image: "/aavarna/He understood your silence before you found the words. 🤍This Father’s Day, gift him more than a.webp",
+          title: "Mindful Gifting Edition",
+          caption: "Emotional gifting campaigns elevating artisanal luxury aromatics",
+          aspectClass: "aspect-[4/5]",
+          tag: "Gifting",
         },
       ],
       column3: [
         {
-          id: "aav-7",
-          image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1200&auto=format&fit=crop",
-          title: "Botanical Ingredients",
-          caption: "Showcasing raw temple flowers and resin purity",
-          aspectClass: "aspect-[16/10]",
-          tag: "Purity",
-        },
-        {
-          id: "aav-8",
-          image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop",
-          title: "E-Commerce Flagship",
-          caption: "Minimal web storefront built for effortless cart conversion",
-          aspectClass: "aspect-[3/4]",
-          tag: "Web Design",
-        },
-        {
           id: "aav-9",
-          image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=1000&auto=format&fit=crop",
-          title: "Pre-Launch Teasers",
-          caption: "Cryptic teaser campaign that gathered 5,000 waitlist signups",
-          aspectClass: "aspect-[1/1]",
-          tag: "Launch",
+          image: "/aavarna/Every corner deserves something beautiful. ✨ Aavarna isn’t just décor. It’s the feeling you walk.webm",
+          title: "Living Space Atmosphere",
+          caption: "Decor integration showing sculptural burners and lingering notes",
+          aspectClass: "aspect-[9/16]",
+          tag: "Home Aesthetics",
+        },
+        {
+          id: "aav-10",
+          image: "/aavarna/Your vibe has a scent and it smells like amber rose 🌹🪷Some things are just non negotiable.#Aa.webp",
+          title: "Amber Rose Scent Vibe",
+          caption: "Signature amber rose moodboard pairing olfactory notes with aesthetics",
+          aspectClass: "aspect-[4/5]",
+          tag: "Moodboard",
+        },
+        {
+          id: "aav-11",
+          image: "/aavarna/One fragrance We wish. 🤭Which one would you reorder instantlyYeah… us too. All of them. 🌿••#Aa.webm",
+          title: "Instant Reorder Favorites",
+          caption: "Playful customer favorite comparison format driving high retention",
+          aspectClass: "aspect-[9/16]",
+          tag: "Community",
+        },
+        {
+          id: "aav-12",
+          image: "/aavarna/You’re just one step away from bringing peace home. 🤍✨Your cart is almost complete, now let eve (1).webp",
+          title: "Bringing Peace Home",
+          caption: "Direct conversion aesthetic banner for e-commerce checkout",
+          aspectClass: "aspect-[4/5]",
+          tag: "Conversions",
         },
       ],
     },
+    carousels: [
+      {
+        id: "aav-carousel-1",
+        title: "Your Mood Has a Scent: The Selection Guide",
+        subtitle: "A multi-slide guide translating emotional states into bespoke botanical fragrances and mindful pause moments.",
+        images: [
+          "/aavarna/carousel 1/1.webp",
+          "/aavarna/carousel 1/2.webp",
+          "/aavarna/carousel 1/3.webp",
+          "/aavarna/carousel 1/4.webp",
+          "/aavarna/carousel 1/5.webp",
+          "/aavarna/carousel 1/6.webp",
+        ],
+      },
+      {
+        id: "aav-carousel-2",
+        title: "Letters to the Scents That Started It All",
+        subtitle: "A poetic multi-slide motion and visual story exploring the origin story and botanical essence of each signature blend.",
+        images: [
+          "/aavarna/carousel 2/1.webp",
+          "/aavarna/carousel 2/2.webm",
+          "/aavarna/carousel 2/3.webm",
+          "/aavarna/carousel 2/4.webm",
+          "/aavarna/carousel 2/5.webm",
+          "/aavarna/carousel 2/6.webp",
+        ],
+      },
+    ],
     quote: {
       statement: "WE CREATED A CULT AROUND A QUIET HOME CATEGORY IN JUST 90 DAYS.",
       narrative:
@@ -1159,10 +1211,12 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["WHERE HERITAGE & TRAVEL", "BECOME PERSONAL"],
     heroDescription:
       "We shaped Salony into a modern Indian storyteller people actually stay for. Three content pillars across travel and heritage, wellness and tea, and collaborations, with signature series like Tea and Tales and The Story Behind that make culture feel personal in 2026.",
-    heroImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop",
+    heroImage:
+      "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
     description:
       "We shaped Salony into a modern Indian storyteller people actually stay for. Three content pillars across travel and heritage, wellness and tea, and collaborations, with signature series like Tea and Tales and The Story Behind that make culture feel personal in 2026.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop",
+    image:
+      "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
     meta: {
       client: "Salony Luthra",
       year: "2026",
@@ -1174,82 +1228,129 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "sl-1",
-          image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
-          title: "Tea & Tales Series",
-          caption: "Intimate cultural storytelling and afternoon brew reflections",
-          aspectClass: "aspect-[3/4]",
-          tag: "Series",
+          image:
+            "/salony/EP. 01 - ISTANBUL 🇹🇷One city. One day. So many stories.From iconic heritage and centuries of h.webm",
+          title: "Istanbul Stories · Ep. 01",
+          caption: "One city, one day, endless heritage narratives and cultural immersion",
+          aspectClass: "aspect-[9/16]",
+          tag: "Travel Series",
         },
         {
           id: "sl-2",
-          image: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1000&auto=format&fit=crop",
-          title: "Heritage Exploration",
-          caption: "Cinematic documentation of ancient Indian architecture",
+          image:
+            "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
+          title: "Celebrating Onam Tradition",
+          caption: "Six yards of tradition, fragrant jasmine, and soulful cultural celebrations",
           aspectClass: "aspect-[4/5]",
-          tag: "Heritage",
-        },
-        {
-          id: "sl-3",
-          image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop",
-          title: "Slow Travel Chronicles",
-          caption: "Immersive photo essays capturing untouched horizons",
-          aspectClass: "aspect-[16/10]",
-          tag: "Travel",
+          tag: "Heritage Portrait",
         },
       ],
       column2: [
         {
+          id: "sl-3",
+          image:
+            "/salony/Experience the Flavors of Abundance- Onam Sadhya 2026Taste the true flavors of Kerala this Onam!.webm",
+          title: "Flavors of Abundance · Onam Sadhya",
+          caption: "Tasting the true authentic culinary heritage of Kerala on a banana leaf",
+          aspectClass: "aspect-[9/16]",
+          tag: "Culinary Heritage",
+        },
+        {
           id: "sl-4",
-          image: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop",
-          title: "Luxury Brand Collabs",
-          caption: "Organic integrations with sustainable boutique labels",
-          aspectClass: "aspect-[4/5]",
-          tag: "Collabs",
-        },
-        {
-          id: "sl-5",
-          image: "https://images.unsplash.com/photo-1544717302-de2939b7ef71?q=80&w=1200&auto=format&fit=crop",
-          title: "Mindful Rituals",
-          caption: "Morning routines and conscious mindfulness reels",
-          aspectClass: "aspect-[16/9]",
-          tag: "Wellness",
-        },
-        {
-          id: "sl-6",
-          image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1000&auto=format&fit=crop",
-          title: "The Story Behind",
-          caption: "Deep dive stories behind local artisans and looms",
-          aspectClass: "aspect-[3/4]",
-          tag: "Artisans",
+          image:
+            "/salony/Krakow was one of those cities that made me want to put my phone down and just walk. 🇵🇱Pretty .webm",
+          title: "Krakow Chronicles · Poland",
+          caption: "Slow wanderlust and candid moments through the historic cobblestone streets",
+          aspectClass: "aspect-[9/16]",
+          tag: "Slow Travel",
         },
       ],
       column3: [
         {
-          id: "sl-7",
-          image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
-          title: "Mountain Retreats",
-          caption: "Himalayan travel episodes with poetic voiceovers",
-          aspectClass: "aspect-[16/10]",
-          tag: "Journeys",
+          id: "sl-5",
+          image:
+            "/salony/Red, timeless, and a little desi drama. ❤️🌹Some looks don’t need an occasion- they are the occa.webm",
+          title: "Timeless Desi Drama",
+          caption: "Bold crimson silhouettes and effortless ethnic elegance that demand attention",
+          aspectClass: "aspect-[9/16]",
+          tag: "Editorial Fashion",
         },
         {
-          id: "sl-8",
-          image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1000&auto=format&fit=crop",
-          title: "Community Dialogue",
-          caption: "Thoughtful carousel comments fostering deep conversations",
-          aspectClass: "aspect-[3/4]",
-          tag: "Connection",
-        },
-        {
-          id: "sl-9",
-          image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1000&auto=format&fit=crop",
-          title: "Visual Harmony",
-          caption: "Consistent warm earthy aesthetic across every post",
-          aspectClass: "aspect-[1/1]",
-          tag: "Harmony",
+          id: "sl-6",
+          image:
+            "/salony/The best shoot days aren’t the ones where everything goes perfectly. They’re the ones filled wit.webm",
+          title: "Behind The Scenes · Shoot Day Energy",
+          caption: "Candid laughter and authentic moments behind the camera lens",
+          aspectClass: "aspect-[9/16]",
+          tag: "BTS & Real Life",
         },
       ],
     },
+    carousels: [
+      {
+        id: "salony-carousel-1",
+        title: "A Few Days in Istanbul · Travel & Cultural Diary",
+        subtitle:
+          "A visual journal through the historic mosques, bustling bazaars, and Turkish tea culture.",
+        images: [
+          "/salony/carousel 1/1.webp",
+          "/salony/carousel 1/2.webp",
+          "/salony/carousel 1/3.webp",
+          "/salony/carousel 1/4.webp",
+          "/salony/carousel 1/5.webp",
+          "/salony/carousel 1/6.webp",
+        ],
+      },
+      {
+        id: "salony-carousel-2",
+        title: "Day in My Life · Everyday Moments & Mindful Routines",
+        subtitle:
+          "Unfiltered glimpses into daily rituals, coffee brewing, slow living, and self-care.",
+        images: [
+          "/salony/carousel 2/1.webp",
+          "/salony/carousel 2/2.webp",
+          "/salony/carousel 2/3.webp",
+          "/salony/carousel 2/4.webp",
+          "/salony/carousel 2/5.webp",
+        ],
+      },
+      {
+        id: "salony-carousel-3",
+        title: "Day in My Life · Shoot Day Edition & Creative Process",
+        subtitle:
+          "On-set styling, moodboard prep, creative direction, and capturing authentic frames.",
+        images: [
+          "/salony/carousel 3/1.webp",
+          "/salony/carousel 3/2.webp",
+          "/salony/carousel 3/3.webp",
+        ],
+      },
+      {
+        id: "salony-carousel-4",
+        title: "A Little Day Out · Curated Scrapbook & Motion",
+        subtitle:
+          "A multimedia scrapbook blending film stills, textured typography, and candid motion reels.",
+        images: [
+          "/salony/carousel 4/1.webp",
+          "/salony/carousel 4/2.webp",
+          "/salony/carousel 4/3.webm",
+          "/salony/carousel 4/4.webp",
+          "/salony/carousel 4/5.webm",
+        ],
+      },
+      {
+        id: "salony-carousel-5",
+        title: "Fashion & Editorial · Scrapbook Stories",
+        subtitle:
+          "Styling diaries, modern silhouette compositions, motion snippets, and design details.",
+        images: [
+          "/salony/carousel 5/1.webp",
+          "/salony/carousel 5/2.webm",
+          "/salony/carousel 5/3.webp",
+          "/salony/carousel 5/4.webp",
+        ],
+      },
+    ],
     quote: {
       statement: "SLAY HELPED ME BUILD A SPACE ON THE INTERNET THAT TRULY FEELS LIKE HOME.",
       narrative:
@@ -1278,10 +1379,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["B2B MARKETING THAT", "ACTUALLY CLOSES BUYERS"],
     heroDescription:
       "Proof that B2B does not have to be boring. We handled content direction, posting and performance tracking for a manufacturing brand, swapping stock photos and jargon for clear positioning that actually lands with buyers.",
-    heroImage: "/orient/book mockup.png",
+    heroImage: "/orient/book mockup.webp",
     description:
       "Proof that B2B does not have to be boring. We handled content direction, posting and performance tracking for a manufacturing brand, swapping stock photos and jargon for clear positioning that actually lands with buyers.",
-    image: "/orient/book mockup.png",
+    image: "/orient/book mockup.webp",
     meta: {
       client: "Orient Polyfilms",
       year: "2026",
@@ -1293,7 +1394,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "op-1",
-          image: "/orient/standee.png",
+          image: "/orient/standee.webp",
           title: "Trade Show Standee",
           caption: "Industrial event exhibition banner branding",
           aspectClass: "aspect-[9/16]",
@@ -1301,7 +1402,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "op-2",
-          image: "/orient/WhatsApp Video 2026-09-16 at 11.55.45 AM.mp4",
+          image: "/orient/WhatsApp Video 2026-09-16 at 11.55.45 AM.webm",
           title: "Industrial Motion",
           caption: "Dynamic product feature breakdown",
           aspectClass: "aspect-[9/16]",
@@ -1311,7 +1412,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "op-3",
-          image: "/orient/book mockup.png",
+          image: "/orient/book mockup.webp",
           title: "Corporate Catalogue",
           caption: "Comprehensive BOPP product catalogue presentation",
           aspectClass: "aspect-[4/3]",
@@ -1319,7 +1420,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "op-4",
-          image: "/orient/WhatsApp Video 2026-09-16 at 11.55.48 AM.mp4",
+          image: "/orient/WhatsApp Video 2026-09-16 at 11.55.48 AM.webm",
           title: "Manufacturing Reel",
           caption: "Precision manufacturing process reel",
           aspectClass: "aspect-[9/16]",
@@ -1327,7 +1428,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "op-5",
-          image: "/orient/WhatsApp Video 2026-09-16 at 11.56.08 AM.mp4",
+          image: "/orient/WhatsApp Video 2026-09-16 at 11.56.08 AM.webm",
           title: "Supply Chain Motion",
           caption: "Global export distribution visual format",
           aspectClass: "aspect-[9/16]",
@@ -1337,7 +1438,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "op-6",
-          image: "/orient/flyer.png",
+          image: "/orient/flyer.webp",
           title: "Technical Spec Flyer",
           caption: "B2B procurement flyer and barrier property guide",
           aspectClass: "aspect-[3/4]",
@@ -1345,7 +1446,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "op-7",
-          image: "/orient/WhatsApp Video 2026-09-16 at 11.56.06 AM.mp4",
+          image: "/orient/WhatsApp Video 2026-09-16 at 11.56.06 AM.webm",
           title: "Technical Animation",
           caption: "Polymer innovation animation",
           aspectClass: "aspect-[9/16]",

@@ -45,6 +45,18 @@ const nextConfig: NextConfig = {
         source: "/contact-us",
         destination: "/Contact",
       },
+      {
+        source: "/tnc",
+        destination: "/TnC",
+      },
+      {
+        source: "/terms",
+        destination: "/TnC",
+      },
+      {
+        source: "/terms-and-conditions",
+        destination: "/TnC",
+      },
     ];
   },
 };
