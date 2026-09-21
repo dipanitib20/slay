@@ -239,18 +239,6 @@ export default function WorkPage() {
               </div>
             )}
 
-            {/* Action Button: View More Projects */}
-            {filteredProjects.length > 0 && (
-              <div className="mt-8 sm:mt-10 md:mt-12 flex justify-center">
-                <button
-                  type="button"
-                  className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95 cursor-pointer"
-                >
-                  View more projects
-                </button>
-              </div>
-            )}
-
             {/* No Results Found */}
             {filteredProjects.length === 0 && (
               <div className="text-center py-20 bg-white/60 rounded-3xl border border-black/5 p-8 max-w-md mx-auto">
