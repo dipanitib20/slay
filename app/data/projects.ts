@@ -75,7 +75,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/anvi/720138219_17867481315686964_7648030679057249441_n.webp",
     description:
       "Aka Anvi Jain, lawyer turned legal creator, needed a platform. We built her consistent, aesthetic content system, shoot planning, scripting, calendars, and purposeful strategy.",
-    image: "/anvi/720138219_17867481315686964_7648030679057249441_n.webp",
+    image: "/coverimg/law in heels_.png",
     meta: {
       client: "Anvi Jain (Law in Heels)",
       year: "2026",
@@ -147,7 +147,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-8",
-          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody .webp",
+          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody.webp",
           title: "The Grey Areas of Law",
           caption: "Provocative commentary driving hundreds of insightful discussions",
           aspectClass: "aspect-[4/5]",
@@ -219,7 +219,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/indian summer/indian summer  (2).webp",
     description:
       "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content. Same brand, finally landing the way it deserves to.",
-    image: "/indian summer/indian summer  (2).webp",
+    image: "/coverimg/indian summer.png",
     meta: {
       client: "Indian Summer Atelier",
       year: "2026",
@@ -251,7 +251,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "isa-3",
           image:
-            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. #ajrakhcollection #ajrakhp.webm",
+            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. ajrakhcollection ajrakhp.webm",
           title: "Ajrakh Comeback Drop",
           caption: "High energy collection restock and announcement reel",
           aspectClass: "aspect-[9/16]",
@@ -348,7 +348,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/maple/carousel 1/1.webp",
     description:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    image: "/maple/carousel 1/1.webp",
+    image: "/coverimg/maple.png",
     meta: {
       client: "MAPLE Preschool Bengaluru",
       year: "2026",
@@ -370,7 +370,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v2",
           image:
-            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s .webm",
+            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s.webm",
           title: "Every Little Step",
           caption: "Nurturing milestones for future growth",
           aspectClass: "aspect-[9/16]",
@@ -401,7 +401,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v5",
           image:
-            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting .webm",
+            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting.webm",
           title: "Tiny Explorers",
           caption: "Hands-on discovery and curiosity",
           aspectClass: "aspect-[9/16]",
@@ -497,10 +497,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["EVERY SET GETS ITS", "MAIN CHARACTER MOMENT"],
     heroDescription:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
+    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made.webp",
     description:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
+    image: "/coverimg/claw.png",
     meta: {
       client: "Claw Nails Studio",
       year: "2026",
@@ -520,7 +520,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-2",
-          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
+          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made.webp",
           title: "Floral & French Set",
           caption: "Handcrafted floral accents with delicate polka dot French tips",
           aspectClass: "aspect-[4/5]",
@@ -528,7 +528,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-3",
-          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white .webm",
+          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white.webm",
           title: "Playful Colorway Tips",
           caption: "Subverting classic French tips with bold seasonal colors",
           aspectClass: "aspect-[9/16]",
@@ -536,7 +536,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-4",
-          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment, .webm",
+          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment,.webm",
           title: "Long Nails Lifestyle Test",
           caption: "Debunking long nail myths with everyday lifestyle testing",
           aspectClass: "aspect-[9/16]",
@@ -546,7 +546,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "claw-5",
-          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement. .webm",
+          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement..webm",
           title: "Sharp Claw Energy",
           caption: "Statement stiletto sets built for unmatched confidence",
           aspectClass: "aspect-[9/16]",
@@ -570,7 +570,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-8",
-          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl .webp",
+          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl.webp",
           title: "Fresh Set Priorities",
           caption: "Engaging chat-format meme celebrating fresh salon sets",
           aspectClass: "aspect-[4/5]",
@@ -588,7 +588,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-10",
-          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
+          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
           title: "Wispy Lashes & Eye Glam",
           caption: "Soft wispy lash extensions elevating the full studio look",
           aspectClass: "aspect-[4/5]",
@@ -596,7 +596,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-11",
-          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏 .webm",
+          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏.webm",
           title: "Galaxy On Her Fingertips",
           caption: "Celestial chrome and metallic shimmer nail art showcase",
           aspectClass: "aspect-[9/16]",
@@ -645,10 +645,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["CAKES THAT LOOK", "AS DELICIOUS AS THEY TASTE"],
     heroDescription:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    heroImage: "/baked love/baked love .webp",
+    heroImage: "/baked love/baked love.webp",
     description:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    image: "/baked love/baked love .webp",
+    image: "/coverimg/bakedlove.png",
     meta: {
       client: "Baked Love",
       year: "2026",
@@ -660,7 +660,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "bl-1",
-          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what .webm",
+          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what.webm",
           title: "13 Years of Craft & Passion",
           caption: "Behind-the-scenes journey of 13 years of artisanal baking",
           aspectClass: "aspect-[9/16]",
@@ -668,7 +668,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-2",
-          image: "/baked love/baked love .webp",
+          image: "/baked love/baked love.webp",
           title: "A Chef Vatsala Original",
           caption: "Signature handcrafted confection with rich filling and coconut zest",
           aspectClass: "aspect-[4/5]",
@@ -784,7 +784,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/underpass/Underpass Tuesday.webm",
     description:
       "Seven nights, seven vibes, zero repeats. We designed the nightly creative engine for Underpass, motion graphic posters Sunday to Thursday and video invites for the weekend, giving every theme night from Techno Tuesday to Saturday Anthem its own identity.",
-    image: "/underpass/Underpass Tuesday.webm",
+    image: "/coverimg/underpass.png",
     meta: {
       client: "Underpass",
       year: "2026",
@@ -804,7 +804,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-2",
-          image: "/underpass/kokk saturday reel .webm",
+          image: "/underpass/kokk saturday reel.webm",
           title: "Saturday Reel",
           caption: "High energy weekend video invite",
           aspectClass: "aspect-[9/16]",
@@ -838,7 +838,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-6",
-          image: "/underpass/konni 15 tues new .webm",
+          image: "/underpass/konni 15 tues new.webm",
           title: "Tuesday Underground",
           caption: "Nightly creative series flyer",
           aspectClass: "aspect-[9/16]",
@@ -848,7 +848,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "up-7",
-          image: "/underpass/underpass monday .webm",
+          image: "/underpass/underpass monday.webm",
           title: "Monday Series",
           caption: "Animated motion poster format",
           aspectClass: "aspect-[9/16]",
@@ -864,7 +864,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-9",
-          image: "/underpass/wed underpass 16 .webm",
+          image: "/underpass/wed underpass 16.webm",
           title: "Wednesday Frequency",
           caption: "Midweek groove video invite",
           aspectClass: "aspect-[9/16]",
@@ -903,7 +903,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     description:
       "Refurbished tech, zero boring. We built Costify's page around \"Naye jaisa, aadha daam\" with founder reels, Bollywood themed warranty carousels, educational content and trend formats that turned a trust heavy category into something people wanted to watch.",
-    image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
+    image: "/coverimg/costify.png",
     meta: {
       client: "Costify",
       year: "2026",
@@ -967,7 +967,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "cost-7",
-          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment .webm",
+          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment.webm",
           title: "Deep Freezer Transformation",
           caption: "Step-by-step restoration and 32-point technical overhaul",
           aspectClass: "aspect-[9/16]",
@@ -1043,7 +1043,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     description:
       "Incense, but make it a ritual. We took Aavarna from pre launch intrigue to launch day and beyond, with founder led shoots, scent mood storytelling and deadpan, sarcastic campaigns that made a quiet home category impossible to scroll past.",
-    image: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
+    image: "/coverimg/aavarna.png",
     meta: {
       client: "Aavarna",
       year: "2026",
@@ -1071,7 +1071,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-3",
-          image: "/aavarna/Some days move too fast.So we made a ritual that slows you down for a second. ✨Light it.Breathe .webm",
+          image: "/aavarna/Some days move too fast.So we made a ritual that slows you down for a second. ✨Light it.Breathe.webm",
           title: "Light It. Breathe: Slowing Down",
           caption: "Atmospheric sensory reel highlighting the slowing ritual",
           aspectClass: "aspect-[9/16]",
@@ -1089,7 +1089,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "aav-5",
-          image: "/aavarna/Inspired by Vogue’s iconic 73 Questions, we asked our founder a few rapid fire questions of our .webm",
+          image: "/aavarna/Inspired by Vogue’s iconic 73 Questions, we asked our founder a few rapid fire questions of our.webm",
           title: "73 Questions with the Founder",
           caption: "Vogue-inspired fast-paced founder interview in the studio",
           aspectClass: "aspect-[9/16]",
@@ -1131,7 +1131,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-10",
-          image: "/aavarna/Your vibe has a scent and it smells like amber rose 🌹🪷Some things are just non negotiable.#Aa.webp",
+          image: "/aavarna/Your vibe has a scent and it smells like amber rose 🌹🪷Some things are just non negotiable.Aa.webp",
           title: "Amber Rose Scent Vibe",
           caption: "Signature amber rose moodboard pairing olfactory notes with aesthetics",
           aspectClass: "aspect-[4/5]",
@@ -1139,7 +1139,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-11",
-          image: "/aavarna/One fragrance We wish. 🤭Which one would you reorder instantlyYeah… us too. All of them. 🌿••#Aa.webm",
+          image: "/aavarna/One fragrance We wish. 🤭Which one would you reorder instantlyYeah… us too. All of them. 🌿••Aa.webm",
           title: "Instant Reorder Favorites",
           caption: "Playful customer favorite comparison format driving high retention",
           aspectClass: "aspect-[9/16]",
@@ -1216,7 +1216,7 @@ export const projectsData: ProjectData[] = [
     description:
       "We shaped Salony into a modern Indian storyteller people actually stay for. Three content pillars across travel and heritage, wellness and tea, and collaborations, with signature series like Tea and Tales and The Story Behind that make culture feel personal in 2026.",
     image:
-      "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
+      "/coverimg/salony.png",
     meta: {
       client: "Salony Luthra",
       year: "2026",
@@ -1258,7 +1258,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "sl-4",
           image:
-            "/salony/Krakow was one of those cities that made me want to put my phone down and just walk. 🇵🇱Pretty .webm",
+            "/salony/Krakow was one of those cities that made me want to put my phone down and just walk. 🇵🇱Pretty.webm",
           title: "Krakow Chronicles · Poland",
           caption: "Slow wanderlust and candid moments through the historic cobblestone streets",
           aspectClass: "aspect-[9/16]",
@@ -1382,7 +1382,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/orient/book mockup.webp",
     description:
       "Proof that B2B does not have to be boring. We handled content direction, posting and performance tracking for a manufacturing brand, swapping stock photos and jargon for clear positioning that actually lands with buyers.",
-    image: "/orient/book mockup.webp",
+    image: "/coverimg/orient_.png",
     meta: {
       client: "Orient Polyfilms",
       year: "2026",

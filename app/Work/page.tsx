@@ -188,7 +188,7 @@ export default function WorkPage() {
                     className="group flex flex-col cursor-pointer"
                   >
                     {/* Image / Video Container */}
-                    <div className="relative w-full aspect-[3/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
+                    <div className="relative w-full aspect-square rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
                       {project.image.trim().toLowerCase().endsWith(".webm") ||
                       project.image.trim().toLowerCase().endsWith(".mp4") ||
                       project.image.trim().toLowerCase().endsWith(".mov") ||
@@ -218,7 +218,7 @@ export default function WorkPage() {
                       <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200 normal-case">
                         {formatTitle(project.title)}
                       </h2>
-                      <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
+                      <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl line-clamp-2">
                         {project.description}
                       </p>
 

@@ -11,7 +11,7 @@ import { getProjectBySlug, projectsData, BentoItem, ProjectCarousel } from "../.
 /* ── Helper to detect all standard video formats ── */
 const isVideoMedia = (src?: string): boolean => {
   if (!src) return false;
-  const clean = src.trim().toLowerCase().split("?")[0].split("#")[0];
+  const clean = src.trim().toLowerCase();
   return (
     clean.endsWith(".webm") ||
     clean.endsWith(".mp4") ||
