@@ -24,7 +24,7 @@ export default function Navbar({
   ],
   mobileLinks = [
     { name: "Services", href: "/Services" },
-    { name: "Case studies", href: "/Work" },
+    { name: "Work", href: "/Work" },
     { name: "About us", href: "/About" },
     { name: "Contact", href: "/Contact" },
   ],

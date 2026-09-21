@@ -205,10 +205,7 @@ export default function Footer({
 
             {/* Attribution / Credits */}
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-              <div className="font-body text-neutral-600 text-xs sm:text-sm md:text-[16px]">
-                {attributionText}{" "}
-                <span className="font-bold text-[#242424]">{creatorName}</span>
-              </div>
+              
 
               {/* Back to Top */}
               <button

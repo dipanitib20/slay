@@ -60,7 +60,22 @@ export default function AboutPage() {
             {/* Creativity with Purpose Section Header */}
             <div className="relative max-w-6xl mx-auto text-center mb-8 sm:mb-12 flex flex-col items-center">
               <div className="relative inline-flex flex-col items-center text-center max-w-full">
-                <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tight leading-[1.14] text-center">
+                {/* Mobile (3 lines, matching font size, dual color middle line) */}
+                <h2 className="sm:hidden font-heading text-4xl uppercase tracking-tight leading-[1.14] text-center">
+                  <span className="text-neutral-400 block whitespace-nowrap">
+                    We build brands that
+                  </span>
+                  <span className="block whitespace-nowrap">
+                    <span className="text-neutral-400">make people </span>
+                    <span className="text-[#536757]">stop and</span>
+                  </span>
+                  <span className="text-[#536757] block whitespace-nowrap">
+                    actually look.
+                  </span>
+                </h2>
+
+                {/* Desktop / Tablet */}
+                <h2 className="hidden sm:block font-heading sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tight leading-[1.14] text-center">
                   <span className="text-neutral-400 block text-center sm:whitespace-nowrap">
                     We build brands that make people
                   </span>
