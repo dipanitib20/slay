@@ -29,7 +29,7 @@ export default function Navbar({
     { name: "Contact", href: "/Contact" },
   ],
   bookCallHref = "/Contact",
-  avatarSrc = "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=256&auto=format&fit=crop",
+  avatarSrc = "/call pic.png",
   phone = "(510) 895-6500",
   email = "hello@slayagency.com",
 }: NavbarProps) {

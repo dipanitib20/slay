@@ -72,7 +72,7 @@ export default function AboutUsSection() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/dipani-h-tibrewala"
+                href="https://www.linkedin.com/in/dipani-h-tibrewala-a7460066?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:scale-110 active:scale-95 transition-transform duration-300 shrink-0"
