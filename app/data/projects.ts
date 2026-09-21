@@ -580,7 +580,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "claw-9",
-          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝒆 𝘳𝘰.webm",
+          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝘦 𝘳𝘰.webm",
           title: "Founder Hot Seat with Reena Batra",
           caption: "Rapid-fire founder interview and nail care secrets",
           aspectClass: "aspect-[9/16]",
@@ -588,7 +588,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-10",
-          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
+          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
           title: "Wispy Lashes & Eye Glam",
           caption: "Soft wispy lash extensions elevating the full studio look",
           aspectClass: "aspect-[4/5]",

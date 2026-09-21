@@ -8,6 +8,20 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import { getProjectBySlug, projectsData, BentoItem, ProjectCarousel } from "../../data/projects";
 
+/* ── Helper to detect all standard video formats ── */
+const isVideoMedia = (src?: string): boolean => {
+  if (!src) return false;
+  const clean = src.trim().toLowerCase().split("?")[0].split("#")[0];
+  return (
+    clean.endsWith(".webm") ||
+    clean.endsWith(".mp4") ||
+    clean.endsWith(".mov") ||
+    clean.endsWith(".m4v") ||
+    clean.endsWith(".ogg") ||
+    clean.endsWith(".ogv")
+  );
+};
+
 /* ── Project Carousel Row Component (Smooth horizontal swipe & control) ── */
 function ProjectCarouselRow({
   carousel,
@@ -99,9 +113,7 @@ function ProjectCarouselRow({
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {carousel.images.map((imgSrc, imgIdx) => {
-          const isVid =
-            imgSrc.trim().toLowerCase().endsWith(".webm") ||
-            imgSrc.trim().toLowerCase().endsWith(".webm");
+          const isVid = isVideoMedia(imgSrc);
           return (
             <div
               key={imgIdx}
@@ -115,11 +127,12 @@ function ProjectCarouselRow({
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               ) : (
                 <Image
-                  src={imgSrc}
+                  src={imgSrc.trim()}
                   alt={`${carousel.title || "Project visual"} - Slide ${imgIdx + 1}`}
                   fill
                   unoptimized
@@ -154,11 +167,7 @@ function BentoMediaItem({
   item: BentoItem;
   onClick: () => void;
 }) {
-  const isVid =
-    item.image.trim().toLowerCase().endsWith(".webm") ||
-    item.image.trim().toLowerCase().endsWith(".webm") ||
-    item.image.trim().toLowerCase().endsWith(".webm");
-
+  const isVid = isVideoMedia(item.image);
   const cleanSrc = encodeURI(item.image.trim());
 
   return (
@@ -181,7 +190,7 @@ function BentoMediaItem({
           />
         ) : (
           <Image
-            src={item.image}
+            src={item.image.trim()}
             alt={item.title || "Project asset"}
             fill
             unoptimized
@@ -425,19 +434,19 @@ export default function ProjectSlugPage() {
               href={`/Work/${nextProject.slug}`}
               className="group block relative w-full aspect-[16/9] sm:aspect-[2.2/1] md:aspect-[2.6/1] rounded-[28px] sm:rounded-[40px] overflow-hidden bg-[#ECEAE6] border border-black/[0.06] shadow-lg"
             >
-              {nextProject.heroImage?.trim().toLowerCase().endsWith(".webm") ||
-              nextProject.heroImage?.trim().toLowerCase().endsWith(".webm") ? (
+              {isVideoMedia(nextProject.heroImage) ? (
                 <video
                   src={encodeURI(nextProject.heroImage.trim())}
                   autoPlay
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               ) : (
                 <Image
-                  src={nextProject.heroImage}
+                  src={nextProject.heroImage.trim()}
                   alt={nextProject.title}
                   fill
                   unoptimized
@@ -507,9 +516,7 @@ export default function ProjectSlugPage() {
             className="relative max-w-5xl max-h-[85vh] w-full h-full flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            {activeLightbox.image.trim().toLowerCase().endsWith(".webm") ||
-            activeLightbox.image.trim().toLowerCase().endsWith(".webm") ||
-            activeLightbox.image.trim().toLowerCase().endsWith(".webm") ? (
+            {isVideoMedia(activeLightbox.image) ? (
               <video
                 src={encodeURI(activeLightbox.image.trim())}
                 autoPlay
@@ -522,7 +529,7 @@ export default function ProjectSlugPage() {
             ) : (
               <div className="relative w-full h-full">
                 <Image
-                  src={activeLightbox.image}
+                  src={activeLightbox.image.trim()}
                   alt={activeLightbox.title}
                   fill
                   unoptimized

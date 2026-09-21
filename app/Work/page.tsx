@@ -189,18 +189,22 @@ export default function WorkPage() {
                   >
                     {/* Image / Video Container */}
                     <div className="relative w-full aspect-[3/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      {project.image.trim().toLowerCase().endsWith(".webm") ? (
+                      {project.image.trim().toLowerCase().endsWith(".webm") ||
+                      project.image.trim().toLowerCase().endsWith(".mp4") ||
+                      project.image.trim().toLowerCase().endsWith(".mov") ||
+                      project.image.trim().toLowerCase().endsWith(".m4v") ? (
                         <video
                           src={encodeURI(project.image.trim())}
                           autoPlay
                           loop
                           muted
                           playsInline
+                          preload="metadata"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         />
                       ) : (
                         <Image
-                          src={project.image}
+                          src={project.image.trim()}
                           alt={project.title}
                           fill
                           className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
