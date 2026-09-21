@@ -106,22 +106,22 @@ export default function ServicesPage() {
         {/* Section 2: Industries Showcase Section */}
         <section className="my-16 sm:my-24 lg:my-32 w-full px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
-            <div className="bg-white rounded-[32px] sm:rounded-[44px] md:rounded-[52px] border border-black/[0.04] shadow-[0_4px_32px_rgba(0,0,0,0.03)] overflow-hidden relative pt-10 sm:pt-14 md:pt-16 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-8 md:px-12">
+            <div className="bg-white rounded-[32px] sm:rounded-[44px] md:rounded-[52px] border border-black/[0.04] shadow-[0_4px_32px_rgba(0,0,0,0.03)] overflow-hidden relative pt-10 sm:pt-14 md:pt-16 pb-12 sm:pb-16 md:pb-20 px-3 sm:px-8 md:px-12">
               {/* Floating Pills Moving Bottom to Top Container */}
-              <div className="relative h-[240px] sm:h-[290px] md:h-[340px] w-full overflow-hidden">
+              <div className="relative h-[240px] sm:h-[290px] md:h-[340px] w-full overflow-hidden flex items-center justify-center">
                 {/* Top & Bottom Gradient Fade Overlays */}
                 <div className="absolute top-0 inset-x-0 h-20 sm:h-28 bg-gradient-to-b from-white via-white/85 to-transparent pointer-events-none z-10" />
                 <div className="absolute bottom-0 inset-x-0 h-16 sm:h-24 bg-gradient-to-t from-white via-white/85 to-transparent pointer-events-none z-10" />
 
                 {/* Staggered Vertical Columns (Only 2 Middle Columns Centered) */}
-                <div className="grid grid-cols-2 gap-6 sm:gap-10 md:gap-14 h-full items-start justify-items-center max-w-2xl mx-auto">
+                <div className="grid grid-cols-2 gap-3.5 sm:gap-10 md:gap-14 h-full items-start justify-items-center max-w-2xl mx-auto scale-[0.72] min-[375px]:scale-[0.78] min-[420px]:scale-[0.88] min-[520px]:scale-[0.95] sm:scale-100 origin-center">
                   {/* Column 1 */}
-                  <div className="flex flex-col animate-marquee-vertical-fast gap-6 sm:gap-8 items-center py-2 shrink-0">
+                  <div className="flex flex-col animate-marquee-vertical-fast gap-5 sm:gap-8 items-center py-2 shrink-0">
                     {[...industryCol1, ...industryCol1].map((item, idx) => (
                       <div
                         key={`col1-${idx}`}
                         style={{ transform: `rotate(${item.rotation}deg)` }}
-                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-sm sm:text-[15px] md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
+                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-xs sm:text-[15px] md:text-base px-4 sm:px-6 md:px-7 py-2 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
                       >
                         {item.name}
                       </div>
@@ -129,12 +129,12 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Column 2 */}
-                  <div className="flex flex-col animate-marquee-vertical-slow gap-6 sm:gap-8 items-center py-2 shrink-0">
+                  <div className="flex flex-col animate-marquee-vertical-slow gap-5 sm:gap-8 items-center py-2 shrink-0">
                     {[...industryCol2, ...industryCol2].map((item, idx) => (
                       <div
                         key={`col2-${idx}`}
                         style={{ transform: `rotate(${item.rotation}deg)` }}
-                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-sm sm:text-[15px] md:text-base px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
+                        className="bg-gradient-to-b from-[#627766] to-[#48584c] text-white font-body font-medium text-xs sm:text-[15px] md:text-base px-4 sm:px-6 md:px-7 py-2 sm:py-3 rounded-full shadow-[0_12px_24px_-4px_rgba(40,55,44,0.38)] border border-white/20 whitespace-nowrap select-none transition-transform hover:scale-105 shrink-0"
                       >
                         {item.name}
                       </div>
