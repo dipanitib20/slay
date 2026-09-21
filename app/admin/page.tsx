@@ -606,7 +606,7 @@ export default function AdminDashboardPage() {
             <div className="mt-6 pt-4 border-t border-black/[0.05] flex justify-end gap-2">
               <a
                 href={`mailto:${selectedLead.email}?subject=Re: Your Inquiry with Slay Agency`}
-                className="inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white text-xs font-body font-medium px-4 py-2.5 rounded-[12px] transition-colors"
+                className="cta-btn inline-flex items-center justify-center text-white text-xs font-body font-medium px-4 py-2.5 rounded-[12px] shadow-sm"
               >
                 Reply via Email
               </a>

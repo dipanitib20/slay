@@ -41,9 +41,9 @@ export default function BrandTrust() {
       <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
         {/* Section Header */}
         <div className="relative max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.14]">
-            <span className="text-[#9BA59D] font-normal">Brands we have </span>
-            <span className="text-[#536757] font-medium">worked with</span>
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+            <span className="text-[#9BA59D]">Brands we have </span>
+            <span className="text-[#536757]">worked with</span>
           </h2>
           <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
             Fashion, jewellery, wellness, education, manufacturing, hospitality and everything in between. Different industries, same starting point: a brand worth more than its presence was showing.

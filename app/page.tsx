@@ -179,9 +179,9 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">We build brands that make people </span>
-              <span className="text-[#536757] font-medium">stop and actually look.</span>
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+              <span className="text-neutral-400">We build brands that make people </span>
+              <span className="text-[#536757]">stop and actually look.</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
@@ -209,7 +209,7 @@ export default function Home() {
                     }}
                     className={`relative overflow-hidden cursor-pointer transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col justify-between group/card ${
                       isActive
-                        ? "flex-[2.8] md:flex-[2.2] bg-[#222222] text-white rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 lg:p-9 shadow-xl"
+                        ? "flex-[2.8] md:flex-[2.2] bg-[#536757] text-white rounded-[24px] sm:rounded-[30px] p-6 sm:p-8 lg:p-9 shadow-xl"
                         : "flex-1 bg-[#F0EEEB] text-[#242424] hover:bg-[#EAE7E3] rounded-[22px] sm:rounded-[28px] p-5 sm:p-6"
                     }`}
                   >
@@ -237,12 +237,12 @@ export default function Home() {
                         <Link
                           href={`/Services/${service.slug}`}
                           onClick={(e) => e.stopPropagation()}
-                          className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight hover:text-[#9BA59D] transition-colors inline-flex items-center gap-2 group/title"
+                          className="font-heading font-medium text-2xl sm:text-3xl lg:text-[32px] text-white leading-tight tracking-tight hover:text-white/80 transition-colors inline-flex items-center gap-2 group/title"
                         >
                           <span>{service.title}</span>
                           <span className="text-xl transition-transform group-hover/title:translate-x-1">→</span>
                         </Link>
-                        <p className="font-subheading text-neutral-300 text-sm sm:text-[15px] lg:text-base leading-relaxed max-w-lg">
+                        <p className="font-subheading text-white/90 text-sm sm:text-[15px] lg:text-base leading-relaxed max-w-lg">
                           {service.description}
                         </p>
                       </div>
@@ -262,7 +262,7 @@ export default function Home() {
           <div className="mt-10 sm:mt-12 md:mt-14 flex justify-center">
             <Link
               href="/Services"
-              className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.45)] active:scale-95 transition-all duration-300"
+              className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95"
             >
               View more services
             </Link>
@@ -290,9 +290,9 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">Real work.</span>
-              <span className="text-[#536757] font-medium">Real brands. </span>
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+              <span className="text-neutral-400">Real work. </span>
+              <span className="text-[#536757]">Real brands.</span>
             </h2>
 
             {/* Subheading / Description Paragraph */}
@@ -349,7 +349,7 @@ export default function Home() {
           <div className="mt-10 sm:mt-12 md:mt-18 flex justify-center">
             <Link
               href="/Work"
-              className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.45)] active:scale-95 transition-all duration-300"
+              className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95"
             >
               View more projects
             </Link>

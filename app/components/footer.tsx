@@ -103,10 +103,10 @@ export default function Footer({
           </div>
 
           {/* Heading */}
-          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl text-[#4A4A4A] tracking-tight leading-[1.18] max-w-2xl px-2">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase text-[#4A4A4A] tracking-tight leading-[1.18] max-w-2xl px-2">
             Build it once.{" "}
             <br />
-            <span className="font-semibold text-[#242424]">Build it right. </span>
+            <span className="text-[#242424]">Build it right. </span>
           </h2>
 
           {/* Subheading */}
@@ -160,14 +160,14 @@ export default function Footer({
           </div>
 
           {/* Social Cards: 2x2 Grid on Mobile with centered 3rd item, Flex Row on Desktop */}
-          <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-2.5 sm:gap-4 md:gap-6 lg:gap-8 mt-8 sm:mt-12 md:mt-14 w-full max-w-sm sm:max-w-lg md:max-w-none">
+          <div className="grid grid-cols-2 md:flex md:flex-row md:items-center md:justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mt-8 sm:mt-12 md:mt-14 w-full max-w-sm sm:max-w-lg md:max-w-none">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative flex items-center justify-between gap-2 sm:gap-5 md:gap-7 bg-[#F2F2F2] hover:bg-[#EBEBEB] border border-white/90 inner-shadow-card px-3 py-2.5 sm:px-5 sm:py-3.5 md:pl-6 md:pr-3.5 md:py-3.5 rounded-[14px] sm:rounded-[18px] md:rounded-[20px] transition-all duration-300 min-w-0 md:min-w-[200px] lg:min-w-[215px] last:col-span-2 last:w-[calc(50%-5px)] sm:last:w-[calc(50%-8px)] md:last:w-auto md:last:col-span-1 last:mx-auto"
+                className="group relative flex items-center justify-between gap-2 sm:gap-4 md:gap-6 bg-[#F2F2F2] hover:bg-[#EBEBEB] border border-white/90 inner-shadow-card px-3.5 py-2.5 sm:px-5 sm:py-3.5 md:pl-6 md:pr-3.5 md:py-3.5 rounded-[14px] sm:rounded-[18px] md:rounded-[20px] transition-all duration-300 min-w-0 md:w-[210px] lg:w-[220px] last:col-span-2 last:w-[calc(50%-5px)] sm:last:w-[calc(50%-8px)] md:last:w-[210px] lg:last:w-[220px] md:last:col-span-1 last:mx-auto md:last:mx-0"
               >
                 <span className="font-heading font-bold text-[13.5px] sm:text-[16px] md:text-[18px] text-[#242424] tracking-tight truncate">
                   {social.name}

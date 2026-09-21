@@ -91,7 +91,7 @@ export default function ServicesPage() {
                     <div className="mt-6 sm:mt-8 flex justify-center">
                       <Link
                         href={`/Services/${service.slug}`}
-                        className="w-full inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.45)] active:scale-95 transition-all duration-300"
+                        className="cta-btn w-full inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95"
                       >
                         {service.buttonText}
                       </Link>
@@ -145,11 +145,11 @@ export default function ServicesPage() {
 
               {/* Bottom Headline & Description */}
               <div className="relative z-20 text-center max-w-3xl mx-auto mt-6 sm:mt-10">
-                <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.14]">
-                  <span className="text-neutral-400 font-normal">Industries we </span>
-                  <span className="text-[#2B382E] font-medium">have</span>
+                <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+                  <span className="text-neutral-400">Industries we </span>
+                  <span className="text-[#2B382E]">have</span>
                   <br />
-                  <span className="text-[#2B382E] font-medium">built in </span>
+                  <span className="text-[#2B382E]">built in </span>
                 </h2>
                 <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-sm sm:text-base md:text-[17px] leading-relaxed mt-4 sm:mt-5">
                   We work across industries to solve unique challenges with thoughtful design, technology, and strategy.

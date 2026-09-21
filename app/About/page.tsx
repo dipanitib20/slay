@@ -59,10 +59,10 @@ export default function AboutPage() {
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Creativity with Purpose Section Header */}
             <div className="text-center max-w-2xl mx-auto">
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[56px] tracking-tight leading-[1.12]">
-                <span className="text-[#536757]/65 font-normal">We build brands that make people </span>
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+                <span className="text-[#536757]/65">We build brands that make people </span>
                 <br />
-                <span className="text-[#536757] font-medium">stop and actually look</span>
+                <span className="text-[#536757]">stop and actually look</span>
               </h2>
               <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
                 Every creative decision we make is answering a question. Who is this for, what should it make them do, and how will we know it worked. Pretty is the baseline, not the point.
@@ -248,7 +248,7 @@ export default function AboutPage() {
             <div className="shrink-0 self-start sm:self-auto mb-2">
               <Link
                 href="/Contact"
-                className="inline-flex items-center justify-center bg-[#242424] text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.45)] active:scale-95 transition-all duration-300"
+                className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95"
               >
                 Join the team
               </Link>

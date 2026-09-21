@@ -359,9 +359,9 @@ export default function FAQFun({
           <div className="max-w-7xl mx-auto w-full h-full relative flex flex-col justify-between">
             {/* Top Section Header */}
             <div className="relative max-w-3xl mx-auto text-center pt-6 xl:pt-10 mb-2 select-none z-30 pointer-events-none">
-              <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[50px] tracking-tight leading-[1.14]">
-                <span className="text-[#9BA59D] font-normal">How we </span>
-                <span className="text-[#536757] font-medium">actually work</span>
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+                <span className="text-[#9BA59D]">How we </span>
+                <span className="text-[#536757]">actually work</span>
               </h2>
               <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-[15px] leading-relaxed mt-2.5">
                 {subDescription}
@@ -518,7 +518,7 @@ export default function FAQFun({
                 {/* CTA Action Button */}
                 <Link
                   href="/Contact"
-                  className="mt-4 inline-flex items-center justify-center px-7 py-2.5 rounded-full bg-[#536757] text-white font-medium text-xs lg:text-sm hover:bg-[#435346] shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] transition-all duration-200 cursor-pointer"
+                  className="cta-btn mt-4 inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-medium text-xs lg:text-sm shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] cursor-pointer"
                 >
                   Start your project
                 </Link>
@@ -562,9 +562,9 @@ export default function FAQFun({
       {/* ── HORIZONTAL STEP SLIDER: Mobile (<1024px) ── */}
       <div className="block lg:hidden relative z-20 w-full pt-8 pb-4 sm:pt-12 sm:pb-6 px-4 sm:px-8 flex flex-col items-center select-none overflow-hidden">
         {/* Section Heading */}
-        <h2 className="font-heading text-3xl sm:text-4xl text-[#242424] font-medium tracking-tight text-center max-w-xs sm:max-w-sm mx-auto leading-tight">
-          <span className="text-[#9BA59D] font-normal">How we </span>
-          <span className="text-[#536757] font-medium">actually work</span>
+        <h2 className="font-heading text-4xl sm:text-5xl uppercase tracking-tight text-center max-w-xs sm:max-w-sm mx-auto leading-tight">
+          <span className="text-[#9BA59D]">How we </span>
+          <span className="text-[#536757]">actually work</span>
         </h2>
 
         {/* Subheading */}
@@ -647,7 +647,7 @@ export default function FAQFun({
                   {/* CTA Button */}
                   <Link
                     href="/Contact"
-                    className="inline-flex items-center justify-center px-8 py-3.5 rounded-2xl bg-[#536757] text-white font-semibold text-sm shadow-[0_4px_16px_rgba(83,103,87,0.25)] hover:bg-[#435346] active:scale-95 transition-all duration-200 cursor-pointer"
+                    className="cta-btn inline-flex items-center justify-center px-8 py-3.5 rounded-2xl text-white font-semibold text-sm shadow-[0_4px_16px_rgba(83,103,87,0.25)] active:scale-95 cursor-pointer"
                   >
                     Start your project
                   </Link>

@@ -238,7 +238,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="mt-2 w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base py-3.5 rounded-[14px] shadow-[0_8px_20px_rgba(0,0,0,0.25)] active:scale-[0.99] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+              className="cta-btn mt-2 w-full inline-flex items-center justify-center text-white font-body font-medium text-base py-3.5 rounded-[14px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_8px_20px_rgba(83,103,87,0.35)] active:scale-[0.99] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isLoading ? (
                 <span className="inline-flex items-center gap-2">

@@ -124,14 +124,14 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
       >
         {/* Central Heading */}
         <div className="absolute inset-x-0 top-[26%] flex flex-col items-center text-center select-none pointer-events-none z-10">
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-[56px] lg:text-[62px] tracking-tight leading-[1.12]">
-            <span className="text-neutral-400 font-normal relative inline-block">
+          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+            <span className="text-neutral-400 relative inline-block">
               Questions people
-              <span className="absolute -top-3 -right-8 sm:-top-4 sm:-right-11 font-doodle text-2xl sm:text-3xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal">
+              <span className="absolute -top-3 -right-8 sm:-top-4 sm:-right-11 font-doodle text-2xl sm:text-3xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal lowercase">
                 FAQs
               </span>
             </span>
-            <span className="text-[#536757] font-medium block">
+            <span className="text-[#536757] block">
               usually ask 
             </span>
           </h2>
@@ -191,14 +191,14 @@ export default function FAQ({ items = defaultItems }: FAQProps = {}) {
       {/* ── MOBILE STACKED ACCORDION LAYOUT (<768px) ── */}
       <div className="block md:hidden relative z-20 w-full px-4 sm:px-8 flex flex-col items-center select-none pb-6">
         <div className="flex flex-col items-center text-center mb-8">
-          <h2 className="font-heading text-3xl sm:text-4xl tracking-tight leading-[1.12]">
-            <span className="text-neutral-400 font-normal relative inline-block">
+          <h2 className="font-heading text-4xl sm:text-5xl uppercase tracking-tight leading-[1.12]">
+            <span className="text-neutral-400 relative inline-block">
               Questions people
-              <span className="absolute -top-3 -right-7 font-doodle text-2xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal">
+              <span className="absolute -top-3 -right-7 font-doodle text-2xl text-[#242424] rotate-[15deg] select-none pointer-events-none tracking-normal lowercase">
                 FAQs
               </span>
             </span>
-            <span className="text-[#536757] font-medium block">
+            <span className="text-[#536757] block">
               usually ask
             </span>
           </h2>

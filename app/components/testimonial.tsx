@@ -222,11 +222,11 @@ export default function TestimonialSection() {
                 </span>
               </div>
 
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-                <span className="text-neutral-400 font-normal block">
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+                <span className="text-neutral-400 block">
                   Straight from the chat.
                 </span>
-                <span className="text-[#536757] font-medium block mt-1">
+                <span className="text-[#536757] block mt-1">
                   Real words
                 </span>
               </h2>
@@ -281,11 +281,11 @@ export default function TestimonialSection() {
                 Kind Words
               </span>
             </div>
-            <h2 className="font-heading text-4xl sm:text-5xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal block">
+            <h2 className="font-heading text-4xl sm:text-5xl uppercase tracking-tight leading-[1.12]">
+              <span className="text-neutral-400 block">
                 Straight from the chat.
               </span>
-              <span className="text-[#536757] font-medium block mt-1">
+              <span className="text-[#536757] block mt-1">
                 Real words
               </span>
             </h2>

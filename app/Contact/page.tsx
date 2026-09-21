@@ -189,7 +189,7 @@ export default function ContactPage() {
           href="https://calendly.com/dipanitib20/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center bg-[#242424] hover:bg-[#383838] text-white font-body font-medium text-sm sm:text-base px-7 sm:px-8 py-3 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.35)] active:scale-95 transition-all duration-200"
+          className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-sm sm:text-base px-7 sm:px-8 py-3 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_8px_20px_rgba(83,103,87,0.35)] active:scale-95"
         >
           Book a call
         </a>
@@ -216,7 +216,7 @@ export default function ContactPage() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[62px] font-normal tracking-tight leading-[1.12]">
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
                 <span className="text-[#536757]/65">Got a project</span>
                 <br />
                 <span className="text-[#536757]">in mind?</span>
@@ -559,9 +559,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full inline-flex items-center justify-center bg-[#1C1C1C] hover:bg-[#333333] text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(0,0,0,0.35)] active:scale-[0.98] transition-all duration-200 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed ${
-                      isSubmitted ? "!bg-[#536757] hover:!bg-[#435346]" : ""
-                    }`}
+                    className="cta-btn w-full inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg py-4 rounded-[16px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-[0.98] cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="inline-flex items-center gap-2">

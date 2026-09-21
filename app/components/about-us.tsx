@@ -20,9 +20,9 @@ export default function AboutUsSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal">The People </span>
-              <span className="text-[#536757] font-medium">Behind the Work</span>
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+              <span className="text-neutral-400">The People </span>
+              <span className="text-[#536757]">Behind the Work</span>
             </h2>
 
             {/* Subheading / Description */}
@@ -48,9 +48,9 @@ export default function AboutUsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
           {/* Left Column: Typography & Description */}
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.12]">
-              <span className="text-neutral-400 font-normal block">Meet the</span>
-              <span className="text-[#536757] font-medium block">founder- Dipani</span>
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
+              <span className="text-neutral-400 block">Meet the</span>
+              <span className="text-[#536757] block">founder- Dipani</span>
             </h2>
 
             <p className="font-subheading text-neutral-500 max-w-lg mx-auto lg:mx-0 text-base sm:text-lg leading-relaxed mt-5 sm:mt-6">
