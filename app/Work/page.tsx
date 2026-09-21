@@ -42,8 +42,16 @@ export default function WorkPage() {
     });
   }, [searchQuery, selectedCategory]);
 
-  const featuredProjects = filteredProjects.slice(0, 2);
-  const remainingProjects = filteredProjects.slice(2);
+  const formatTitle = (title: string) => {
+    return title
+      .split(" ")
+      .map((word) =>
+        word.length > 0
+          ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+          : ""
+      )
+      .join(" ");
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F4F3] text-[#242424] flex flex-col justify-between selection:bg-[#536757]/20 selection:text-[#536757]">
@@ -169,79 +177,19 @@ export default function WorkPage() {
             </div>
           </div>
 
-          {/* Projects Grid Container */}
+          {/* Projects Grid Container (All 3 Columns in a Row) */}
           <div className="mt-12 sm:mt-16 md:mt-20 flex flex-col gap-10 sm:gap-14 md:gap-16 relative z-10">
-            {/* Top Row: 2 Featured Larger Columns */}
-            {featuredProjects.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
-                {featuredProjects.map((project) => (
-                  <Link
-                    key={project.id}
-                    href={`/Work/${project.slug}`}
-                    className="group flex flex-col cursor-pointer"
-                  >
-                    {/* Image / Video Container */}
-                    <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      {project.image.trim().toLowerCase().endsWith(".webm") ||
-                      project.image.trim().toLowerCase().endsWith(".webm") ? (
-                        <video
-                          src={encodeURI(project.image.trim())}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                        />
-                      ) : (
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                          unoptimized
-                        />
-                      )}
-                    </div>
-
-                    {/* Project Info */}
-                    <div className="flex flex-col mt-6 sm:mt-7">
-                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200">
-                        {project.title}
-                      </h2>
-                      <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
-                        {project.description}
-                      </p>
-
-                      {/* Tag Badges */}
-                      <div className="flex items-center gap-3 mt-4 sm:mt-5 flex-wrap">
-                        {project.tags.map((tag, tagIdx) => (
-                          <span
-                            key={tagIdx}
-                            className="px-6 sm:px-7 py-2 rounded-full bg-white text-[#242424] font-body text-sm shadow-[0_2px_10px_rgba(0,0,0,0.06)] border border-black/[0.04]"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {/* Next Rows: 3 Columns Grid */}
-            {remainingProjects.length > 0 && (
+            {filteredProjects.length > 0 && (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 lg:gap-10">
-                {remainingProjects.map((project) => (
+                {filteredProjects.map((project) => (
                   <Link
                     key={project.id}
                     href={`/Work/${project.slug}`}
                     className="group flex flex-col cursor-pointer"
                   >
                     {/* Image / Video Container */}
-                    <div className="relative w-full aspect-[4/4] sm:aspect-[4/4.1] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
-                      {project.image.trim().toLowerCase().endsWith(".webm") ||
-                      project.image.trim().toLowerCase().endsWith(".webm") ? (
+                    <div className="relative w-full aspect-[3/4] rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6]">
+                      {project.image.trim().toLowerCase().endsWith(".webm") ? (
                         <video
                           src={encodeURI(project.image.trim())}
                           autoPlay
@@ -263,8 +211,8 @@ export default function WorkPage() {
 
                     {/* Project Info */}
                     <div className="flex flex-col mt-6 sm:mt-7">
-                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200">
-                        {project.title}
+                      <h2 className="font-heading font-medium text-2xl sm:text-3xl text-[#536757] tracking-tight group-hover:text-[#242424] transition-colors duration-200 normal-case">
+                        {formatTitle(project.title)}
                       </h2>
                       <p className="font-subheading text-neutral-500 text-sm sm:text-base leading-relaxed mt-2 max-w-xl">
                         {project.description}

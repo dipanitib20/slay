@@ -149,6 +149,16 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   text-transform: inherit !important;
 }
 
+/* Allow explicit casing overrides (e.g. project card names) */
+:is(h1, h2, h3, h4, h5, h6, .font-heading).capitalize,
+:is(h1, h2, h3, h4, h5, h6, .font-heading).capitalize *,
+:is(h1, h2, h3, h4, h5, h6, .font-heading).title-case,
+:is(h1, h2, h3, h4, h5, h6, .font-heading).title-case *,
+:is(h1, h2, h3, h4, h5, h6, .font-heading).normal-case,
+:is(h1, h2, h3, h4, h5, h6, .font-heading).normal-case * {
+  text-transform: none !important;
+}
+
 /* Refined font-weights when utility classes are used on headings */
 :is(h1, h2, h3, h4, h5, h6, .font-heading).font-normal,
 :is(h1, h2, h3, h4, h5, h6, .font-heading) .font-normal,

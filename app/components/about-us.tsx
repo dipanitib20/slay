@@ -22,7 +22,7 @@ export default function AboutUsSection() {
             {/* Main Headline */}
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
               <span className="text-neutral-400">The People </span>
-              <span className="text-[#536757]">Behind the Work</span>
+              <span className="text-[#536757]">Behind the Strategy</span>
             </h2>
 
             {/* Subheading / Description */}
@@ -44,21 +44,17 @@ export default function AboutUsSection() {
           </div>
         </div>
 
-        {/* Bottom Block: Split 2-Column Layout with Sticky Founder's Note */}
+        {/* Bottom Block: Split 2-Column Layout with Founder Image & Small Yellow Sticky Note */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-          {/* Left Column: Typography & Description */}
+          {/* Left Column: Typography & Social Links */}
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
             <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
               <span className="text-neutral-400 block">Meet the</span>
-              <span className="text-[#536757] block">founder- Dipani</span>
+              <span className="text-[#536757] block">founder - Dipani</span>
             </h2>
 
-            <p className="font-subheading text-neutral-500 max-w-lg mx-auto lg:mx-0 text-base sm:text-lg leading-relaxed mt-5 sm:mt-6">
-              A small team with big ideas, bringing strategy, creativity and technology together to build brands that actually move people.
-            </p>
-
             {/* Social Links (Instagram, LinkedIn, Facebook) */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-5 mt-7 sm:mt-8">
+            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-5 mt-7 sm:mt-9">
               <a
                 href="https://www.instagram.com/slaywithdipani"
                 target="_blank"
@@ -109,26 +105,31 @@ export default function AboutUsSection() {
             </div>
           </div>
 
-          {/* Right Column: Sticky / Founder's Note Image */}
+          {/* Right Column: Prominent Founder Image with Small Yellow Sticky Note */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[440px] sm:max-w-[480px] xl:max-w-[520px]">
-              <Image
-                src="/foundersnote.webp"
-                alt="Founder's Note"
-                width={800}
-                height={800}
-                className="w-full h-auto object-contain select-none drop-shadow-[0_16px_36px_rgba(0,0,0,0.08)] transition-transform duration-500 ease-out"
-              />
-
-              {/* Founder Image at bottom-left corner */}
-              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 md:-bottom-8 md:-left-8 w-28 sm:w-36 md:w-44 aspect-square overflow-hidden shadow-[0_14px_34px_rgba(0,0,0,0.18)] border-4 sm:border-[5px] border-white -rotate-6 hover:rotate-0 hover:scale-105 transition-all duration-300 z-10 select-none bg-white">
+            <div className="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[440px]">
+              {/* Main Large Founder Image */}
+              <div className="relative w-full aspect-square rounded-[24px] sm:rounded-[32px] md:rounded-[38px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] border-4 sm:border-[6px] border-white bg-white">
                 <Image
                   src="/founder-image.webp"
                   alt="Founder Dipani"
-                  width={300}
-                  height={300}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  priority
                 />
+              </div>
+
+              {/* Small Yellow Sticky Note (Secondary Decorative Element) */}
+              <div className="absolute -bottom-4 -left-3 sm:-bottom-6 sm:-left-6 md:-bottom-7 md:-left-8 w-44 sm:w-48 md:w-54 bg-[#FFF275] text-[#242424] p-3.5 sm:p-4 rounded-[4px] sm:rounded-[6px] shadow-[0_12px_28px_rgba(0,0,0,0.14)] -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 z-10 select-none border border-black/5">
+                {/* Translucent top tape strip */}
+                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-12 sm:w-14 h-4 bg-white/70 backdrop-blur-xs rotate-1 shadow-xs border border-black/5 rounded-xs" />
+                
+                <p className="font-doodle text-xl sm:text-2xl md:text-[25px] leading-tight text-[#1A1A1A]">
+                  “Building brands that don’t blend in. Let’s create something bold.”
+                </p>
+                <span className="font-doodle text-lg sm:text-xl text-[#536757] block text-right mt-1 font-semibold">
+                  — Dipani
+                </span>
               </div>
             </div>
           </div>

@@ -55,16 +55,21 @@ export default function AboutPage() {
         </section>
 
         {/* Section 2: Creativity with Purpose & Approach/Belief */}
-        <section className="my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12">
+        <section className="mt-16 sm:mt-24 lg:mt-32 mb-8 sm:mb-12 lg:mb-16 px-4 sm:px-8 md:px-12">
           <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
             {/* Creativity with Purpose Section Header */}
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
-                <span className="text-[#536757]/65">We build brands that make people </span>
-                <br />
-                <span className="text-[#536757]">stop and actually look</span>
-              </h2>
-              <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3.5 sm:mt-4">
+            <div className="relative max-w-6xl mx-auto text-center mb-8 sm:mb-12 flex flex-col items-center">
+              <div className="relative inline-flex flex-col items-center text-center max-w-full">
+                <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tight leading-[1.14] text-center">
+                  <span className="text-neutral-400 block text-center sm:whitespace-nowrap">
+                    We build brands that make people
+                  </span>
+                  <span className="text-[#536757] block text-center sm:whitespace-nowrap">
+                    stop and actually look.
+                  </span>
+                </h2>
+              </div>
+              <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed text-center mt-4 sm:mt-6">
                 Every creative decision we make is answering a question. Who is this for, what should it make them do, and how will we know it worked. Pretty is the baseline, not the point.
               </p>
             </div>
@@ -75,10 +80,10 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-6 sm:gap-8 lg:gap-12">
                 {/* Left Column: Text */}
                 <div className="flex flex-col">
-                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
+                  <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-[#536757] tracking-tight uppercase mb-3 sm:mb-4">
                     OUR MISSION
                   </h3>
-                  <p className="font-subheading text-[#242424] text-xs sm:text-sm md:text-[15px] leading-relaxed mb-3 sm:mb-4">
+                  <p className="font-subheading text-[#242424] text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4">
                     Slay The Strategy exists to close the gap between what a founder has actually built and what the world sees online. Too many good brands are let down by content that makes them look like everybody else. We bring strategy to every piece of content and accountability to every strategy, so the brands we work with look exactly as good as they are.  
                   </p>
                 </div>
@@ -144,10 +149,10 @@ export default function AboutPage() {
 
                 {/* Right Column: Text */}
                 <div className="order-1 lg:order-3 flex flex-col lg:items-end lg:text-right">
-                  <h3 className="font-heading text-base sm:text-lg md:text-xl font-bold tracking-widest text-[#536757] uppercase mb-2 sm:mb-3">
+                  <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl text-[#536757] tracking-tight uppercase mb-3 sm:mb-4">
                     OUR VISION
                   </h3>
-                  <p className="font-subheading text-[#242424] font-medium text-xs sm:text-sm md:text-[15px] leading-snug mb-2 sm:mb-3">
+                  <p className="font-subheading text-[#242424] text-sm sm:text-base md:text-lg leading-relaxed mb-2 sm:mb-3">
                     To become the first agency ambitious founders think of when average is not an option, in India and in every market we build into. We want Slay The Strategy to be the reference point for what a modern brand should look and sound like online, with a body of work sharp enough that clients arrive already convinced. 
                   </p>
                 </div>
@@ -164,15 +169,15 @@ export default function AboutPage() {
       <WorldMap />
 
       {/* "The Numbers Speak" Stats / Impact Section */}
-      <section className="w-full bg-[#F5F4F3] my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      <section className="w-full bg-[#F5F4F3] mt-10 mb-6 sm:mb-8 lg:mb-10 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
-          <div className="relative max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="relative max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-14">
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-[54px] tracking-tight leading-[1.14]">
               <span className="text-[#9BA59D] font-normal">The </span>
               <span className="text-[#536757] font-medium">Numbers Speak</span>
             </h2>
-            <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-3 sm:mt-4">
+            <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed mt-2.5 sm:mt-3">
               A track record built on strategy, creativity, and results.
             </p>
           </div>
@@ -223,35 +228,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section ("The people behind the work") */}
-      <section className="w-full bg-[#F5F4F3] my-16 sm:my-24 lg:my-32 px-4 sm:px-8 md:px-12 relative overflow-hidden">
+      {/* Team Section ("The people behind the strategy") */}
+      <section className="w-full bg-[#F5F4F3] mt-16 sm:mt-20 lg:mt-28 mb-16 sm:mb-24 lg:mb-32 px-4 sm:px-8 md:px-12 relative overflow-hidden">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 md:mb-20">
-            <div className="relative">
+          <div className="relative max-w-3xl mx-auto text-center mb-10 sm:mb-14 md:mb-16">
+            <div className="relative inline-block text-center">
               {/* Cursive Doodle "Our Team" on Top */}
-              <div className="absolute -top-7 sm:-top-9 -left-1 -rotate-6 pointer-events-none select-none">
-                <span className="font-doodle text-3xl sm:text-4xl md:text-5xl text-[#7E8B80]/85">
+              <div className="absolute -top-10 sm:-top-13 md:-top-16 left-2 sm:-left-4 md:-left-8 -rotate-6 pointer-events-none select-none z-10">
+                <span className="font-doodle text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#536757] whitespace-nowrap leading-none">
                   Our Team
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[58px] tracking-tight leading-[1.08] text-left pt-2">
-                <span className="text-[#9BA59D] font-normal">The people behind</span>
+              <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.08] text-center pt-2 sm:pt-3">
+                <span className="text-[#9BA59D]">The people behind </span>
                 <br />
-                <span className="text-[#536757] font-medium">the work</span>
+                <span className="text-[#536757]">the strategy</span>
               </h2>
-            </div>
-
-            {/* "Join the team" CTA Button */}
-            <div className="shrink-0 self-start sm:self-auto mb-2">
-              <Link
-                href="/Contact"
-                className="cta-btn inline-flex items-center justify-center text-white font-body font-medium text-base sm:text-lg px-8 sm:px-11 py-3.5 sm:py-4 rounded-[12px] shadow-[inset_0_1px_2px_rgba(255,255,255,0.15),inset_0_-2px_4px_rgba(0,0,0,0.4),0_12px_28px_rgba(83,103,87,0.35)] active:scale-95"
-              >
-                Join the team
-              </Link>
             </div>
           </div>
 

@@ -334,7 +334,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "maple",
     slug: "maple",
-    title: "MAPLE",
+    title: "Maple",
     client: "Maple Canadian Preschool",
     year: "2026",
     role: "Admissions Marketing & Local Growth",
@@ -486,7 +486,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "claw-nails",
     slug: "claw-nails",
-    title: "CLAW NAILS",
+    title: "Claw Nails",
     client: "Claw Nails Studio",
     year: "2026",
     role: "Social Direction & In-Studio Shoots",
@@ -580,7 +580,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "claw-9",
-          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝘦 𝘳𝘰.webm",
+          image: "/claw/𝘞𝘦 𝘱𝘶𝘵 𝑹𝒆𝒆𝒏𝒂 𝑩𝒂𝒕𝒓𝒂 𝘪𝘯 𝘵𝘩𝘦 𝘩𝘰𝘵 𝘴𝘦𝘢𝘵 𝘧𝘰𝘳 𝘢 𝘳𝘢𝘱𝘪𝘥-𝘧𝘪𝘳𝒆 𝘳𝘰.webm",
           title: "Founder Hot Seat with Reena Batra",
           caption: "Rapid-fire founder interview and nail care secrets",
           aspectClass: "aspect-[9/16]",
@@ -634,7 +634,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "baked-love",
     slug: "baked-love",
-    title: "BAKED LOVE",
+    title: "Baked Love",
     client: "Baked Love Patisserie",
     year: "2026",
     role: "Food Direction & Founder Storytelling",
@@ -770,7 +770,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "underpass",
     slug: "underpass",
-    title: "UNDERPASS",
+    title: "Underpass",
     client: "Underpass Lounge & Club",
     year: "2026",
     role: "Nightly Creative Engine & Motion Graphics",
@@ -889,7 +889,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "costify",
     slug: "costify",
-    title: "COSTIFY",
+    title: "Costify",
     client: "Costify Refurbished Tech",
     year: "2026",
     role: "Founder Strategy & Meme Formats",
@@ -1029,7 +1029,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "aavarna",
     slug: "aavarna",
-    title: "AAVARNA",
+    title: "Aavarna",
     client: "Aavarna Incense & Fragrance",
     year: "2026",
     role: "Creative Direction & Launch Campaign",
@@ -1368,7 +1368,7 @@ export const projectsData: ProjectData[] = [
   {
     id: "orient-polyfilms",
     slug: "orient-polyfilms",
-    title: "ORIENT POLYFILMS",
+    title: "Orient Polyfilms",
     client: "Orient Polyfilms Ltd.",
     year: "2026",
     role: "B2B Strategy & Positioning",

@@ -15,7 +15,7 @@ export interface FAQProps {
   items?: FAQItem[];
   title?: string;
   subtitle?: string;
-  subDescription?: string;
+  subDescription?: React.ReactNode;
 }
 
 const defaultFAQItems: FAQItem[] = [
@@ -43,14 +43,14 @@ const defaultFAQItems: FAQItem[] = [
   {
     question: "Execution",
     shortLabel: "Execution",
-    tags: "PRODUCTION • SCHEDULING • COMMUNITY",
+    tags: "PRODUCTION • PUBLISHING • ACTIVE MONITORING",
     answer:
-      "We shoot, edit, write, schedule, post and handle the comments and DMs. Consistent, on brand and on time. You stay in the loop without having to chase anyone for an update.",
+      "Filming, editing, copy, design and publishing. Everything that goes out has a reason behind it, consistent quality and zero shortcuts on the aesthetic.",
   },
   {
-    question: "Report and Sharpen",
-    shortLabel: "Report & Sharpen",
-    tags: "MONTHLY REPORTING • ANALYTICS • REFINEMENT",
+    question: "Review and Optimise",
+    shortLabel: "Review & Optimise",
+    tags: "PERFORMANCE • ADJUSTMENT • STRATEGY REFINEMENT",
     answer:
       "Monthly reporting on what performed and what did not, and a strategy adjustment based on it. No agency should be running month six the same way it ran month one.",
   },
@@ -63,7 +63,13 @@ export default function FAQFun({
   items = defaultFAQItems,
   title = "How we actually work",
   subtitle = "PROCESS",
-  subDescription = "Five steps. No mystery, no jargon, no six week onboarding before anything gets made.",
+  subDescription = (
+    <>
+      Five steps. No mystery, no jargon, no six week onboarding
+      <br />
+      before anything gets made.
+    </>
+  ),
 }: FAQProps = {}) {
   const faqList = items && items.length > 0 ? items : defaultFAQItems;
   const [activeIndex, setActiveIndex] = useState(INITIAL_INDEX);
@@ -316,7 +322,7 @@ export default function FAQFun({
 
   // Arc Geometry parameters:
   const radius = Math.min(Math.max(containerWidth * 0.65, 750), 920);
-  const apexY = 195; // Positioned below header
+  const apexY = 155; // Positioned cleanly below header
   const centerY = apexY + radius;
   const centerX = containerWidth / 2;
 
@@ -358,12 +364,12 @@ export default function FAQFun({
         >
           <div className="max-w-7xl mx-auto w-full h-full relative flex flex-col justify-between">
             {/* Top Section Header */}
-            <div className="relative max-w-3xl mx-auto text-center pt-6 xl:pt-10 mb-2 select-none z-30 pointer-events-none">
+            <div className="relative max-w-3xl mx-auto text-center pt-4 xl:pt-6 mb-1 select-none z-30 pointer-events-none">
               <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
                 <span className="text-[#9BA59D]">How we </span>
                 <span className="text-[#536757]">actually work</span>
               </h2>
-              <p className="font-subheading text-neutral-500 max-w-xl mx-auto text-xs sm:text-sm md:text-[15px] leading-relaxed mt-2.5">
+              <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mt-4 sm:mt-6">
                 {subDescription}
               </p>
             </div>
@@ -481,13 +487,13 @@ export default function FAQFun({
               })}
 
               {/* Center Card / Step Display Panel */}
-              <div className="absolute top-[280px] xl:top-[295px] inset-x-0 mx-auto max-w-2xl px-6 flex flex-col items-center text-center z-30 pointer-events-auto">
+              <div className="absolute top-[215px] xl:top-[230px] inset-x-0 mx-auto max-w-2xl px-6 flex flex-col items-center text-center z-30 pointer-events-auto">
                 {/* Main Step Title in Serif */}
                 <div
                   key={`title-${activeIndex}`}
                   className="transition-all duration-300 ease-out animate-fadeIn"
                 >
-                  <h3 className="font-heading text-2xl sm:text-3xl lg:text-[34px] text-[#242424] font-medium tracking-tight leading-[1.25]">
+                  <h3 className="font-heading text-2xl sm:text-3xl lg:text-[32px] text-[#242424] font-medium tracking-tight leading-[1.2]">
                     0{activeIndex + 1} {faqList[activeIndex]?.question}
                   </h3>
                 </div>
@@ -495,36 +501,23 @@ export default function FAQFun({
                 {/* Answer body text */}
                 <div
                   key={`answer-${activeIndex}`}
-                  className="min-h-[75px] flex items-center justify-center mt-3.5 transition-all duration-300 ease-out animate-fadeIn"
+                  className="min-h-[55px] flex items-center justify-center mt-2.5 transition-all duration-300 ease-out animate-fadeIn"
                 >
-                  <p className="font-body text-sm lg:text-base text-[#242424]/75 leading-relaxed max-w-xl mx-auto font-normal">
+                  <p className="font-body text-sm lg:text-[15px] text-[#242424]/75 leading-relaxed max-w-xl mx-auto font-normal">
                     {faqList[activeIndex]?.answer}
-                  </p>
-                </div>
-
-                {/* Dashed divider */}
-                <div className="w-full max-w-md mx-auto my-3.5 border-t border-dashed border-[#242424]/15" />
-
-                {/* Sub-tags in tracked uppercase */}
-                <div
-                  key={`tags-${activeIndex}`}
-                  className="transition-all duration-300 ease-out animate-fadeIn"
-                >
-                  <p className="font-body text-[11px] tracking-widest text-[#536757] font-semibold uppercase">
-                    {faqList[activeIndex]?.tags}
                   </p>
                 </div>
 
                 {/* CTA Action Button */}
                 <Link
                   href="/Contact"
-                  className="cta-btn mt-4 inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-medium text-xs lg:text-sm shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] cursor-pointer"
+                  className="cta-btn mt-3.5 inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-medium text-xs lg:text-sm shadow-[0_4px_16px_rgba(83,103,87,0.22)] hover:shadow-[0_6px_22px_rgba(83,103,87,0.32)] cursor-pointer"
                 >
                   Start your project
                 </Link>
 
                 {/* Counter & 5 Progress Navigation Dots */}
-                <div className="mt-4 flex flex-col items-center gap-1.5">
+                <div className="mt-3 flex flex-col items-center gap-1.5">
                   <span className="font-body text-[10px] font-semibold text-neutral-400 tracking-widest uppercase">
                     0{activeIndex + 1} / 0{faqList.length}
                   </span>
@@ -568,7 +561,7 @@ export default function FAQFun({
         </h2>
 
         {/* Subheading */}
-        <p className="font-subheading text-neutral-500 max-w-sm sm:max-w-md mx-auto text-xs sm:text-sm leading-relaxed text-center mt-2.5 mb-2">
+        <p className="font-subheading text-neutral-500 max-w-lg mx-auto text-base sm:text-lg leading-relaxed text-center mt-3.5 mb-2">
           {subDescription}
         </p>
 
@@ -631,18 +624,9 @@ export default function FAQFun({
                   </h3>
 
                   {/* Description */}
-                  <p className="font-body text-sm sm:text-[15px] text-[#242424]/75 font-normal leading-relaxed mt-2.5 max-w-xs sm:max-w-sm">
+                  <p className="font-body text-sm sm:text-[15px] text-[#242424]/75 font-normal leading-relaxed mt-2.5 mb-6 max-w-xs sm:max-w-sm">
                     {item.answer}
                   </p>
-
-                  {/* Dotted border tags */}
-                  {item.tags && (
-                    <div className="w-full max-w-xs sm:max-w-sm border-y border-dotted border-neutral-300/90 py-3.5 my-5">
-                      <p className="font-subheading text-[10.5px] sm:text-xs tracking-[0.18em] text-[#536757] font-semibold uppercase">
-                        {item.tags}
-                      </p>
-                    </div>
-                  )}
 
                   {/* CTA Button */}
                   <Link

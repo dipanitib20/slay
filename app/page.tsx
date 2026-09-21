@@ -74,7 +74,7 @@ export default function Home() {
       title: "Indian Summer Atelier",
       description:
         "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content.",
-      image: "/indian summer/indian summer  (2).webp",
+      image: "/laftcard.png",
       tags: ["Social Media", "Performance Marketing", "Founder Led", "UGC & Content Shoot"],
     },
     {
@@ -163,29 +163,36 @@ export default function Home() {
       <section id="services" className="w-full bg-[#F5F4F3] my-40 px-4 sm:px-8 md:px-12">
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
-          <div className="relative max-w-4xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
-            {/* Doodle Arrow & Handwritten Note */}
-            <div className="absolute -top-9 sm:-top-12 md:-top-16 right-0 sm:right-2 md:right-6 lg:right-12 flex items-center gap-1 sm:gap-2 pointer-events-none select-none md:translate-x-8 lg:translate-x-14">
-              <Image
-                src="/arrow.svg"
-                alt="Arrow"
-                width={85}
-                height={55}
-                className="w-10 sm:w-16 md:w-22 lg:w-28 h-auto object-contain shrink-0"
-              />
-              <span className="font-doodle text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#536757] whitespace-nowrap pt-1 sm:pt-2 md:pt-3 -translate-y-2 sm:-translate-y-3 md:-translate-y-5">
-                What we bring
-              </span>
+          <div className="relative max-w-5xl mx-auto text-center mb-14 sm:mb-18 md:mb-20 flex flex-col items-center">
+            {/* Headline Container with Relative Top-Right Doodle */}
+            <div className="relative inline-flex flex-col items-center text-center">
+              {/* Doodle Arrow & Handwritten Note on Top Right */}
+              <div className="absolute -top-10 sm:-top-13 md:-top-16 -right-4 sm:-right-8 md:-right-12 lg:-right-16 flex items-center gap-1 sm:gap-2 pointer-events-none select-none">
+                <Image
+                  src="/arrow.svg"
+                  alt="Arrow"
+                  width={85}
+                  height={55}
+                  className="w-10 sm:w-14 md:w-18 lg:w-22 h-auto object-contain shrink-0"
+                />
+                <span className="font-doodle text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#536757] whitespace-nowrap -rotate-2 -translate-y-1">
+                  What we bring
+                </span>
+              </div>
+
+              {/* Main Headline */}
+              <h2 className="font-heading text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl uppercase tracking-tight leading-[1.14] text-center">
+                <span className="text-neutral-400 block text-center sm:whitespace-nowrap">
+                  We build brands that make people
+                </span>
+                <span className="text-[#536757] block text-center sm:whitespace-nowrap">
+                  stop and actually look.
+                </span>
+              </h2>
             </div>
 
-            {/* Main Headline */}
-            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[1.12]">
-              <span className="text-neutral-400">We build brands that make people </span>
-              <span className="text-[#536757]">stop and actually look.</span>
-            </h2>
-
             {/* Subheading / Description Paragraph */}
-            <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mt-6">
+            <p className="font-subheading text-neutral-500 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mt-6 text-center">
               Most brands blend into the scroll. Same formats, same captions, same energy. Slay the Strategy exists to change that. We are a full service social media and digital marketing agency crafting aesthetic, intentional content for founders who refuse to be forgettable. No average work. No noise. Just work worth stopping for.
             </p>
           </div>
@@ -275,18 +282,11 @@ export default function Home() {
         <div className="max-w-8xl mx-auto md:px-6 lg:px-15">
           {/* Section Header */}
           <div className="relative max-w-3xl mx-auto text-center mb-14 sm:mb-18 md:mb-20">
-            {/* Doodle Arrow & Handwritten Note on Top Right */}
-            <div className="absolute -top-10 sm:-top-14 md:-top-16 right-0 sm:right-2 md:right-4 lg:right-6 flex flex-col items-center pointer-events-none select-none md:translate-x-6 lg:translate-x-10">
+            {/* Doodle Handwritten Note on Top Right */}
+            <div className="absolute -top-7 sm:-top-9 md:-top-11 right-0 sm:right-2 md:right-4 lg:right-6 flex flex-col items-center pointer-events-none select-none md:translate-x-6 lg:translate-x-10">
               <span className="font-doodle text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#536757] whitespace-nowrap -rotate-2">
                 What We’ve Made
               </span>
-              <Image
-                src="/arrow.svg"
-                alt="Arrow"
-                width={85}
-                height={55}
-                className="w-10 sm:w-14 md:w-18 lg:w-20 h-auto object-contain shrink-0 rotate-[130deg] scale-x-[-1] mt-0.5 -translate-x-3"
-              />
             </div>
 
             {/* Main Headline */}
