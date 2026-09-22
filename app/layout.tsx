@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ScrollAnimator from "./components/scroll-animator";
+import LaunchCountdown from "./components/launch-countdown";
 
 export const metadata: Metadata = {
   title: "Slay Agency",
@@ -28,7 +29,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-body bg-[#F5F4F3] text-[#242424]">
         <ScrollAnimator />
-        {children}
+        <LaunchCountdown>
+          {children}
+        </LaunchCountdown>
       </body>
     </html>
   );
