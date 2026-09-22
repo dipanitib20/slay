@@ -75,7 +75,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/anvi/720138219_17867481315686964_7648030679057249441_n.webp",
     description:
       "Aka Anvi Jain, lawyer turned legal creator, needed a platform. We built her consistent, aesthetic content system, shoot planning, scripting, calendars, and purposeful strategy.",
-    image: "/coverimg/law in heels_.png",
+    image: "/anvi/720138219_17867481315686964_7648030679057249441_n.webp",
     meta: {
       client: "Anvi Jain (Law in Heels)",
       year: "2026",
@@ -113,7 +113,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "lih-4",
-          image: "/anvi/linkedin shots.webp",
+          image: "/anvi/linkedin shots-50kb.webp",
           title: "LinkedIn Thought Leadership",
           caption: "Viral LinkedIn carousel templates and authority engagement formats",
           aspectClass: "aspect-[9/16]",
@@ -147,7 +147,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "lih-8",
-          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody.webp",
+          image: "/anvi/The law isn’t black and white. Most of it lives in the grey.And honestly That’s the part nobody .webp",
           title: "The Grey Areas of Law",
           caption: "Provocative commentary driving hundreds of insightful discussions",
           aspectClass: "aspect-[4/5]",
@@ -161,13 +161,13 @@ export const projectsData: ProjectData[] = [
         title: "Everyday Legal Scenarios & Consumer Rights",
         subtitle: "High-retention multi-slide breakdown translating everyday legal dilemmas into simple, actionable guidance.",
         images: [
-          "/anvi/carousel/c1.1.webp",
-          "/anvi/carousel/c1.2.webp",
-          "/anvi/carousel/c1.3.webp",
-          "/anvi/carousel/c1.4.webp",
-          "/anvi/carousel/c1.5.webp",
-          "/anvi/carousel/c1.6.webp",
-          "/anvi/carousel/c1.7.webp",
+          "/anvi/carousel1/c1.1.webp",
+          "/anvi/carousel1/c1.2.webp",
+          "/anvi/carousel1/c1.3.webp",
+          "/anvi/carousel1/c1.4.webp",
+          "/anvi/carousel1/c1.5.webp",
+          "/anvi/carousel1/c1.6.webp",
+          "/anvi/carousel1/c1.7.webp",
         ],
       },
       {
@@ -175,13 +175,13 @@ export const projectsData: ProjectData[] = [
         title: "Workplace Rights & Corporate Advisory",
         subtitle: "Authoritative editorial guide clarifying POSH guidelines, employee protections, and reporting frameworks.",
         images: [
-          "/anvi/carousel 2/c2.1.webp",
-          "/anvi/carousel 2/c2.2.webp",
-          "/anvi/carousel 2/c2.3.webp",
-          "/anvi/carousel 2/c2.4.webp",
-          "/anvi/carousel 2/c2.5.webp",
-          "/anvi/carousel 2/c2.6.webp",
-          "/anvi/carousel 2/c2.7.webp",
+          "/anvi/carousel2/c2.1.webp",
+          "/anvi/carousel2/c2.2.webp",
+          "/anvi/carousel2/c2.3.webp",
+          "/anvi/carousel2/c2.4.webp",
+          "/anvi/carousel2/c2.5.webp",
+          "/anvi/carousel2/c2.6.webp",
+          "/anvi/carousel2/c2.7.webp",
         ],
       },
     ],
@@ -219,7 +219,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/indian summer/indian summer  (2).webp",
     description:
       "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content. Same brand, finally landing the way it deserves to.",
-    image: "/coverimg/indian summer.png",
+    image: "/indian summer/indian summer  (2).webp",
     meta: {
       client: "Indian Summer Atelier",
       year: "2026",
@@ -251,7 +251,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "isa-3",
           image:
-            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. ajrakhcollection ajrakhp.webm",
+            "/indian summer/Ajrakh- the stunner has made its comeback. DM us to know the details. #ajrakhcollection #ajrakhp.webm",
           title: "Ajrakh Comeback Drop",
           caption: "High energy collection restock and announcement reel",
           aspectClass: "aspect-[9/16]",
@@ -292,12 +292,12 @@ export const projectsData: ProjectData[] = [
         title: "Collection Lookbook & Silhouettes",
         subtitle: "In-house editorial photography highlighting hand-embroidered textiles and draping.",
         images: [
-          "/indian summer/carousel 1/1.webp",
-          "/indian summer/carousel 1/2.webp",
-          "/indian summer/carousel 1/3.webp",
-          "/indian summer/carousel 1/4.webp",
-          "/indian summer/carousel 1/5.webp",
-          "/indian summer/carousel 1/6.webp",
+          "/indian summer/carousel1/1.webp",
+          "/indian summer/carousel1/2.webp",
+          "/indian summer/carousel1/3.webp",
+          "/indian summer/carousel1/4.webp",
+          "/indian summer/carousel1/5.webp",
+          "/indian summer/carousel1/6.webp",
         ],
       },
       {
@@ -305,12 +305,12 @@ export const projectsData: ProjectData[] = [
         title: "Seasonal Styling & Details",
         subtitle: "Macro fabric details and founder-led styling formats.",
         images: [
-          "/indian summer/carousel 2/1.webp",
-          "/indian summer/carousel 2/2.webp",
-          "/indian summer/carousel 2/3.webp",
-          "/indian summer/carousel 2/4.webp",
-          "/indian summer/carousel 2/5.webp",
-          "/indian summer/carousel 2/6.webp",
+          "/indian summer/carousel2/1.webp",
+          "/indian summer/carousel2/2.webp",
+          "/indian summer/carousel2/3.webp",
+          "/indian summer/carousel2/4.webp",
+          "/indian summer/carousel2/5.webp",
+          "/indian summer/carousel2/6.webp",
         ],
       },
     ],
@@ -345,10 +345,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["WARM, TRUST-LED", "CANADIAN PRESCHOOL STORYTELLING"],
     heroDescription:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    heroImage: "/maple/carousel 1/1.webp",
+    heroImage: "/maple/carousel1/1.webp",
     description:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    image: "/coverimg/maple.png",
+    image: "/maple/carousel1/1.webp",
     meta: {
       client: "MAPLE Preschool Bengaluru",
       year: "2026",
@@ -370,7 +370,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v2",
           image:
-            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s.webm",
+            "/maple/Every little step matters when it comes to your child’s future ✨At Maple Bear RMV Stage 2, it’s .webm",
           title: "Every Little Step",
           caption: "Nurturing milestones for future growth",
           aspectClass: "aspect-[9/16]",
@@ -401,7 +401,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "maple-v5",
           image:
-            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting.webm",
+            "/maple/Tiny explorers, big discoveries! Our little paleontologists at Maple Bear RMV 2 had an exciting .webm",
           title: "Tiny Explorers",
           caption: "Hands-on discovery and curiosity",
           aspectClass: "aspect-[9/16]",
@@ -424,9 +424,9 @@ export const projectsData: ProjectData[] = [
         title: "Play & Learning Highlights",
         subtitle: "Curated moments of early childhood discovery and interactive learning.",
         images: [
-          "/maple/carousel 1/1.webp",
-          "/maple/carousel 1/2.webp",
-          "/maple/carousel 1/3.webp",
+          "/maple/carousel1/1.webp",
+          "/maple/carousel1/2.webp",
+          "/maple/carousel1/3.webp",
         ],
       },
       {
@@ -434,12 +434,12 @@ export const projectsData: ProjectData[] = [
         title: "Classroom Life & Milestones",
         subtitle: "A glimpse inside the Canadian learning framework in action.",
         images: [
-          "/maple/carousel 2/1.webp",
-          "/maple/carousel 2/2.webp",
-          "/maple/carousel 2/3.webp",
-          "/maple/carousel 2/4.webp",
-          "/maple/carousel 2/5.webp",
-          "/maple/carousel 2/6.webp",
+          "/maple/carousel2/1.webp",
+          "/maple/carousel2/2.webp",
+          "/maple/carousel2/3.webp",
+          "/maple/carousel2/4.webp",
+          "/maple/carousel2/5.webp",
+          "/maple/carousel2/6.webp",
         ],
       },
       {
@@ -447,12 +447,12 @@ export const projectsData: ProjectData[] = [
         title: "Hands-on Discovery & Wonder",
         subtitle: "Messy hands, curious minds, and joyful milestone moments.",
         images: [
-          "/maple/carousel 3/1.webp",
-          "/maple/carousel 3/2.webp",
-          "/maple/carousel 3/3.webp",
-          "/maple/carousel 3/The best learning happens when little hands get messy, curious minds start asking questions, and (4).webp",
-          "/maple/carousel 3/5.webp",
-          "/maple/carousel 3/6.webp",
+          "/maple/carousel3/1.webp",
+          "/maple/carousel3/2.webp",
+          "/maple/carousel3/3.webp",
+          "/maple/carousel3/The best learning happens when little hands get messy, curious minds start asking questions, and (4).webp",
+          "/maple/carousel3/5.webp",
+          "/maple/carousel3/6.webp",
         ],
       },
       {
@@ -460,12 +460,12 @@ export const projectsData: ProjectData[] = [
         title: "Admissions & Campus Joy",
         subtitle: "Warm, trust-led storytelling connecting with parents across Bengaluru.",
         images: [
-          "/maple/carousel 4/1.webp",
-          "/maple/carousel 4/2.webp",
-          "/maple/carousel 4/3.webp",
-          "/maple/carousel 4/4.webp",
-          "/maple/carousel 4/5.webp",
-          "/maple/carousel 4/6.webp",
+          "/maple/carousel4/1.webp",
+          "/maple/carousel4/2.webp",
+          "/maple/carousel4/3.webp",
+          "/maple/carousel4/4.webp",
+          "/maple/carousel4/5.webp",
+          "/maple/carousel4/6.webp",
         ],
       },
     ],
@@ -497,10 +497,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["EVERY SET GETS ITS", "MAIN CHARACTER MOMENT"],
     heroDescription:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made.webp",
+    heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
     description:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    image: "/coverimg/claw.png",
+    image: "/claw/Two types of Claw Nails girls 💅📌 The Pinterest Girl🔥 The “Aaj Kuch Toofani Karte Hai” GirlWhi.webp",
     meta: {
       client: "Claw Nails Studio",
       year: "2026",
@@ -520,7 +520,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-2",
-          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made.webp",
+          image: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
           title: "Floral & French Set",
           caption: "Handcrafted floral accents with delicate polka dot French tips",
           aspectClass: "aspect-[4/5]",
@@ -528,7 +528,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-3",
-          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white.webm",
+          image: "/claw/Who says French tips have to be basicA playful mix of yellow, chocolate brown, black, and white .webm",
           title: "Playful Colorway Tips",
           caption: "Subverting classic French tips with bold seasonal colors",
           aspectClass: "aspect-[9/16]",
@@ -536,7 +536,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-4",
-          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment,.webm",
+          image: "/claw/Who says long nails slow you down 💅🥤From opening your favourite drink to owning every moment, .webm",
           title: "Long Nails Lifestyle Test",
           caption: "Debunking long nail myths with everyday lifestyle testing",
           aspectClass: "aspect-[9/16]",
@@ -546,7 +546,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "claw-5",
-          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement..webm",
+          image: "/claw/Serving sharp energy with every move, these claw nails aren’t just a look, they’re a statement. .webm",
           title: "Sharp Claw Energy",
           caption: "Statement stiletto sets built for unmatched confidence",
           aspectClass: "aspect-[9/16]",
@@ -570,7 +570,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-8",
-          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl.webp",
+          image: "/claw/“what are you doing today”me- probably getting a fresh set because priorities 💅✨From soft girl .webp",
           title: "Fresh Set Priorities",
           caption: "Engaging chat-format meme celebrating fresh salon sets",
           aspectClass: "aspect-[4/5]",
@@ -588,7 +588,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-10",
-          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
+          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
           title: "Wispy Lashes & Eye Glam",
           caption: "Soft wispy lash extensions elevating the full studio look",
           aspectClass: "aspect-[4/5]",
@@ -596,7 +596,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-11",
-          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏.webm",
+          image: "/claw/𝙎𝙝𝙚’𝙨 𝙖 𝙬𝙝𝙤𝙡𝙚 𝙜𝙖𝙡𝙖𝙭𝙮 𝙤𝙣 𝙝𝙚𝙧 𝙛𝙞𝙣𝙜𝙚𝙧𝙩𝙞𝙥𝙨 𝙖𝙣𝙙 𝙬𝙚 𝙖𝙧𝙚 𝙉𝙊𝙏 .webm",
           title: "Galaxy On Her Fingertips",
           caption: "Celestial chrome and metallic shimmer nail art showcase",
           aspectClass: "aspect-[9/16]",
@@ -610,10 +610,10 @@ export const projectsData: ProjectData[] = [
         title: "Summer Nails Trends & Editorial Moodboards",
         subtitle: "Handcrafted illustrated guides and seasonal nail moodboards highlighting studio trends and signature styles.",
         images: [
-          "/claw/carousel/1.webp",
-          "/claw/carousel/2.webp",
-          "/claw/carousel/3.webp",
-          "/claw/carousel/4.webp",
+          "/claw/carousel1/1.webp",
+          "/claw/carousel1/2.webp",
+          "/claw/carousel1/3.webp",
+          "/claw/carousel1/4.webp",
         ],
       },
     ],
@@ -645,10 +645,10 @@ export const projectsData: ProjectData[] = [
     heroHeadline: ["CAKES THAT LOOK", "AS DELICIOUS AS THEY TASTE"],
     heroDescription:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    heroImage: "/baked love/baked love.webp",
+    heroImage: "/baked love/baked love .webp",
     description:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    image: "/coverimg/bakedlove.png",
+    image: "/baked love/baked love .webp",
     meta: {
       client: "Baked Love",
       year: "2026",
@@ -660,7 +660,7 @@ export const projectsData: ProjectData[] = [
       column1: [
         {
           id: "bl-1",
-          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what.webm",
+          image: "/baked love/13 years of baking, creating, learning - and there’s still plenty we haven’t told you.From what .webm",
           title: "13 Years of Craft & Passion",
           caption: "Behind-the-scenes journey of 13 years of artisanal baking",
           aspectClass: "aspect-[9/16]",
@@ -668,7 +668,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "bl-2",
-          image: "/baked love/baked love.webp",
+          image: "/baked love/baked love .webp",
           title: "A Chef Vatsala Original",
           caption: "Signature handcrafted confection with rich filling and coconut zest",
           aspectClass: "aspect-[4/5]",
@@ -734,10 +734,10 @@ export const projectsData: ProjectData[] = [
         title: "Cake Architecture & Layered Flavor Cross-Sections",
         subtitle: "Macro cross-section breakdowns revealing sponge moisture, bespoke infusions, and artisanal textures.",
         images: [
-          "/baked love/carousel/baked love  (1).webp",
-          "/baked love/carousel/baked love  (2).webp",
-          "/baked love/carousel/baked love  (3).webp",
-          "/baked love/carousel/baked love  (4).webp",
+          "/baked love/carousel1/baked love  (1).webp",
+          "/baked love/carousel1/baked love  (2).webp",
+          "/baked love/carousel1/baked love  (3).webp",
+          "/baked love/carousel1/baked love  (4).webp",
         ],
       },
       {
@@ -745,11 +745,11 @@ export const projectsData: ProjectData[] = [
         title: "The Deliciousness Quotient & Pure Ingredients",
         subtitle: "Sensory storytelling celebrating unadulterated cocoa, pure Nutella swirls, and zero-shortcut ingredient purity.",
         images: [
-          "/baked love/carousel 2/baked love  (6).webp",
-          "/baked love/carousel 2/baked love  (7).webp",
-          "/baked love/carousel 2/baked love  (8).webp",
-          "/baked love/carousel 2/baked love  (9).webp",
-          "/baked love/carousel 2/baked love  (10).webp",
+          "/baked love/carousel2/baked love  (6).webp",
+          "/baked love/carousel2/baked love  (7).webp",
+          "/baked love/carousel2/baked love  (8).webp",
+          "/baked love/carousel2/baked love  (9).webp",
+          "/baked love/carousel2/baked love  (10).webp",
         ],
       },
     ],
@@ -784,7 +784,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/underpass/Underpass Tuesday.webm",
     description:
       "Seven nights, seven vibes, zero repeats. We designed the nightly creative engine for Underpass, motion graphic posters Sunday to Thursday and video invites for the weekend, giving every theme night from Techno Tuesday to Saturday Anthem its own identity.",
-    image: "/coverimg/underpass.png",
+    image: "/underpass/Underpass Tuesday.webm",
     meta: {
       client: "Underpass",
       year: "2026",
@@ -804,7 +804,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-2",
-          image: "/underpass/kokk saturday reel.webm",
+          image: "/underpass/kokk saturday reel .webm",
           title: "Saturday Reel",
           caption: "High energy weekend video invite",
           aspectClass: "aspect-[9/16]",
@@ -838,7 +838,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-6",
-          image: "/underpass/konni 15 tues new.webm",
+          image: "/underpass/konni 15 tues new .webm",
           title: "Tuesday Underground",
           caption: "Nightly creative series flyer",
           aspectClass: "aspect-[9/16]",
@@ -848,7 +848,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "up-7",
-          image: "/underpass/underpass monday.webm",
+          image: "/underpass/underpass monday .webm",
           title: "Monday Series",
           caption: "Animated motion poster format",
           aspectClass: "aspect-[9/16]",
@@ -864,7 +864,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "up-9",
-          image: "/underpass/wed underpass 16.webm",
+          image: "/underpass/wed underpass 16 .webm",
           title: "Wednesday Frequency",
           caption: "Midweek groove video invite",
           aspectClass: "aspect-[9/16]",
@@ -903,7 +903,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     description:
       "Refurbished tech, zero boring. We built Costify's page around \"Naye jaisa, aadha daam\" with founder reels, Bollywood themed warranty carousels, educational content and trend formats that turned a trust heavy category into something people wanted to watch.",
-    image: "/coverimg/costify.png",
+    image: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     meta: {
       client: "Costify",
       year: "2026",
@@ -967,7 +967,7 @@ export const projectsData: ProjectData[] = [
       column3: [
         {
           id: "cost-7",
-          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment.webm",
+          image: "/costify/What looks like an old deep freezer is transformed through Costify’s professional refurbishment .webm",
           title: "Deep Freezer Transformation",
           caption: "Step-by-step restoration and 32-point technical overhaul",
           aspectClass: "aspect-[9/16]",
@@ -989,10 +989,10 @@ export const projectsData: ProjectData[] = [
         title: "Pop Culture & Comic Strips",
         subtitle: "Bollywood character integration and relatable comic frames turning refurbished tech into shareable entertainment.",
         images: [
-          "/costify/carousel 1/1.webp",
-          "/costify/carousel 1/2.webp",
-          "/costify/carousel 1/3.webp",
-          "/costify/carousel 1/4.webp",
+          "/costify/carousel1/1.webp",
+          "/costify/carousel1/2.webp",
+          "/costify/carousel1/3.webp",
+          "/costify/carousel1/4.webp",
         ],
       },
       {
@@ -1000,15 +1000,15 @@ export const projectsData: ProjectData[] = [
         title: "Bollywood Themed Warranty & Product Guides",
         subtitle: "Educational multi-slide breakdown debunking refurbished appliance myths and highlighting 6-month full warranty assurance.",
         images: [
-          "/costify/carousel 2/1.webp",
-          "/costify/carousel 2/2.webp",
-          "/costify/carousel 2/2(1).webp",
-          "/costify/carousel 2/3.webp",
-          "/costify/carousel 2/4.webp",
-          "/costify/carousel 2/5.webp",
-          "/costify/carousel 2/6.webp",
-          "/costify/carousel 2/7.webp",
-          "/costify/carousel 2/8.webp",
+          "/costify/carousel2/1.webp",
+          "/costify/carousel2/2.webp",
+          "/costify/carousel2/2(1).webp",
+          "/costify/carousel2/3.webp",
+          "/costify/carousel2/4.webp",
+          "/costify/carousel2/5.webp",
+          "/costify/carousel2/6.webp",
+          "/costify/carousel2/7.webp",
+          "/costify/carousel2/8.webp",
         ],
       },
     ],
@@ -1043,7 +1043,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     description:
       "Incense, but make it a ritual. We took Aavarna from pre launch intrigue to launch day and beyond, with founder led shoots, scent mood storytelling and deadpan, sarcastic campaigns that made a quiet home category impossible to scroll past.",
-    image: "/coverimg/aavarna.png",
+    image: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     meta: {
       client: "Aavarna",
       year: "2026",
@@ -1071,7 +1071,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-3",
-          image: "/aavarna/Some days move too fast.So we made a ritual that slows you down for a second. ✨Light it.Breathe.webm",
+          image: "/aavarna/Some days move too fast.So we made a ritual that slows you down for a second. ✨Light it.Breathe .webm",
           title: "Light It. Breathe: Slowing Down",
           caption: "Atmospheric sensory reel highlighting the slowing ritual",
           aspectClass: "aspect-[9/16]",
@@ -1089,7 +1089,7 @@ export const projectsData: ProjectData[] = [
       column2: [
         {
           id: "aav-5",
-          image: "/aavarna/Inspired by Vogue’s iconic 73 Questions, we asked our founder a few rapid fire questions of our.webm",
+          image: "/aavarna/Inspired by Vogue’s iconic 73 Questions, we asked our founder a few rapid fire questions of our .webm",
           title: "73 Questions with the Founder",
           caption: "Vogue-inspired fast-paced founder interview in the studio",
           aspectClass: "aspect-[9/16]",
@@ -1131,7 +1131,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-10",
-          image: "/aavarna/Your vibe has a scent and it smells like amber rose 🌹🪷Some things are just non negotiable.Aa.webp",
+          image: "/aavarna/Some fragrances don’t just smell good, they feel like nature itself. 🌿Crafted with the richness.webp",
           title: "Amber Rose Scent Vibe",
           caption: "Signature amber rose moodboard pairing olfactory notes with aesthetics",
           aspectClass: "aspect-[4/5]",
@@ -1139,7 +1139,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "aav-11",
-          image: "/aavarna/One fragrance We wish. 🤭Which one would you reorder instantlyYeah… us too. All of them. 🌿••Aa.webm",
+          image: "/aavarna/One fragrance We wish. 🤭Which one would you reorder instantlyYeah… us too. All of them. 🌿••#Aa.webm",
           title: "Instant Reorder Favorites",
           caption: "Playful customer favorite comparison format driving high retention",
           aspectClass: "aspect-[9/16]",
@@ -1161,12 +1161,12 @@ export const projectsData: ProjectData[] = [
         title: "Your Mood Has a Scent: The Selection Guide",
         subtitle: "A multi-slide guide translating emotional states into bespoke botanical fragrances and mindful pause moments.",
         images: [
-          "/aavarna/carousel 1/1.webp",
-          "/aavarna/carousel 1/2.webp",
-          "/aavarna/carousel 1/3.webp",
-          "/aavarna/carousel 1/4.webp",
-          "/aavarna/carousel 1/5.webp",
-          "/aavarna/carousel 1/6.webp",
+          "/aavarna/carousel1/1.webp",
+          "/aavarna/carousel1/2.webp",
+          "/aavarna/carousel1/3.webp",
+          "/aavarna/carousel1/4.webp",
+          "/aavarna/carousel1/5.webp",
+          "/aavarna/carousel1/6.webp",
         ],
       },
       {
@@ -1174,12 +1174,12 @@ export const projectsData: ProjectData[] = [
         title: "Letters to the Scents That Started It All",
         subtitle: "A poetic multi-slide motion and visual story exploring the origin story and botanical essence of each signature blend.",
         images: [
-          "/aavarna/carousel 2/1.webp",
-          "/aavarna/carousel 2/2.webm",
-          "/aavarna/carousel 2/3.webm",
-          "/aavarna/carousel 2/4.webm",
-          "/aavarna/carousel 2/5.webm",
-          "/aavarna/carousel 2/6.webp",
+          "/aavarna/carousel2/1.webp",
+          "/aavarna/carousel1/2.webp",
+          "/aavarna/carousel1/3.webp",
+          "/aavarna/carousel1/4.webp",
+          "/aavarna/carousel1/5.webp",
+          "/aavarna/carousel2/6.webp",
         ],
       },
     ],
@@ -1216,7 +1216,7 @@ export const projectsData: ProjectData[] = [
     description:
       "We shaped Salony into a modern Indian storyteller people actually stay for. Three content pillars across travel and heritage, wellness and tea, and collaborations, with signature series like Tea and Tales and The Story Behind that make culture feel personal in 2026.",
     image:
-      "/coverimg/salony.png",
+      "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
     meta: {
       client: "Salony Luthra",
       year: "2026",
@@ -1258,7 +1258,7 @@ export const projectsData: ProjectData[] = [
         {
           id: "sl-4",
           image:
-            "/salony/Krakow was one of those cities that made me want to put my phone down and just walk. 🇵🇱Pretty.webm",
+            "/salony/Krakow was one of those cities that made me want to put my phone down and just walk. 🇵🇱Pretty .webm",
           title: "Krakow Chronicles · Poland",
           caption: "Slow wanderlust and candid moments through the historic cobblestone streets",
           aspectClass: "aspect-[9/16]",
@@ -1293,12 +1293,12 @@ export const projectsData: ProjectData[] = [
         subtitle:
           "A visual journal through the historic mosques, bustling bazaars, and Turkish tea culture.",
         images: [
-          "/salony/carousel 1/1.webp",
-          "/salony/carousel 1/2.webp",
-          "/salony/carousel 1/3.webp",
-          "/salony/carousel 1/4.webp",
-          "/salony/carousel 1/5.webp",
-          "/salony/carousel 1/6.webp",
+          "/salony/carousel1/1.webp",
+          "/salony/carousel1/2.webp",
+          "/salony/carousel1/3.webp",
+          "/salony/carousel1/4.webp",
+          "/salony/carousel1/5.webp",
+          "/salony/carousel1/6.webp",
         ],
       },
       {
@@ -1382,7 +1382,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/orient/book mockup.webp",
     description:
       "Proof that B2B does not have to be boring. We handled content direction, posting and performance tracking for a manufacturing brand, swapping stock photos and jargon for clear positioning that actually lands with buyers.",
-    image: "/coverimg/orient_.png",
+    image: "/orient/book mockup.webp",
     meta: {
       client: "Orient Polyfilms",
       year: "2026",
