@@ -10,12 +10,12 @@ const row1Logos = [
 ];
 
 const row2Logos = [
-  "18.svg", "19.svg", "20.svg", "21.svg", "22.svg", "23.svg", "25.svg", "26.svg", "27.svg",
+  "18.svg", "19.svg", "20.svg", "21.svg", "22.svg", "23.svg", "24.svg", "25.svg", "26.svg", "27.svg",
   "28.svg", "29.svg", "30.svg", "31.svg", "32.svg"
 ];
 
 const row3Logos = [
-  "33.svg", "34.svg", "35.svg", "37.svg", "38.svg", "39.svg", "40.svg", "41.svg", "42.svg",
+  "33.svg", "34.svg", "35.svg", "36.svg", "37.svg", "38.svg", "39.svg", "40.svg", "41.svg", "42.svg",
   "43.svg", "44.svg", "45.svg", "46.svg", "47.svg"
 ];
 
@@ -31,6 +31,7 @@ const LogoItem = ({ src }: LogoItemProps) => (
       width={400}
       height={180}
       className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto max-w-[200px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[360px] object-contain opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-200 cursor-pointer"
+      unoptimized
     />
   </div>
 );

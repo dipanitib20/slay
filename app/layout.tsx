@@ -6,6 +6,11 @@ import LaunchCountdown from "./components/launch-countdown";
 export const metadata: Metadata = {
   title: "Slay Agency",
   description: "Creative & digital production agency",
+  icons: {
+    icon: "/fav.svg",
+    shortcut: "/fav.svg",
+    apple: "/fav.svg",
+  },
 };
 
 export default function RootLayout({
@@ -16,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="antialiased">
       <head>
+        <link rel="icon" href="/fav.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

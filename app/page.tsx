@@ -128,6 +128,7 @@ export default function Home() {
                 width={264}
                 height={115}
                 className="h-[60px] sm:h-[70px] md:h-[82px] w-auto max-w-[190px] sm:max-w-[234px] md:max-w-[275px] object-contain opacity-85 hover:opacity-100 transition-opacity duration-200"
+                unoptimized
               />
             </div>
           ))}
@@ -142,6 +143,7 @@ export default function Home() {
                 width={264}
                 height={115}
                 className="h-[60px] sm:h-[70px] md:h-[82px] w-auto max-w-[190px] sm:max-w-[234px] md:max-w-[275px] object-contain opacity-85 hover:opacity-100 transition-opacity duration-200"
+                unoptimized
               />
             </div>
           ))}
