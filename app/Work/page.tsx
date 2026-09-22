@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import LazyVideo from "../components/lazy-video";
 import { projectsData, ProjectData } from "../data/projects";
 
 export default function WorkPage() {
@@ -193,13 +194,8 @@ export default function WorkPage() {
                       project.image.trim().toLowerCase().endsWith(".mp4") ||
                       project.image.trim().toLowerCase().endsWith(".mov") ||
                       project.image.trim().toLowerCase().endsWith(".m4v") ? (
-                        <video
-                          src={encodeURI(project.image.trim())}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          preload="metadata"
+                        <LazyVideo
+                          src={project.image.trim()}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         />
                       ) : (
@@ -207,8 +203,8 @@ export default function WorkPage() {
                           src={project.image.trim()}
                           alt={project.title}
                           fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                          unoptimized
                         />
                       )}
                     </div>

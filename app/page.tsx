@@ -95,27 +95,16 @@ export default function Home() {
 
       {/* Hero Section (Fullscreen Edge-to-Edge Video) */}
       <section className="relative w-full hero-fullscreen overflow-hidden bg-[#242424]">
-        {/* Mobile Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="block md:hidden absolute inset-0 w-full h-full object-cover object-center"
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/Herovideomobile.webm" type="video/webm" />
-          Your browser does not support the video tag.
-        </video>
-
-        {/* Desktop Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/HeroDesktopvod.webm" type="video/webm" />
+          <source src="/Herovideomobile.webm" media="(max-width: 767px)" type="video/webm" />
+          <source src="/HeroDesktopvod.webm" media="(min-width: 768px)" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </section>
@@ -330,8 +319,8 @@ export default function Home() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    unoptimized
                   />
                 </div>
 

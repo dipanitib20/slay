@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useParams, notFound } from "next/navigation";
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import LazyVideo from "../../components/lazy-video";
 import { getProjectBySlug, projectsData, BentoItem, ProjectCarousel } from "../../data/projects";
 
 /* ── Helper to detect all standard video formats ── */
@@ -121,13 +122,8 @@ function ProjectCarouselRow({
               className="group relative shrink-0 snap-start w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] aspect-[4/5] rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#ECEAE6] border border-black/[0.05] shadow-[0_4px_24px_rgba(0,0,0,0.04)] cursor-pointer hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300"
             >
               {isVid ? (
-                <video
-                  src={encodeURI(imgSrc.trim())}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <LazyVideo
+                  src={imgSrc.trim()}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               ) : (
@@ -135,7 +131,6 @@ function ProjectCarouselRow({
                   src={imgSrc.trim()}
                   alt={`${carousel.title || "Project visual"} - Slide ${imgIdx + 1}`}
                   fill
-                  unoptimized
                   sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 360px"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
@@ -179,13 +174,8 @@ function BentoMediaItem({
         className={`relative w-full ${item.aspectClass || "aspect-[9/16]"} rounded-[28px] sm:rounded-[36px] overflow-hidden bg-[#ECEAE6] border border-black/[0.05]`}
       >
         {isVid ? (
-          <video
-            src={cleanSrc}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
+          <LazyVideo
+            src={item.image.trim()}
             className="absolute inset-0 w-full h-full object-cover"
           />
         ) : (
@@ -193,7 +183,6 @@ function BentoMediaItem({
             src={item.image.trim()}
             alt={item.title || "Project asset"}
             fill
-            unoptimized
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover"
           />
@@ -435,13 +424,8 @@ export default function ProjectSlugPage() {
               className="group block relative w-full aspect-[16/9] sm:aspect-[2.2/1] md:aspect-[2.6/1] rounded-[28px] sm:rounded-[40px] overflow-hidden bg-[#ECEAE6] border border-black/[0.06] shadow-lg"
             >
               {isVideoMedia(nextProject.heroImage) ? (
-                <video
-                  src={encodeURI(nextProject.heroImage.trim())}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <LazyVideo
+                  src={nextProject.heroImage.trim()}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               ) : (
@@ -449,7 +433,7 @@ export default function ProjectSlugPage() {
                   src={nextProject.heroImage.trim()}
                   alt={nextProject.title}
                   fill
-                  unoptimized
+                  sizes="(max-width: 768px) 100vw, 80vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               )}
