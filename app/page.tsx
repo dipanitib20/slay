@@ -95,16 +95,29 @@ export default function Home() {
 
       {/* Hero Section (Fullscreen Edge-to-Edge Video) */}
       <section className="relative w-full hero-fullscreen overflow-hidden bg-[#242424]">
+        {/* Mobile Video (< 768px) */}
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/Herovideomobile.webm" media="(max-width: 767px)" type="video/webm" />
-          <source src="/HeroDesktopvod.webm" media="(min-width: 768px)" type="video/webm" />
+          <source src="/mobielhero.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Desktop Video (>= 768px) */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/desktophero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>
