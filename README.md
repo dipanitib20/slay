@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Slay Agency
+
+Official website and digital experience for Slay Agency — full-service creative & digital production agency.
 
 ## Getting Started
 
