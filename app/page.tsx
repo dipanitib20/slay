@@ -88,15 +88,39 @@ export default function Home() {
     },
   ];
 
+  const desktopVideoRef = React.useRef<HTMLVideoElement | null>(null);
+  const mobileVideoRef = React.useRef<HTMLVideoElement | null>(null);
+
+  React.useEffect(() => {
+    const playVideos = () => {
+      if (desktopVideoRef.current) {
+        desktopVideoRef.current.defaultMuted = true;
+        desktopVideoRef.current.muted = true;
+        desktopVideoRef.current.play().catch(() => {});
+      }
+      if (mobileVideoRef.current) {
+        mobileVideoRef.current.defaultMuted = true;
+        mobileVideoRef.current.muted = true;
+        mobileVideoRef.current.play().catch(() => {});
+      }
+    };
+
+    playVideos();
+    // Re-attempt after short delay to ensure stream attachment
+    const timer = setTimeout(playVideos, 150);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="relative min-h-screen w-full bg-[#F5F4F3] text-[#242424] selection:bg-[#242424] selection:text-white overflow-x-hidden">
       {/* Floating Header / Navbar */}
       <Navbar />
 
       {/* Hero Section (Fullscreen Edge-to-Edge Video) */}
-      <section className="relative w-full hero-fullscreen overflow-hidden bg-[#242424]">
+      <section className="relative w-full hero-fullscreen overflow-hidden bg-[#1C1C1C]">
         {/* Mobile Video (< 768px) */}
         <video
+          ref={mobileVideoRef}
           autoPlay
           loop
           muted
@@ -105,11 +129,13 @@ export default function Home() {
           className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="/mobielhero.mp4" type="video/mp4" />
+          <source src="/Herovideomobile.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
         {/* Desktop Video (>= 768px) */}
         <video
+          ref={desktopVideoRef}
           autoPlay
           loop
           muted
@@ -118,6 +144,7 @@ export default function Home() {
           className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="/desktophero.mp4" type="video/mp4" />
+          <source src="/HeroDesktopvod.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
       </section>
