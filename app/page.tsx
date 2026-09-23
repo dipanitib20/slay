@@ -128,8 +128,9 @@ export default function Home() {
           preload="auto"
           className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/mobielhero.mp4" type="video/mp4" />
+          <source src="/mobielhero.webm" type="video/webm" />
           <source src="/Herovideomobile.webm" type="video/webm" />
+          <source src="/mobielhero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -143,8 +144,9 @@ export default function Home() {
           preload="auto"
           className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/desktophero.mp4" type="video/mp4" />
+          <source src="/desktophero.webm" type="video/webm" />
           <source src="/HeroDesktopvod.webm" type="video/webm" />
+          <source src="/desktophero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>
