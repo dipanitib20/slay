@@ -100,7 +100,7 @@ export default function Home() {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src="/Herovideomobile.webm" media="(max-width: 767px)" type="video/webm" />

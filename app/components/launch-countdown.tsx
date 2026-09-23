@@ -159,17 +159,22 @@ export default function LaunchCountdown({
   const [showAdminControls, setShowAdminControls] = useState(false);
   const [customTarget, setCustomTarget] = useState<number | null>(null);
 
-  // Compute launch target: tomorrow at 10:00 AM if not custom
+  // Compute launch target: today at 10:00 AM if still upcoming, otherwise tomorrow at 10:00 AM
   const launchTimestamp = useMemo(() => {
     if (customTarget !== null) return customTarget;
     if (targetDate) return new Date(targetDate).getTime();
 
-    // Default: Tomorrow at 10:00 AM local time
     const now = new Date();
-    const tomorrow10AM = new Date(now);
-    tomorrow10AM.setDate(now.getDate() + 1);
-    tomorrow10AM.setHours(10, 0, 0, 0);
-    return tomorrow10AM.getTime();
+    const target = new Date(now);
+    target.setHours(10, 0, 0, 0);
+
+    // If 10:00 AM today hasn't passed yet, target today 10:00 AM.
+    // If it has already passed, target tomorrow 10:00 AM.
+    if (now.getTime() >= target.getTime()) {
+      target.setDate(target.getDate() + 1);
+    }
+
+    return target.getTime();
   }, [targetDate, customTarget]);
 
   // Initial calculation of time left
@@ -212,12 +217,22 @@ export default function LaunchCountdown({
         setTimeout(() => {
           setIsLaunched(true);
           setIsRevealing(false);
-        }, 1200);
+        }, 1000);
       }
     }, 1000);
 
     return () => clearInterval(interval);
   }, [launchTimestamp, isLaunched]);
+
+  // Ensure all videos (including Hero edge-to-edge video) play immediately upon launch
+  useEffect(() => {
+    if (isLaunched || previewBypassed) {
+      const videos = document.querySelectorAll<HTMLVideoElement>("video");
+      videos.forEach((vid) => {
+        vid.play().catch(() => {});
+      });
+    }
+  }, [isLaunched, previewBypassed]);
 
   // Format second digits for the flap cards
   const secondsString = String(timeLeft.seconds).padStart(2, "0");
@@ -230,28 +245,7 @@ export default function LaunchCountdown({
     pathname?.startsWith("/login") ||
     pathname?.startsWith("/api");
 
-  // If already launched or preview bypassed, render the normal website
-  if (mounted && (isLaunched || previewBypassed || isExcludedRoute) && !standalone) {
-    return (
-      <>
-        {previewBypassed && !isLaunched && (
-          <div className="fixed top-3 right-3 z-[99999] bg-[#242424] text-white text-xs font-medium py-1.5 px-3.5 rounded-full border border-white/20 shadow-xl flex items-center gap-2.5 transition-all">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Preview Mode (Countdown Active)</span>
-            <button
-              onClick={() => setPreviewBypassed(false)}
-              className="text-[#a3c4ab] underline hover:text-white ml-1 cursor-pointer font-semibold"
-            >
-              Return to Countdown
-            </button>
-          </div>
-        )}
-        {children}
-      </>
-    );
-  }
-
-  return (
+  const countdownOverlay = (
     <div
       className={`fixed inset-0 z-50 bg-[#F5F4F3] text-[#242424] font-body flex flex-col justify-between items-center overflow-y-auto overflow-x-hidden transition-all duration-1000 ${
         isRevealing ? "opacity-0 scale-95 filter blur-sm pointer-events-none" : "opacity-100 scale-100"
@@ -381,7 +375,7 @@ export default function LaunchCountdown({
             We&apos;re coming soon...
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-[#242424]/60 max-w-md font-normal leading-relaxed">
-            We are putting the final touches on our new digital experience. Slay Agency officially goes live tomorrow morning at <strong className="text-[#242424] font-semibold">10:00 AM</strong>.
+            We are putting the final touches on our new digital experience. Slay Agency officially goes live {timeLeft.days > 0 ? "tomorrow morning" : "today"} at <strong className="text-[#242424] font-semibold">10:00 AM</strong>.
           </p>
         </div>
       </main>
@@ -481,7 +475,7 @@ export default function LaunchCountdown({
                   }}
                   className="w-full px-3 py-1 text-[10px] text-white/40 hover:text-white/70 transition cursor-pointer text-center"
                 >
-                  Reset to Tomorrow 10:00 AM
+                  Reset to 10:00 AM Target
                 </button>
               </div>
             </div>
@@ -489,5 +483,49 @@ export default function LaunchCountdown({
         </div>
       )}
     </div>
+  );
+
+  // If standalone countdown page, return the overlay directly
+  if (standalone) {
+    return countdownOverlay;
+  }
+
+  // If excluded route (admin, login, api), render children without countdown
+  if (isExcludedRoute) {
+    return <>{children}</>;
+  }
+
+  // If already launched and not in test preview bypass, render children directly
+  if (mounted && isLaunched && !previewBypassed) {
+    return <>{children}</>;
+  }
+
+  // Otherwise (before launch or previewing), render children in background DOM so hero video & assets preload with zero lazy delays
+  return (
+    <>
+      <div
+        className={`w-full ${
+          !isLaunched && !previewBypassed ? "pointer-events-none select-none" : ""
+        }`}
+        aria-hidden={!isLaunched && !previewBypassed}
+      >
+        {children}
+      </div>
+
+      {previewBypassed && !isLaunched && (
+        <div className="fixed top-3 right-3 z-[99999] bg-[#242424] text-white text-xs font-medium py-1.5 px-3.5 rounded-full border border-white/20 shadow-xl flex items-center gap-2.5 transition-all">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Preview Mode (Countdown Active)</span>
+          <button
+            onClick={() => setPreviewBypassed(false)}
+            className="text-[#a3c4ab] underline hover:text-white ml-1 cursor-pointer font-semibold"
+          >
+            Return to Countdown
+          </button>
+        </div>
+      )}
+
+      {(!isLaunched || isRevealing) && !previewBypassed && countdownOverlay}
+    </>
   );
 }
