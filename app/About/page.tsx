@@ -47,6 +47,7 @@ export default function AboutPage() {
                 src="/about-main.webp"
                 alt="Slay The Strategy Studio Office"
                 fill
+                sizes="100vw"
                 priority
                 className="object-cover object-center"
               />
@@ -127,6 +128,7 @@ export default function AboutPage() {
                     src="/mission.webp"
                     alt="Our Mission"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>
@@ -140,6 +142,7 @@ export default function AboutPage() {
                     src="/vision.webp"
                     alt="Our Vision"
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>

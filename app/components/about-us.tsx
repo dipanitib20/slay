@@ -114,6 +114,7 @@ export default function AboutUsSection() {
                   src="/founder-image.webp"
                   alt="Founder Dipani"
                   fill
+                  sizes="(max-width: 640px) 320px, (max-width: 1024px) 420px, 440px"
                   className="object-cover"
                   priority
                 />
