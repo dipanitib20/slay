@@ -75,7 +75,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/anvi/720138219_17867481315686964_7648030679057249441_n.webp",
     description:
       "Aka Anvi Jain, lawyer turned legal creator, needed a platform. We built her consistent, aesthetic content system, shoot planning, scripting, calendars, and purposeful strategy.",
-    image: "/projectcard/law in heels.webp",
+    image: "/workcard/law in heels_.png",
     meta: {
       client: "Anvi Jain (Law in Heels)",
       year: "2026",
@@ -219,7 +219,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/indian summer/indian summer  (2).webp",
     description:
       "A Gurugram fashion label with the product already right and the presence lagging behind it. We built the content system around what they shoot in house, then took it further with performance marketing and founder led content. Same brand, finally landing the way it deserves to.",
-    image: "/projectcard/indian summer.webp",
+    image: "/workcard/indian summer.png",
     meta: {
       client: "Indian Summer Atelier",
       year: "2026",
@@ -348,7 +348,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/maple/carousel1/1.webp",
     description:
       "We turned a neighbourhood preschool into the brand every Bengaluru parent scrolls past twice. Warm, trust led content that shows real classrooms, real milestones and the Canadian learning approach in action, built to spark admissions conversations in 2026.",
-    image: "/projectcard/maple.webp",
+    image: "/workcard/maple.png",
     meta: {
       client: "MAPLE Preschool Bengaluru",
       year: "2026",
@@ -500,7 +500,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/claw/From elegant French tips to playful polka dots and handcrafted floral details, this set is made .webp",
     description:
       "Nails, but make it a whole aesthetic. We ran Claw's Instagram with playful, trend aware content backed by weekly in-studio shoots, so every set got its main character moment and the feed stayed as sharp as the tips.",
-    image: "/projectcard/claw.webp",
+    image: "/workcard/claw.png",
     meta: {
       client: "Claw Nails Studio",
       year: "2026",
@@ -648,7 +648,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/baked love/baked love .webp",
     description:
       "Flavour first, always. We rebuilt Baked Love's Instagram around what makes it special, founder led stories, Cake of the Month, the Deliciousness Quotient and zero plastic shimmer packaging, with in house shoots that finally made the cakes look as good as they taste.",
-    image: "/projectcard/bakedlove.webp",
+    image: "/workcard/bakedlove.png",
     meta: {
       client: "Baked Love",
       year: "2026",
@@ -784,7 +784,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/underpass/Underpass Tuesday.webm",
     description:
       "Seven nights, seven vibes, zero repeats. We designed the nightly creative engine for Underpass, motion graphic posters Sunday to Thursday and video invites for the weekend, giving every theme night from Techno Tuesday to Saturday Anthem its own identity.",
-    image: "/projectcard/underpass.webp",
+    image: "/workcard/underpass.png",
     meta: {
       client: "Underpass",
       year: "2026",
@@ -903,7 +903,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/costify/Your next washing machine is just one scan away. 📲✨Looking to upgrade without overspending Scan.webp",
     description:
       "Refurbished tech, zero boring. We built Costify's page around \"Naye jaisa, aadha daam\" with founder reels, Bollywood themed warranty carousels, educational content and trend formats that turned a trust heavy category into something people wanted to watch.",
-    image: "/projectcard/costify.webp",
+    image: "/workcard/costify.png",
     meta: {
       client: "Costify",
       year: "2026",
@@ -1043,7 +1043,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/aavarna/Before the emails. Before the chaos. Before the to-do list takes over — light the incense It’s n.webp",
     description:
       "Incense, but make it a ritual. We took Aavarna from pre launch intrigue to launch day and beyond, with founder led shoots, scent mood storytelling and deadpan, sarcastic campaigns that made a quiet home category impossible to scroll past.",
-    image: "/projectcard/aavarna.webp",
+    image: "/workcard/aavarna.png",
     meta: {
       client: "Aavarna",
       year: "2026",
@@ -1215,7 +1215,7 @@ export const projectsData: ProjectData[] = [
       "/salony/Celebrating Onam in six yards of tradition, with jasmine in my hair and Kerala in my heart. 🤍🌼.webp",
     description:
       "We shaped Salony into a modern Indian storyteller people actually stay for. Three content pillars across travel and heritage, wellness and tea, and collaborations, with signature series like Tea and Tales and The Story Behind that make culture feel personal in 2026.",
-    image: "/projectcard/salony.webp",
+    image: "/workcard/salony.png",
     meta: {
       client: "Salony Luthra",
       year: "2026",
@@ -1381,7 +1381,7 @@ export const projectsData: ProjectData[] = [
     heroImage: "/orient/book mockup.webp",
     description:
       "Proof that B2B does not have to be boring. We handled content direction, posting and performance tracking for a manufacturing brand, swapping stock photos and jargon for clear positioning that actually lands with buyers.",
-    image: "/projectcard/orient.webp",
+    image: "/workcard/orient_.png",
     meta: {
       client: "Orient Polyfilms",
       year: "2026",
