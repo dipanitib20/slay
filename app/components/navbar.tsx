@@ -30,8 +30,8 @@ export default function Navbar({
   ],
   bookCallHref = "/Contact",
   avatarSrc = "/call-pic.png",
-  phone = "(510) 895-6500",
-  email = "hello@slayagency.com",
+  phone = "+91 90363 83777",
+  email = "hello@slaystrategy.com",
 }: NavbarProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);

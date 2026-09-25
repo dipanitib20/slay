@@ -588,7 +588,7 @@ export const projectsData: ProjectData[] = [
         },
         {
           id: "claw-10",
-          image: "/claw/Lashes that do the talking before you even say a word ✨👀 Soft, wispy & made to elevate every look••.webp",
+          image: "/claw/Lashes that do the talking before you even say a word ✨👀Soft, wispy & made to elevate every look••.webp",
           title: "Wispy Lashes & Eye Glam",
           caption: "Soft wispy lash extensions elevating the full studio look",
           aspectClass: "aspect-[4/5]",
