@@ -129,6 +129,7 @@ export default function Navbar({
                 height={45}
                 className="h-9 sm:h-10 w-auto object-contain transition-transform duration-200"
                 priority
+                unoptimized
               />
             </Link>
 
@@ -197,6 +198,7 @@ export default function Navbar({
               height={38}
               className="h-8 w-auto object-contain"
               priority
+              unoptimized
             />
           </Link>
 

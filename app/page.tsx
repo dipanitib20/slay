@@ -88,27 +88,36 @@ export default function Home() {
     },
   ];
 
-  const desktopVideoRef = React.useRef<HTMLVideoElement | null>(null);
-  const mobileVideoRef = React.useRef<HTMLVideoElement | null>(null);
+  const videoRef = React.useRef<HTMLVideoElement | null>(null);
 
   React.useEffect(() => {
-    const playVideos = () => {
-      if (desktopVideoRef.current) {
-        desktopVideoRef.current.defaultMuted = true;
-        desktopVideoRef.current.muted = true;
-        desktopVideoRef.current.play().catch(() => {});
-      }
-      if (mobileVideoRef.current) {
-        mobileVideoRef.current.defaultMuted = true;
-        mobileVideoRef.current.muted = true;
-        mobileVideoRef.current.play().catch(() => {});
+    const video = videoRef.current;
+    if (!video) return;
+
+    const playVideo = () => {
+      video.defaultMuted = true;
+      video.muted = true;
+      video.play().catch(() => {});
+    };
+
+    playVideo();
+    const timer = setTimeout(playVideo, 150);
+
+    // Re-evaluate video source on viewport breakpoint change (<768px vs >=768px)
+    const mql = window.matchMedia("(min-width: 768px)");
+    const handleBreakpointChange = () => {
+      if (video) {
+        video.load();
+        video.play().catch(() => {});
       }
     };
 
-    playVideos();
-    // Re-attempt after short delay to ensure stream attachment
-    const timer = setTimeout(playVideos, 150);
-    return () => clearTimeout(timer);
+    mql.addEventListener("change", handleBreakpointChange);
+
+    return () => {
+      clearTimeout(timer);
+      mql.removeEventListener("change", handleBreakpointChange);
+    };
   }, []);
 
   return (
@@ -118,35 +127,37 @@ export default function Home() {
 
       {/* Hero Section (Fullscreen Edge-to-Edge Video) */}
       <section className="relative w-full hero-fullscreen overflow-hidden bg-[#1C1C1C]">
-        {/* Mobile Video (< 768px) */}
-        <video
-          ref={mobileVideoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="md:hidden absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src="/mobielhero.webm" type="video/webm" />
-          <source src="/Herovideomobile.webm" type="video/webm" />
-          <source src="/mobielhero.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Instant responsive poster painted immediately (<100ms) */}
+        <picture className="absolute inset-0 w-full h-full pointer-events-none z-0">
+          <source media="(min-width: 768px)" srcSet="/hero-desktop-poster.jpg" />
+          <img
+            src="/hero-mobile-poster.jpg"
+            alt="Hero background"
+            fetchPriority="high"
+            decoding="sync"
+            className="w-full h-full object-cover object-center"
+          />
+        </picture>
 
-        {/* Desktop Video (>= 768px) */}
         <video
-          ref={desktopVideoRef}
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+          className="relative z-10 w-full h-full object-cover object-center"
         >
-          <source src="/desktophero.webm" type="video/webm" />
-          <source src="/HeroDesktopvod.webm" type="video/webm" />
-          <source src="/desktophero.mp4" type="video/mp4" />
+          <source
+            src="/desktophero.mp4"
+            media="(min-width: 768px)"
+            type="video/mp4"
+          />
+          <source
+            src="/mobielhero.mp4"
+            media="(max-width: 767px)"
+            type="video/mp4"
+          />
           Your browser does not support the video tag.
         </video>
       </section>
